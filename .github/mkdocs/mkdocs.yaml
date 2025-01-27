@@ -12,6 +12,8 @@ nav:
   - Proposals: proposals.md
   - Samples: samples.md
   - Instruments: instruments.md
+  - Troubleshooting:
+      - troubleshoot/index.md
   - About: about.md
 
 theme: material
