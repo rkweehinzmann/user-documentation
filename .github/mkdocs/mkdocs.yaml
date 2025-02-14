@@ -4,22 +4,29 @@ docs_dir: ../../docs
 
 nav: 
   - Home: index.md
-  - Login: 
+  - SciCat USER Guide:  
+    - user-manual/index.md
+    - Login:
       - login/index.md
       - Anonymous: login/Anonymous.md
       - Dashboard: login/Dashboard.md
-  - Datasets: 
+    - Datasets:
       - datasets/index.md
       - Triggering DOIs: datasets/Publishing.md
-  - Proposals: proposals.md
-  - Samples: samples.md
-  - Instruments: instruments.md
-  - Troubleshooting:
+    - Proposals: proposals.md
+    - Samples: samples.md
+    - Instruments: instruments.md
+    - Troubleshooting:
       - troubleshoot/index.md
+  
+  - SciCat Operator Guide: 
+    - operators-manual/index.md
+    - sites/DESY/index.md
+    
   - About:
       - about/index.md
 
-theme: material
+theme: material 
 
 plugins:
   - search
