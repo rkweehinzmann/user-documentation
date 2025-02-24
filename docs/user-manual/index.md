@@ -29,11 +29,3 @@ These main classes determine the functionality of SciCat:
 3. [Instruments](instruments.md): Depending on the science background `instruments` can mean something different.
 4. [Samples](samples.md): 
 
-
-## Links to site-specific SciCat documentation of user sites
-
-* ESS
-* PSI
-* MAXIV
-* SOLEIL
-* DESY

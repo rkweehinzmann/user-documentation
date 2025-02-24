@@ -5,9 +5,9 @@ General manual for site-administrators can be found in the [**scicatlive**](http
 ## Links to site-specific SciCat documentation of user sites
 
 * ESS
-* PSI
+* [PSI](../sites/PSI/index.md)
 * MAXIV
 * SOLEIL
-* [DESY](DESY/index.md)
+* [DESY](../sites/DESY/index.md)
 
 
