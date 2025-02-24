@@ -8,11 +8,11 @@ We highlight most promiment features that SciCat offers, but note that SciCat is
 
 Your data may be of type raw or derived, you may want to login or just browse what's in the catalogue. Here is how to find more on how to proceed:
 
-* [Login](login/index.md)
+* [Login](../login/index.md)
 * Search and find your data, see [Datasets How to query](datasets/index.md#how-to-query-datasets)
 *   How to change some fields after ingestion
 *   How to view history of changes to a dataset
-*   How to [group and tag datasets](datasets/grouping_tagging_ds.md).
+*   How to [group and tag datasets](../datasets/grouping_tagging_ds.md).
 *   How to group and tag grouped datasets
 
 ## A few more How-To's for users and site-admins
