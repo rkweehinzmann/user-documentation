@@ -6,6 +6,7 @@ on:  # yamllint disable-line rule:truthy
       - main
     tags:
       - v*
+
 jobs:
   build:
     runs-on: ubuntu-latest
