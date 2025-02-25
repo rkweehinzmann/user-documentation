@@ -9,10 +9,6 @@
       
       
       
-        <link rel="prev" href="../troubleshoot/">
-      
-      
-        <link rel="next" href="../sites/DESY/">
       
       
       <link rel="icon" href="../assets/images/favicon.png">
@@ -20,7 +16,7 @@
     
     
       
-        <title>SciCat Operator Guide - SciCat Documentation</title>
+        <title>Swagger or Explorer - The Backend API - SciCat Documentation</title>
       
     
     
@@ -73,7 +69,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#welcome-to-scicat-operators-manual" class="md-skip">
+        <a href="#swagger-or-explorer-the-backend-api" class="md-skip">
           Skip to content
         </a>
       
@@ -109,7 +105,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              SciCat Operator Guide
+              Swagger or Explorer - The Backend API
             
           </span>
         </div>
@@ -518,24 +514,22 @@
       
   
   
-    
   
   
-  
     
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
         
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="./" class="md-nav__link md-nav__link--active">
+            <a href="../operator-manual/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -546,13 +540,13 @@
             </a>
             
               
-              <label class="md-nav__link md-nav__link--active" for="__nav_3" id="__nav_3_label" tabindex="0">
+              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="0">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
           </div>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
             SciCat Operator Guide
@@ -634,18 +628,9 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#hands-on-scicat" class="md-nav__link">
+  <a href="#authentication" class="md-nav__link">
     <span class="md-ellipsis">
-      Hands-on SciCat
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#links-to-site-specific-scicat-documentation-of-user-sites" class="md-nav__link">
-    <span class="md-ellipsis">
-      Links to site-specific SciCat documentation of user sites
+      Authentication
     </span>
   </a>
   
@@ -666,19 +651,16 @@
                   
 
 
-<h1 id="welcome-to-scicat-operators-manual">Welcome to SciCat Operator's Manual</h1>
-<p>General manual for site-administrators can be found in the <a href="https://www.scicatproject.org/scicatlive/latest/"><strong>scicatlive</strong></a> documentation, it contains information how to set up and run a SciCat instance.</p>
-<h2 id="hands-on-scicat">Hands-on SciCat</h2>
-<p>For getting familiar with SciCat's APIs, you can explore via the <a href="../swagger/">Swagger</a> interface.</p>
-<p>Here we link to site-specific set ups. </p>
-<h2 id="links-to-site-specific-scicat-documentation-of-user-sites">Links to site-specific SciCat documentation of user sites</h2>
-<ul>
-<li>ESS</li>
-<li><a href="../sites/PSI/">PSI</a></li>
-<li>MAXIV</li>
-<li>SOLEIL</li>
-<li><a href="../sites/DESY/">DESY</a></li>
-</ul>
+<h1 id="swagger-or-explorer-the-backend-api">Swagger or Explorer - The Backend API</h1>
+<p>If SciCat has been set up and runs, one has direct access through the APIs are possible via the Swagger tool or Explorer interface. Often, you can simply extend the <code>url</code> by <code>/explorer</code>, e.g. <code>https://myLocalScicat.mydomain.de/explorer</code>. You will see a list of all APIs of that instance.</p>
+<p><a class="glightbox" href="img/swagger.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="swagger" src="img/swagger.png" /></a></p>
+<p>Once authenticated you can start using the endpoints.</p>
+<h2 id="authentication">Authentication</h2>
+<p>You need to authenticate twice:
+1. Get the <strong>SciCat token</strong> from the user setting when logged into SciCat via the main GUI. Copy paste it into the field "Authorize" in the explorer on the top right. <a class="glightbox" href="img/swagger_getToken.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="swagger login" src="img/swagger_getToken.png" /></a>
+<br>
+<br>
+2. Login on the explorer page again with the same credentials. <a class="glightbox" href="img/swaggerLogin.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="swagger login" src="img/swaggerLogin.png" /></a></p>
 
 
 
