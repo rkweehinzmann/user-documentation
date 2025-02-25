@@ -20,7 +20,7 @@ nav:
       - troubleshoot/index.md
   
   - SciCat Operator Guide: 
-    - operators-manual/index.md
+    - operator-manual/index.md
     - sites/DESY/index.md
 
   - About:
