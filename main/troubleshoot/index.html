@@ -240,7 +240,7 @@
               
   
   <span class="md-ellipsis">
-    SciCat USER Guide
+    SciCat User Guide
   </span>
   
 
@@ -256,7 +256,7 @@
         <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
-            SciCat USER Guide
+            SciCat User Guide
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -541,9 +541,18 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#no-images-visible" class="md-nav__link">
+  <a href="#1-no-images-visible" class="md-nav__link">
     <span class="md-ellipsis">
-      No images visible
+      #1 No images visible
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-adminingestor-login-behaved-differently" class="md-nav__link">
+    <span class="md-ellipsis">
+      #2 Admin/Ingestor login behaved differently
     </span>
   </a>
   
@@ -629,6 +638,48 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../swagger/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Swagger or Explorer - The Backend API
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../backendconfig/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Central Configuration of Backend: .env
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -683,9 +734,18 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#no-images-visible" class="md-nav__link">
+  <a href="#1-no-images-visible" class="md-nav__link">
     <span class="md-ellipsis">
-      No images visible
+      #1 No images visible
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-adminingestor-login-behaved-differently" class="md-nav__link">
+    <span class="md-ellipsis">
+      #2 Admin/Ingestor login behaved differently
     </span>
   </a>
   
@@ -708,10 +768,15 @@
 
 <h1 id="trouble-shooting">Trouble shooting</h1>
 <p>When using SciCat it is possible you encounter unexpected things. Here is a list of what we had.</p>
-<h2 id="no-images-visible">No images visible</h2>
+<h2 id="1-no-images-visible">#1 No images visible</h2>
 <p>Despite a working set up, sometimes no images are visible. The GUI may look like that:
 <a class="glightbox" href="img/ts_noimages.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="broken page has no images" src="img/ts_noimages.png" /></a></p>
-<p>This may to be related to the site-specific setup. Check with your site-administrator or  github issues.</p>
+<p>This may to be related to the site-specific setup. Check with your site-administrator or  github issues. Indeed there was a bug in the release, a new version fixed it.</p>
+<h2 id="2-adminingestor-login-behaved-differently">#2 Admin/Ingestor login behaved differently</h2>
+<p><strong>Cause</strong> emails in functionalAccounts.json can not be twice the same.</p>
+<p><code>db.getCollection("User").drop():</code></p>
+<p>delete <em>User table</em> </p>
+<p>fix by deleting the dublicate and relaunch backend at restart. </p>
 
 
 
