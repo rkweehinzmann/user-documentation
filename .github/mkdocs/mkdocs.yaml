@@ -24,6 +24,7 @@ nav:
     - sites/DESY/index.md
     - swagger/index.md
     - backendconfig/index.md
+    - backendconfig/dois.md
     
 
   - About:
