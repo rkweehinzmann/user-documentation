@@ -9,10 +9,6 @@
       
       
       
-        <link rel="prev" href="../user-manual/">
-      
-      
-        <link rel="next" href="Anonymous/">
       
       
       <link rel="icon" href="../assets/images/favicon.png">
@@ -20,7 +16,7 @@
     
     
       
-        <title>Login - SciCat Documentation</title>
+        <title>Publishing SciCat datasets - SciCat Documentation</title>
       
     
     
@@ -73,7 +69,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#login" class="md-skip">
+        <a href="#publishing-scicat-datasets" class="md-skip">
           Skip to content
         </a>
       
@@ -109,7 +105,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Login
+              Publishing SciCat datasets
             
           </span>
         </div>
@@ -219,19 +215,17 @@
       
   
   
-    
   
   
-  
     
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
         
           
           
@@ -253,7 +247,7 @@
             
           </div>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
             SciCat User Guide
@@ -264,24 +258,22 @@
                 
   
   
-    
   
   
-  
     
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1" >
         
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="./" class="md-nav__link md-nav__link--active">
+            <a href="../login/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -292,13 +284,13 @@
             </a>
             
               
-              <label class="md-nav__link md-nav__link--active" for="__nav_2_1" id="__nav_2_1_label" tabindex="0">
+              <label class="md-nav__link " for="__nav_2_1" id="__nav_2_1_label" tabindex="0">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
           </div>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_1_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_1_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_2_1">
             <span class="md-nav__icon md-icon"></span>
             Login
@@ -312,7 +304,7 @@
   
   
     <li class="md-nav__item">
-      <a href="Anonymous/" class="md-nav__link">
+      <a href="../login/Anonymous/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -333,7 +325,7 @@
   
   
     <li class="md-nav__item">
-      <a href="Dashboard/" class="md-nav__link">
+      <a href="../login/Dashboard/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -705,15 +697,31 @@
                   
 
 
-<h1 id="login">Login</h1>
-<p>To get access to <strong>all</strong> the data, for which you have read access, you first have to login. Otherwise you can browse only public datasets, see <a href="Anonymous/">anonymous browsing</a>.</p>
-<p>To login hit the "Sign in" Icon at the top right corner.</p>
-<p><a class="glightbox" href="img/login.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Login to ESS" src="img/login.png" /></a></p>
-<p>There are two types of account associated with the DataCatalog: <em>Functional</em> and <em>User</em>. A <em>functional</em> account will primarily be used by software and system administrators to deal with backups and other tasks.</p>
-<p><em>User</em> accounts are tied into the login system that is used by your institution, for example: Active Directory. You are able to log in to the system using the same credentials you use on that account. This process is called <em>authenitication</em> in IT tech terminology</p>
-<p>When you login as a user your user management system will assign groups to the logged in user. Each dataset is also assigned to one such group (via the so called ownerGroup field), and you can view the datasets only, if you are member of the corresponding group. The logic that defines, what parts of the data you can see, is called "authorization" in IT terminology. The first page you'll see after login is the <a href="Dashboard/">"Dashboard"</a>.</p>
-<p>Another  example login page from PSI is here</p>
-<p><a class="glightbox" href="img/login-psi.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Login to PSI" src="img/login-psi.png" /></a></p>
+<h1 id="publishing-scicat-datasets">Publishing SciCat datasets</h1>
+<p>A <strong>D</strong>igital <strong>O</strong>bject <strong>I</strong>dentifier (DOI) is issued to uniquely identify some object, e.g. data, used for reference e.g. in journal publications.
+In SciCat if one selected his favorite datasets, put them into the cart and clicks <code>publish</code> DOI minting is triggered. This process compises the following steps:</p>
+<p>Data that is known to the data catalog can be published. The publication workflow does the following:</p>
+<ol>
+<li>It defines a <strong>set</strong> of datasets to be published</li>
+<li>It assigns metadata relevant to the publication of the datasets, such as author, abstract etc</li>
+<li>It assigns a <strong>digital object identifier</strong>  DOI to the published data, which can e.g. be used to link from a journal article to the data</li>
+<li>It makes the data publicly available by providing a <strong>landing page</strong> that describes the data.</li>
+<li>It publishes the DOI to the worldwide DOI system , e.g. from Datacite</li>
+</ol>
+<p>So the first step is to select the datasets, that should be published</p>
+<p><a class="glightbox" href="../img/publish_select.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Selecting datasets for publication" src="../img/publish_select.png" /></a></p>
+<p>Then by hitting the "Add to Cart" button these datasets are available in the Cart. This step can be repeated to add further datasets. Once the selection is finished you open the Cart ( click on the Cart symbol and choose actions ) to see the selected datasets:</p>
+<p><a class="glightbox" href="../img/publish_show_selection.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Prepare datasets for publication" src="../img/publish_show_selection.png" /></a></p>
+<p>Here you can still change your selection, remove datasets etc. Once this is finished simply hit the publish button. This leads you to the following screen:</p>
+<p><a class="glightbox" href="../img/publish_edit_metadata.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Adding metadata for publication" src="../img/publish_edit_metadata.png" /></a></p>
+<p>Some of these fields will be pre-filled with information derived from the proposal data, such as the abstract. Independent of the pre-filling you can change the contents as you like until you are satisfied. Then hit the publish button, which leads you to the resulting display page:</p>
+<p><a class="glightbox" href="../img/published_data_details.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Showing entered metadata for publication" src="../img/published_data_details.png" /></a></p>
+<p>Initially the status field is in state "pending". This means, the published data information has been stored, but not yet made public to the worldwide DOI system, and no landing page has been created yet. This gives the possibility, that (potentially another person) can have  a look at the data and do further editing by hitting the Edit button:</p>
+<p><a class="glightbox" href="../img/published_data_edit.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Editing metadata for publication" src="../img/published_data_edit.png" /></a></p>
+<p>Once this is finished one can hit the "register" button (not shown in previous screenshot, because already in state registered)to register the DOI and thus making the data public. The resulting public landing page for this data then looks somethink like this</p>
+<p><a class="glightbox" href="img/landingpage.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Landing page of published data" src="img/landingpage.png" /></a></p>
+<p>Finally you can have a look at all the published data by going to the Published Data menu item (again by clicking the user icon at the top right corner and choosing "Published Data"):</p>
+<p><a class="glightbox" href="../img/published_datasets.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Landing page of published data" src="../img/published_datasets.png" /></a></p>
 
 
 
