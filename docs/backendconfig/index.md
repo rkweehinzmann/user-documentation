@@ -11,13 +11,10 @@ There are currently many configurable additions to SciCat which makes it very fl
 * AMQP to provide a message queue for the jobs
 
 ## Environment Variables
-The current source code contains an example .env file, named _.env.example_, listing all (79) environment variables available to configure the backend. They can be found [here](https://github.com/SciCatProject/scicat-backend-next/blob/master/.env.example) and define
+All environment variables can be used in the ```.env``` filee. The current source code contains an example .env file, named _.env.example_, listing all (79) environment variables available to configure the backend. They can be found [here](https://github.com/SciCatProject/scicat-backend-next/blob/master/.env.example) and define
 
-* How to set the right access groups
-* How to connect to [LDAP](#how-to-configure-ldap)
-* How to configure OIDC
-* How to configure DOIs
-* How to connect to RABBITMQ
+* How SciCat handles [access rights](#how-to-handle-access-rights) and connects to identity providers - such as [LDAP](#how-to-configure-ldap) or [OIDC](#how-to-configure-oidc)
+* How to configure [DOIs](#how-to-configure-doi-minting).
 * How to configure elasitc search (ES)
 * How to configure jobs
 
@@ -34,7 +31,7 @@ The list is compiled according to the configuration class defined in [_src/confi
   _format_: comma separated list of strings. Leading and trailing spaces are trimmed.  
 
 - CREATE\_DATASET\_GROUPS:  
-  list of non admin groups that are allowed to create datasets without pid. The pid is assigned by the system. If set to "all", all users can create a dataset belonging to any of the groups they belong to.    
+  list of non admin groups that are allowed to create datasets without pid. The pid is assigned by the system. If set to "#all", all users can create a dataset belonging to any of the groups they belong to.    
   _default_: "#all"  
   _format_: comma separated list of strings. Leading and trailing spaces are trimmed.  
 
@@ -504,6 +501,14 @@ PROPOSAL_TYPES_FILE="proposalTypes.json"
 ```
 ### How to configure LDAP
 Here are some details that are currently unknown to the author.
+
+### How to configure OIDC
+Here are some details that are currently unknown to the author.
+
+### How to configure DOI minting 
+In SciCat one can publish selected datasets that triggers a DOI minting process. Find [here](dois.md) a short introduction and instructions how to set up such a service. SciCat also has the option to make datasets publicly available, if you wish to do that follow [this Link](toBeWritten.md)
+
+
 
 ## More advanced options
 
