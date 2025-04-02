@@ -407,7 +407,7 @@
         
   
   <span class="md-ellipsis">
-    Triggering DOIs
+    Register DOIs
   </span>
   
 
@@ -553,6 +553,15 @@
   <a href="#2-adminingestor-login-behaved-differently" class="md-nav__link">
     <span class="md-ellipsis">
       #2 Admin/Ingestor login behaved differently
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-scicat-complains-about-non-standard-pid" class="md-nav__link">
+    <span class="md-ellipsis">
+      #3 SciCat complains about non-standard PID
     </span>
   </a>
   
@@ -772,6 +781,15 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#3-scicat-complains-about-non-standard-pid" class="md-nav__link">
+    <span class="md-ellipsis">
+      #3 SciCat complains about non-standard PID
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -798,6 +816,12 @@
 <p><code>db.getCollection("User").drop():</code></p>
 <p>delete <em>User table</em> </p>
 <p>fix by deleting the dublicate and relaunch backend at restart. </p>
+<h2 id="3-scicat-complains-about-non-standard-pid">#3 SciCat complains about non-standard PID</h2>
+<p>error message when trying an ingest of a dataset:</p>
+<p><code>Datasets": [], "usedSoftware": [], "relationships": []}
+Scicat returned 400 Bad Request: PID is not following required standards
+{'message': 'PID is not following required standards', 'error': 'Bad Request', 'statusCode': 400}</code></p>
+<p>Fix was in the variable : <code>DATASET_CREATION_VALIDATION_REGEX</code> if enabled with default values. Switch is <code>DATASET_CREATION_VALIDATION_ENABLED</code>, see documentation of backend <a href="https://github.com/SciCatProject/scicat-backend-next">here</a>.</p>
 
 
 
