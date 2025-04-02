@@ -1,9 +1,7 @@
 # Publishing SciCat datasets
 
 A **D**igital **O**bject **I**dentifier (DOI) is issued to uniquely identify some object, e.g. data, used for reference e.g. in journal publications.
-In SciCat if one selected his favorite datasets, put them into the cart and clicks ```publish``` DOI minting is triggered. This process compises the following steps:
-
-Data that is known to the data catalog can be published. The publication workflow does the following:
+In SciCat, if one selects his datasets, puts them into the cart and clicks ```publish```, DOI minting process is triggered. This process compises the following steps:
 
 1. It defines a **set** of datasets to be published
 2. It assigns metadata relevant to the publication of the datasets, such as author, abstract etc
@@ -11,11 +9,11 @@ Data that is known to the data catalog can be published. The publication workflo
 4. It makes the data publicly available by providing a **landing page** that describes the data.
 5. It publishes the DOI to the worldwide DOI system , e.g. from Datacite
 
-So the first step is to select the datasets, that should be published
+So the first step is to select the datasets to be published
 
 ![Selecting datasets for publication](img/publish_select.png)
 
-Then by hitting the "Add to Cart" button these datasets are available in the Cart. This step can be repeated to add further datasets. Once the selection is finished you open the Cart ( click on the Cart symbol and choose actions ) to see the selected datasets:
+Put them into the cart by hitting the "Add to Cart" button. This step can be repeated to add further datasets. Once the selection is finished you open the cart (click on the cart symbol) to see the selected datasets:
 
 ![Prepare datasets for publication](img/publish_show_selection.png)
 

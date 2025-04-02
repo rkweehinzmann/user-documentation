@@ -1,14 +1,25 @@
-# Publishing the data
+# Publishing datasets
 
-Data that is known to the data catalog can be published. The publication workflow does the following:
+There are two ways of _publishing_ datasets in SciCat, one via the "publish button" for each dataset, and secondly when adding to it to a selection of datasets for which a DOI is registered.
 
-1. It defines a **set** of datasets to be published
-2. It assigns metadata relevant to the publication of the datasets, such as author, abstract etc
-3. It assigns a **digital object identifier**  DOI to the published data, which can e.g. be used to link from a journal article to the data
-4. It makes the data publicly available by providing a **landing page** that describes the data.
+## Publish without DOI registration
+
+Using the "publish button" allows for making a dataset visible within the catalogue for a non-authenticated user.
+Each dataset has this button on the top right. 
+![publish button](img/publish_button.png) 
+
+## Publish with DOI registeration
+
+The user can select one or several datasets for DOI (**Digital Object Identifier**) registration which means that a record in DataCite, a DOI provider, will be made that points to a DESY landing page. SciCat offers a DataCite conform schema during the workflow. Any data that is known to the data catalog can be published. The publication workflow does the following:
+
+1. The logged in user can define a **set** of datasets to be published.
+2. That person assigns metadata relevant to the publication of the datasets, such as title, author (currently the name(s) under 'Creator'), abstract etc. One can work on it at a later stage, too and re-edit the registration. Note, that editing will be allowed once the registration request has been sent.
+3. A DOI is assigned to the published data which can e.g. be used to link from a journal article to the data.
+4. It makes the data publicly available by providing a _landing page_ that describes the data.
 5. It publishes the DOI to the worldwide DOI system , e.g. from Datacite
 
-So the first step is to select the datasets, that should be published
+
+So the first step is to **select the datasets** that should be published:
 
 ![Selecting datasets for publication](img/publish_select.png)
 

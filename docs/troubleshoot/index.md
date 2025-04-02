@@ -15,3 +15,14 @@ This may to be related to the site-specific setup. Check with your site-administ
 delete _User table_ 
 
 fix by deleting the dublicate and relaunch backend at restart. 
+
+
+## #3 SciCat complains about non-standard PID
+
+error message when trying an ingest of a dataset:
+
+```Datasets": [], "usedSoftware": [], "relationships": []}
+Scicat returned 400 Bad Request: PID is not following required standards
+{'message': 'PID is not following required standards', 'error': 'Bad Request', 'statusCode': 400}```
+
+Fix was in the variable : ```DATASET_CREATION_VALIDATION_REGEX``` if enabled with default values. Switch is ```DATASET_CREATION_VALIDATION_ENABLED```, see documentation of backend [here](https://github.com/SciCatProject/scicat-backend-next).
