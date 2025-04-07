@@ -2,7 +2,16 @@
 
 For now one can run and play with the new version of dataset endpoints v4. Here is how to set it up:
 
-1. Pre-requisits: admin rights
+1. Pre-requisits: admin rights, git, docker, nodejs (v.20.18.2) and npm (v10.8.2).
+2. For frontend to run, install angular like this: "npm install -g @angular"
+3. Git clone frontend and backend repository.
+4. Launch "npm install" in each dir by entering "npm install", respectively.
+5. Configuration of backend: add "loggers.json", "functionalAccounts.json",
+"proposalTypes.json", "datasetTypes.json" und ".env" files (there are examples named *.example).
+6. Start MongoDB: I do it using docker container. Recipe is get the image, e.g. bitnami/mongodb:latest, attach volume to it, e.g. "mongodb", mount it, e.g. to /bitnami/mongodb, port 27017. Open in host on 27017.
+7. Optional
+8. Start backend: in dir of backend run "npm run start". After about 10s you should be able to view the APIs from "localhost:3000/explorer" in the browser.
+9. Start frontend: in dir of frontend run "npm run start". After about 40s one should see under "localhost:4200" to SciCat frontend.
 
 1. Voraussetzungen: Adminrechte, Git, Docker, NodeJS (ich habe es jetzt
 mit v.20.18.2 laufen) inkl. npm (bei mir v10.8.2).
