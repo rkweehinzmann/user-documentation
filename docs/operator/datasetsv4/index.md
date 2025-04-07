@@ -2,6 +2,7 @@
 
 For now one can run and play with the new version of dataset endpoints v4. Here is how to set it up:
 
+1. Pre-requisits: admin rights
 
 1. Voraussetzungen: Adminrechte, Git, Docker, NodeJS (ich habe es jetzt
 mit v.20.18.2 laufen) inkl. npm (bei mir v10.8.2).
