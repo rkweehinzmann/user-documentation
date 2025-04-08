@@ -697,19 +697,55 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#configuration-of-the-backend" class="md-nav__link">
+  <a href="#overview" class="md-nav__link">
     <span class="md-ellipsis">
-      Configuration of the Backend
+      Overview
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Configuration of the Backend">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#understanding-the-components" class="md-nav__link">
+    <span class="md-ellipsis">
+      Understanding the Components
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#up-to-date-operators-information" class="md-nav__link">
+    <span class="md-ellipsis">
+      Up-to-date operator's information
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#backend" class="md-nav__link">
+    <span class="md-ellipsis">
+      Backend
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Backend">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#hands-on-scicat" class="md-nav__link">
+  <a href="#configuration-of-the-backend" class="md-nav__link">
     <span class="md-ellipsis">
-      Hands-on SciCat
+      Configuration of the backend
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-how-to-integrate-to-oidc-using-keycloak" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example: How to integrate to OIDC using keycloak
     </span>
   </a>
   
@@ -721,18 +757,84 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#frontend" class="md-nav__link">
+    <span class="md-ellipsis">
+      Frontend
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Frontend">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#configuration-of-the-frontend" class="md-nav__link">
     <span class="md-ellipsis">
-      Configuration of the Frontend
+      Configuration of the frontend
     </span>
   </a>
   
 </li>
+        
+          <li class="md-nav__item">
+  <a href="#how-to-include-site-specific-logos" class="md-nav__link">
+    <span class="md-ellipsis">
+      How to include site-specific logos
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#messaging-infractructure" class="md-nav__link">
+    <span class="md-ellipsis">
+      Messaging infractructure
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#different-entry-points-to-scicat" class="md-nav__link">
+    <span class="md-ellipsis">
+      Different entry points to SciCat
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Different entry points to SciCat">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#publishing-server" class="md-nav__link">
+    <span class="md-ellipsis">
+      Publishing Server
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#underlying-infrastructure-of-scicat-as-a-service" class="md-nav__link">
+    <span class="md-ellipsis">
+      Underlying Infrastructure of SciCat as a Service
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
       
         <li class="md-nav__item">
-  <a href="#links-to-site-specific-scicat-documentation-of-user-sites" class="md-nav__link">
+  <a href="#who-uses-scicat" class="md-nav__link">
     <span class="md-ellipsis">
-      Links to site-specific SciCat documentation of user sites
+      Who uses SciCat?
     </span>
   </a>
   
@@ -754,18 +856,50 @@
 
 
 <h1 id="welcome-to-scicat-operators-manual">Welcome to SciCat Operator's Manual</h1>
-<p>General manual for site-administrators can be found in the <a href="https://www.scicatproject.org/scicatlive/latest/"><strong>scicatlive</strong></a> documentation, it contains information how to set up and run a SciCat instance. For troublshooting issues, please see <a href="../troubleshoot/">the User's Guide</a>.</p>
-<h2 id="configuration-of-the-backend">Configuration of the Backend</h2>
-<p>There is one central place where one has a handle on how the Backend is configured in SciCat: the <a href="../backendconfig/">dotenv</a> file.</p>
-<h3 id="hands-on-scicat">Hands-on SciCat</h3>
-<p>For getting familiar with SciCat's APIs, you can explore via the <a href="../swagger/">Swagger</a> interface.</p>
-<h2 id="configuration-of-the-frontend">Configuration of the Frontend</h2>
-<p>Here we link to site-specific set ups. </p>
-<h2 id="links-to-site-specific-scicat-documentation-of-user-sites">Links to site-specific SciCat documentation of user sites</h2>
+<h2 id="overview">Overview</h2>
+<p>Getting SciCat up and running at your site should be rather straight forward for a test deployment. However turning into a production ready system may involve a bit more work, because different existing systems will need to be interfaced to SciCat.</p>
+<h2 id="understanding-the-components">Understanding the Components</h2>
+<p>For the subsequent sections it will be useful to have a "helicopter" overview of the various components that need to play together seamlessly. The following diagram shows these components and also shows potentially existing components at your site, that you would likely want to interface to SciCat. The specific diagram reflects essentially the situation at PSI as of Sept. 2020. Of course your situation may look different. The diagram should therefore be seen as an example, which you need to adapt to your situation.</p>
+<p><a class="glightbox" href="img/DacatDataflowV3.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="ToDo: Updated schematic view of SciCat components" src="img/DacatDataflowV3.png" /></a></p>
+<h2 id="up-to-date-operators-information">Up-to-date operator's information</h2>
+<p>Generally, the <a href="https://www.scicatproject.org/scicatlive/latest/"><strong>scicatlive</strong></a> documentation contains an up-to-date information how to set up and run the system <code>SciCat</code> interfacing it with various external, site-specific services. For troublshooting issues, please refer <a href="../troubleshoot/">the User's Guide</a>.</p>
+<h2 id="backend">Backend</h2>
+<p>At the heart of the SciCat architecture there is the <strong>REST API server</strong>. This is a NodeJS application that uses the nestjs framework to generate RESTful APIs from JSON files that define these models Users, Datasets, Instruments, Proposals and Instruments. Following the Swagger/OpenAPI format SDKs can be generated in almost any language. You can explore the backend APIs directly via the <a href="../swagger/">Swagger</a> interface.</p>
+<p>The persistence layer behind this API server is a <strong>MongoDB</strong> instance, i.e an open source, NoSQL, document-based database solution. The API server handles all the bi-directional communication from the REST interface to the database.</p>
+<p>These two components together comprise the "backend" of the architecture.</p>
+<h3 id="configuration-of-the-backend">Configuration of the backend</h3>
+<p>There is one central place where one has a handle on how the backend is configured in SciCat: the <a href="../backendconfig/">dotenv</a> file.</p>
+<h3 id="example-how-to-integrate-to-oidc-using-keycloak">Example: How to integrate to OIDC using keycloak</h3>
+<p>Integration with an identity provider, Keycloak, can be done using Open ID Connect, a protocol for authentication.
+See <a href="https://www.scicatproject.org/scicatlive/latest/services/backend/services/keycloak/">scicatlive manual</a> for more information on integration setup in SciCat backend.</p>
+<h2 id="frontend">Frontend</h2>
+<p>To the REST server an arbitrary number of "clients" (frontends) can be connected. One of the most important clients is the web based GUI frontend. This allows to communicate with the data catalog in a user friendly way. It is based on the Angular (9+) technology and uses ngrx to communicate with the SciCat API and provide a searchable interface for datasets, as well as the option to carry out actions (i.e. archiving).</p>
+<p>In addition to the GUI other clients exist, such as command line (CLI) clients (example exist written in GO and Python) or desktop based GUI applications based on Qt. The CLI tools are especially useful for automated workflows, e.g. to get the data into the data catalog. This process is termed "ingestion" of the data. But they can also be used to add the data manually, especially for derived data, since this part of the workflow is often not possible to automate, in particular in truly experimental setups.</p>
+<h3 id="configuration-of-the-frontend">Configuration of the frontend</h3>
+<p>To start a local instance of the frontend follow the recipe: install requirements, esp. angular, git clone the <a href="https://github.com/SciCatProject/frontend">code</a>, go the the directory and run "npm run start". Then you can launch it by entering "localhost:4200".</p>
+<h3 id="how-to-include-site-specific-logos">How to include site-specific logos</h3>
+<p>See <a href="https://github.com/SciCatProject/frontend/blob/master/SITE-LOGO-CONFIGURATION.md">here</a> for example procedure how to include your logo.</p>
+<h3 id="messaging-infractructure">Messaging infractructure</h3>
+<p>SciCat strength is to intergrate into almost any existing infrastructure because <strong>messaging systems</strong> can be easily interfaced to SciCat that take over the communication to other services and systems.</p>
+<p>In particular RabbitMQ (used at PSI) and Apache Kafka are in use. Such systems can e.g. be used to interface to an tape archive system. To add the specific business logic you can e.g. add your own scripting layer. At PSI however a Node-RED based solution proved to be a stable and flexible platform for this purpose. Node-RED is a A NodeJS based visual programming tool to handle flows of data from one source to another. The following shows the Nod-RED flow used for communicating job requests to the PSI archive system.</p>
+<p><a class="glightbox" href="img/job-assembler.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Node-RED" src="img/job-assembler.png" /></a></p>
+<h3 id="different-entry-points-to-scicat">Different entry points to SciCat</h3>
+<p>One can ususally see SciCat datasets that is the metadata of data taken. It will be possible to sort according to samples, proposals, instruments and published data. Integration and generalisation of these entry points to the catalogue is currently in development. Another strength of SciCat is that it provides a publishing server.</p>
+<h4 id="publishing-server">Publishing Server</h4>
+<p>In order to publish data you need to run a landing page server and you need to assign DOIs to your published data. Since the API server may be operated in an intranet, with no access to the internet the following architecture was chosen at PSI:</p>
+<p>An OAI-PMH server is running in a DMZ connected to a local Mongo instance. At publication time the data from SciCat is pushed to the external OAI-PMH server. From this server the landing page server can fetch the information about the published data. Also external DOI systems connect to this OAI-PMH server to synchronize the data with the world wide DOI system.</p>
+<p>If a user wants to download the full datasets of the published data, the data is copied from the internal file server to a https file server (acting as a cache file server) , which subsequently allows anonymous download of the data.</p>
+<h3 id="underlying-infrastructure-of-scicat-as-a-service">Underlying Infrastructure of SciCat as a Service</h3>
+<p>You may or may not run the infrastructure as part of a Kubernetes cluster. E.g. at PSI the API server, the GUI application, RabbitMQ and the Node-RED instances are all deployed to a Kubernetes cluster, whereas the Mongo DB ist kept outside Kubernetes. Kubernetes is not necessary to have, but can simplify operations. Likewise "helm charts" or similar tools for managing software applications as a service. <!--Also, the separation into internet and intranet zones can be defined as required -- OK HOW??. You can, of course, operate the whole infrastructure directly in internet accessible servers, if security policies permit.--></p>
+<h2 id="who-uses-scicat">Who uses SciCat?</h2>
+<p>Traditionally there were PSI, ESS and MaxIV that developed and deploy SciCat. More institutions joined the efforts and have pushed its development and many deploy photon and neutron labs in Europe and world-wide, see our project's for <a href="https://www.scicatproject.org/#facilities">all</a> facilities, contributors and users of SciCat.</p>
+<p>Below is a list of their documentation with more details on their deployment.</p>
 <ul>
-<li>ESS</li>
-<li><a href="../sites/PSI/">PSI</a></li>
-<li>MAXIV</li>
+<li>ESS - European Spallation Source</li>
+<li><a href="../sites/PSI/">PSI - Paul-Scherrer-Institute</a></li>
+<li>MAXIV </li>
+<li>RFI</li>
+<li>ALS </li>
 <li>SOLEIL</li>
 <li><a href="../sites/DESY/">DESY</a></li>
 </ul>
