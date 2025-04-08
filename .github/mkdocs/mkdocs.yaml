@@ -1,0 +1,42 @@
+site_name: SciCat Documentation
+docs_dir: ../../docs
+
+
+nav: 
+  - Home: index.md
+  - SciCat User Guide:  
+    - user-manual/index.md
+    - Login:
+      - login/index.md
+      - Anonymous: login/Anonymous.md
+      - Dashboard: login/Dashboard.md
+    - Datasets:
+      - datasets/index.md
+      - Register DOIs: datasets/Publishing.md
+    - Proposals: proposals.md
+    - Samples: samples.md
+    - Instruments: instruments.md
+    - Troubleshooting:
+      - troubleshoot/index.md
+  
+  - SciCat Operator Guide: 
+    - operator-manual/index.md
+    - sites/DESY/index.md
+    - swagger/index.md
+    - backendconfig/index.md
+    - backendconfig/dois.md
+    
+
+  - About:
+      - about/index.md
+
+theme: material 
+
+plugins:
+  - search
+  - glightbox
+  - section-index
+
+
+extra_css:
+  - custom.css

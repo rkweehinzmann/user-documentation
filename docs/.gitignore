@@ -1,0 +1,3 @@
+# Ignore modified files
+*.md~
+*.DS_Store
