@@ -73,7 +73,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#publishing-datasets" class="md-skip">
+        <a href="#publishing-scicat-datasets" class="md-skip">
           Skip to content
         </a>
       
@@ -789,20 +789,21 @@
                   
 
 
-<h1 id="publishing-datasets">Publishing datasets</h1>
-<p>There are two ways of <em>publishing</em> datasets in SciCat, one via the "publish button" for each dataset, and secondly when adding to it to a selection of datasets for which a DOI is registered.</p>
+<h1 id="publishing-scicat-datasets">Publishing SciCat datasets</h1>
+<p>There are two ways of <em>publishing</em> datasets in SciCat via the GUI: one using the "publish button" for each dataset, and the other when registering a selection of datasets for a DOI according to DataCite standards. The first step is included in the second one. 
+If you want a more advanced option for full exploitation of the available endpoints of SciCat, see <a href="../../backendconfig/dois/">here</a>.</p>
 <h2 id="publish-without-doi-registration">Publish without DOI registration</h2>
 <p>Using the "publish button" allows for making a dataset visible within the catalogue for a non-authenticated user.
 Each dataset has this button on the top right. 
-<a class="glightbox" href="img/publish_button.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="publish button" src="img/publish_button.png" /></a> </p>
+<a class="glightbox" href="../img/publish_button.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="publish button" src="../img/publish_button.png" /></a> </p>
 <h2 id="publish-with-doi-registeration">Publish with DOI registeration</h2>
 <p>The user can select one or several datasets for DOI (<strong>Digital Object Identifier</strong>) registration which means that a record in DataCite, a DOI provider, will be made that points to a DESY landing page. SciCat offers a DataCite conform schema during the workflow. Any data that is known to the data catalog can be published. The publication workflow does the following:</p>
 <ol>
 <li>The logged in user can define a <strong>set</strong> of datasets to be published.</li>
-<li>That person assigns metadata relevant to the publication of the datasets, such as title, author (currently the name(s) under 'Creator'), abstract etc. One can work on it at a later stage, too and re-edit the registration. Note, that editing will be allowed once the registration request has been sent.</li>
+<li>That person assigns metadata relevant to the publication of the datasets, such as title, author (currently the name(s) under 'Creator'), abstract etc. One can work on it at a later stage, too and re-edit the registration. Note, that <strong>no</strong> editing will be allowed once the registration request has been sent.</li>
 <li>A DOI is assigned to the published data which can e.g. be used to link from a journal article to the data.</li>
-<li>It makes the data publicly available by providing a <em>landing page</em> that describes the data.</li>
-<li>It publishes the DOI to the worldwide DOI system , e.g. from Datacite</li>
+<li>It makes the data publicly available by providing a detailed <em>landing page</em> that describes the data.</li>
+<li>It publishes the DOI to the worldwide DOI system from Datacite.</li>
 </ol>
 <p>So the first step is to <strong>select the datasets</strong> that should be published:</p>
 <p><a class="glightbox" href="../img/publish_select.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Selecting datasets for publication" src="../img/publish_select.png" /></a></p>
@@ -816,9 +817,8 @@ Each dataset has this button on the top right.
 <p><a class="glightbox" href="../img/published_data_edit.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Editing metadata for publication" src="../img/published_data_edit.png" /></a></p>
 <p>Once this is finished one can hit the "register" button (not shown in previous screenshot, because already in state registered)to register the DOI and thus making the data public. The resulting public landing page for this data then looks somethink like this</p>
 <p><a class="glightbox" href="../img/landingpage.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Landing page of published data" src="../img/landingpage.png" /></a></p>
-<p>Finally you can have a look at all the published data by going to the Published Data menu item (again by clicking the user icon at the top right corner and choosing "Published Data"):</p>
+<p>Finally you can have a look at all the published data by going to the Published Data menu item: by clicking the user icon at the top right corner and choosing "Published Data":</p>
 <p><a class="glightbox" href="../img/published_datasets.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Landing page of published data" src="../img/published_datasets.png" /></a></p>
-<p>This <a href="https://scicatproject.github.io/img/attach_and_publish.mp4">short video</a> demonstrates how you can add an attachment to your dataset and publish the data.</p>
 
 
 
