@@ -12,6 +12,8 @@ We repeat here the relevant parts from the [```.env```-file](../backendconfig/in
 * DOI_USERNAME="username"
 * DOI_PASSWORD="password"
 
+The up to now main landing page server as separate frontend client will become redundant: other than datasets can be chosen as entry points to benefit from the nice search on datasets, one can simply use also the publishedData main page as entry point for displaying all externaly accessible DOIs.
+
 ## Full potential with SciCat's APIs
 
 The respective endpoints can be viewed from swagger and are
