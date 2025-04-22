@@ -68,7 +68,7 @@ You may or may not run the infrastructure as part of a Kubernetes cluster. E.g. 
 
 ## Who uses SciCat?
 
-Traditionally there were PSI, ESS and MaxIV that developed and deploy SciCat. More institutions joined the efforts and have pushed its development and many deploy photon and neutron labs in Europe and world-wide, see our project's for [all](https://www.scicatproject.org/#facilities) facilities, contributors and users of SciCat.
+Traditionally there were PSI, ESS and MaxIV that developed and deploy SciCat. More institutions joined the efforts and have pushed its development and many deploy photon and neutron labs in Europe and world-wide, see our project's for [all facilities](https://www.scicatproject.org/#facilities), contributors and users of SciCat.
 
 Below is a list of their documentation with more details on their deployment.
 
