@@ -12,7 +12,7 @@ nav:
       - Dashboard: login/Dashboard.md
     - Datasets:
       - datasets/index.md
-      - Register DOIs: datasets/Publishing.md
+      - Publishing data: datasets/Publishing.md
     - Proposals: proposals.md
     - Samples: samples.md
     - Instruments: instruments.md
