@@ -12,7 +12,7 @@
         <link rel="prev" href="../">
       
       
-        <link rel="next" href="../../proposals/">
+        <link rel="next" href="../PublishingAdvanced/">
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
@@ -20,7 +20,7 @@
     
     
       
-        <title>Register DOIs - SciCat Documentation</title>
+        <title>Publishing data - SciCat Documentation</title>
       
     
     
@@ -109,7 +109,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Register DOIs
+              Publishing data
             
           </span>
         </div>
@@ -418,7 +418,7 @@
           
   
   <span class="md-ellipsis">
-    Register DOIs
+    Publishing data
   </span>
   
 
@@ -429,7 +429,7 @@
         
   
   <span class="md-ellipsis">
-    Register DOIs
+    Publishing data
   </span>
   
 
@@ -472,6 +472,27 @@
   
 </nav>
       
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../PublishingAdvanced/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Publishing data Advanced
+  </span>
+  
+
+      </a>
     </li>
   
 
@@ -693,7 +714,7 @@
         
   
   <span class="md-ellipsis">
-    DOI minting in SciCat - How to publish datasets
+    DOI minting in SciCat - How to set up publication of datasets
   </span>
   
 
@@ -792,15 +813,16 @@
 <h1 id="publishing-scicat-datasets">Publishing SciCat datasets</h1>
 <p>There are two ways of <em>publishing</em> datasets in SciCat via the GUI: one using the "publish button" for each dataset, and the other when registering a selection of datasets for a DOI according to DataCite standards. The first step is included in the second one. 
 If you want a more advanced option for full exploitation of the available endpoints of SciCat, see <a href="../../backendconfig/dois/">here</a>.</p>
+<p>A more technical description of the workflow can be found <a href="../PublishingAdvanced/">here</a>.</p>
 <h2 id="publish-without-doi-registration">Publish without DOI registration</h2>
 <p>Using the "publish button" allows for making a dataset visible within the catalogue for a non-authenticated user.
 Each dataset has this button on the top right. 
 <a class="glightbox" href="../img/publish_button.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="publish button" src="../img/publish_button.png" /></a> </p>
 <h2 id="publish-with-doi-registeration">Publish with DOI registeration</h2>
-<p>The user can select one or several datasets for DOI (<strong>Digital Object Identifier</strong>) registration which means that a record in DataCite, a DOI provider, will be made that points to a DESY landing page. SciCat offers a DataCite conform schema during the workflow. Any data that is known to the data catalog can be published. The publication workflow does the following:</p>
+<p>The user can select one or several datasets for DOI (<strong>Digital Object Identifier</strong>) registration producing a record in DataCite, a DOI provider, pointing to a local detailed landing page. SciCat offers a DataCite conform schema during the workflow. Any data that is known to the data catalog can be published and the publication workflow goes as follows:</p>
 <ol>
 <li>The logged in user can define a <strong>set</strong> of datasets to be published.</li>
-<li>That person assigns metadata relevant to the publication of the datasets, such as title, author (currently the name(s) under 'Creator'), abstract etc. One can work on it at a later stage, too and re-edit the registration. Note, that <strong>no</strong> editing will be allowed once the registration request has been sent.</li>
+<li>That user assigns metadata relevant to the publication of the datasets, such as title, author (currently the name(s) under 'Creator'), abstract etc. One can work on it at a later stage, too and re-edit the registration. Note, that <strong>no</strong> editing will be allowed once the registration request has been sent.</li>
 <li>A DOI is assigned to the published data which can e.g. be used to link from a journal article to the data.</li>
 <li>It makes the data publicly available by providing a detailed <em>landing page</em> that describes the data.</li>
 <li>It publishes the DOI to the worldwide DOI system from Datacite.</li>
