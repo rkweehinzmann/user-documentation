@@ -3,7 +3,6 @@ SciCat datasets are sets of meta data and can include several files which e.g. c
 
 To group and tag datasets is depicted [here](grouping_tagging_ds.md). Datasets can also be issued to be **published**: either removing the restricted view or triggering the process of obtaining a DOI for the selected datasets, see description of [publication of SciCat datasets](Publishing.md).
 
-
 ### How to query datasets
 
 
