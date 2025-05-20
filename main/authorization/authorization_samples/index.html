@@ -16,7 +16,7 @@
     
     
       
-        <title>Grouping datasets - SciCat Documentation</title>
+        <title>Samples Authorization - SciCat Documentation</title>
       
     
     
@@ -69,7 +69,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#grouping-datasets" class="md-skip">
+        <a href="#samples-authorization" class="md-skip">
           Skip to content
         </a>
       
@@ -105,7 +105,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Grouping datasets
+              Samples Authorization
             
           </span>
         </div>
@@ -366,7 +366,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../" class="md-nav__link ">
+            <a href="../../datasets/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -397,7 +397,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Publishing/" class="md-nav__link">
+      <a href="../../datasets/Publishing/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -418,7 +418,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../PublishingAdvanced/" class="md-nav__link">
+      <a href="../../datasets/PublishingAdvanced/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -644,7 +644,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../authorization/" class="md-nav__link">
+      <a href="../" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -726,6 +726,71 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#casl-ability-actions" class="md-nav__link">
+    <span class="md-ellipsis">
+      CASL ability actions
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="CASL ability actions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#endpoint-authorization" class="md-nav__link">
+    <span class="md-ellipsis">
+      Endpoint Authorization
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#data-instance-authorization" class="md-nav__link">
+    <span class="md-ellipsis">
+      (Data) Instance Authorization
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="(Data) Instance Authorization">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#priority" class="md-nav__link">
+    <span class="md-ellipsis">
+      Priority
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#authorization-table" class="md-nav__link">
+    <span class="md-ellipsis">
+      Authorization table
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -739,15 +804,269 @@
                   
 
 
-<h1 id="grouping-datasets">Grouping datasets</h1>
-<p>An easy way of quickly grouping some of the datasets is the option to tag each dataset individually and then search by this tag. In the General Information of the dataset one can EDIT it by adding a new KEYWORD (note Keywords are not case sensitive). Saving this keyword enables a search on them at a later point. </p>
-<p>Here one sees the EDIT button (bottom right).
-<a class="glightbox" href="../img/groupingByTagging/groupingByTagging_editbutton.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="first photo" src="../img/groupingByTagging/groupingByTagging_editbutton.png" /></a></p>
-<p>// erscheint noch nicht mittig...
-Having added your keywords you can use them to search: 
-<a class="glightbox" href="../img/groupingByTagging/groupingByTagging_searchresults.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="second one" src="../img/groupingByTagging/groupingByTagging_searchresults.png" /></a>{align=center}</p>
-<p>On the left you see the filters of your datasets, all results with e.g. "myowntagtest".
-<a class="glightbox" href="../img/groupingByTagging_searchresults2.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="same topic" src="../img/groupingByTagging_searchresults2.png" /></a></p>
+<h1 id="samples-authorization">Samples Authorization</h1>
+<h2 id="casl-ability-actions">CASL ability actions</h2>
+<p>This is the list of the permissions methods available for Samples and all their endpoints</p>
+<h3 id="endpoint-authorization">Endpoint Authorization</h3>
+<ul>
+<li>SampleCreate</li>
+<li>SampleRead</li>
+<li>SampleUpdate</li>
+<li>SampleDelete</li>
+<li>SampleAttachmentCreate</li>
+<li>SampleAttachmentRead</li>
+<li>SampleAttachmentUpdate</li>
+<li>SampleAttachmentDelete</li>
+<li>SampleDatasetRead</li>
+</ul>
+<h3 id="data-instance-authorization">(Data) Instance Authorization</h3>
+<ul>
+<li>SampleCreateOwner</li>
+<li>SampleCreateAny</li>
+<li>SampleReadManyPublic</li>
+<li>SampleReadManyAccess</li>
+<li>SampleReadManyOwner</li>
+<li>SampleReadOnePublic</li>
+<li>SampleReadOneAccess</li>
+<li>SampleReadOneOwner</li>
+<li>SampleReadAny</li>
+<li>SampleUpdateOwner</li>
+<li>SampleUpdateAny</li>
+<li>SampleDeleteOwner</li>
+<li>SampleDeleteAny</li>
+<li>SampleAttachmentCreateOwner</li>
+<li>SampleAttachmentCreateAny</li>
+<li>SampleAttachmentReadManyPublic</li>
+<li>SampleAttachmentReadManyAccess</li>
+<li>SampleAttachmentReadManyOwner</li>
+<li>SampleAttachmentReadManyAny</li>
+<li>SampleAttachmentUpdateOwner</li>
+<li>SampleAttachmentUpdateAny</li>
+<li>SampleAttachmentDeleteOwner</li>
+<li>SampleAttachmentDeleteAny</li>
+<li>SampleDatasetReadPublic</li>
+<li>SampleDatasetReadAccess</li>
+<li>SampleDatasetReadOwner</li>
+<li>SampleDatasetReadAny</li>
+</ul>
+<h4 id="priority">Priority</h4>
+<pre><code class="language-mermaid">graph LR;
+    SampleCreate--&gt;SampleCreateOwner;
+    SampleCreateOwner--&gt;SampleCreateAny;
+    SampleRead--&gt;SampleReadManyPublic;
+    SampleReadManyPublic--&gt;SampleReadManyAccess;
+    SampleReadManyAccess--&gt;SampleReadManyOwner;
+    SampleReadManyOwner--&gt;SampleReadAny;
+    SampleRead--&gt;SampleReadOnePublic;
+    SampleReadOnePublic--&gt;SampleReadOneAccess;
+    SampleReadOneAccess--&gt;SampleReadOneOwner;
+    SampleReadOneOwner--&gt;SampleReadAny;
+    SampleUpdate--&gt;SampleUpdateOwner;
+    SampleUpdateOwner--&gt;SampleUpdateAny;
+    SampleDelete--&gt;SampleDeleteOwner;
+    SampleDeleteOwner--&gt;SampleDeleteAny;
+    SampleAttachmentCreate--&gt;SampleAttachmentCreateOwner;
+    SampleAttachmentCreateOwner--&gt;SampleAttachmentCreateAny;
+    SampleAttachmentRead--&gt;SampleAttachmentReadManyPublic;
+    SampleAttachmentReadManyPublic--&gt;SampleAttachmentReadManyAccess;
+    SampleAttachmentReadManyAccess--&gt;SampleAttachmentReadManyOwner;
+    SampleAttachmentReadManyOwner--&gt;SampleAttachmentReadManyAny;
+    SampleAttachmentUpdate--&gt;SampleAttachmentUpdateOwner;
+    SampleAttachmentUpdateOwner--&gt;SampleAttachmentUpdateAny;
+    SampleAttachmentDelete--&gt;SampleAttachmentDeleteOwner;
+    SampleAttachmentDeleteOwner--&gt;SampleAttachmentDeleteAny;
+    SampleDatasetRead--&gt;SampleDatasetReadPublic;
+    SampleDatasetReadPublic--&gt;SampleDatasetReadAccess;
+    SampleDatasetReadAccess--&gt;SampleDatasetReadOwner;
+    SampleDatasetReadOwner--&gt;SampleDatasetReadAny;
+</code></pre>
+<h4 id="authorization-table">Authorization table</h4>
+<table>
+<thead>
+<tr>
+<th>HTTP method</th>
+<th>Endpoint</th>
+<th>Endpoint Authentication</th>
+<th>Anonymous</th>
+<th>Authenticated User</th>
+<th>Sample Groups</th>
+<th>Sample Privileged Groups</th>
+<th>Admin Groups</th>
+<th>Delete Groups</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>POST</td>
+<td>Samples</td>
+<td><em>SampleCreate</em></td>
+<td><strong>no</strong></td>
+<td><strong>no</strong></td>
+<td>Owner<br><em>SampleCreateOwner</em></td>
+<td>Any<br><em>SampleCreateAny</em></td>
+<td>Any<br><em>SampleCreateAny</em></td>
+<td><strong>no</strong></td>
+<td></td>
+</tr>
+<tr>
+<td>GET</td>
+<td>Samples</td>
+<td><em>SampleRead</em></td>
+<td>Public<br/><em>SampleReadManyPublic</em></td>
+<td>Has Access<br/><em>SampleReadManyAccess</em></td>
+<td>Has Access<br/><em>SampleReadManyAccess</em></td>
+<td>Has Access<br/><em>SampleReadManyAccess</em></td>
+<td>Any<br/><em>SampleReadAny</em></td>
+<td><strong>no</strong></td>
+<td></td>
+</tr>
+<tr>
+<td>GET</td>
+<td>Samples/fullquery</td>
+<td><em>SampleRead</em></td>
+<td>Public<br/><em>SampleReadManyPublic</em></td>
+<td>Has Access<br/><em>SampleReadManyAccess</em></td>
+<td>Has Access<br/><em>SampleReadManyAccess</em></td>
+<td>Has Access<br/><em>SampleReadManyAccess</em></td>
+<td>Any<br/><em>SampleReadAny</em></td>
+<td><strong>no</strong></td>
+<td></td>
+</tr>
+<tr>
+<td>GET</td>
+<td>Samples/fullfacet</td>
+<td><em>SampleRead</em></td>
+<td>Public<br/><em>SampleReadManyPublic</em></td>
+<td>Has Access<br/><em>SampleReadManyAccess</em></td>
+<td>Has Access<br/><em>SampleReadManyAccess</em></td>
+<td>Has Access<br/><em>SampleReadManyAccess</em></td>
+<td>Any<br/><em>SampleReadAny</em></td>
+<td><strong>no</strong></td>
+<td></td>
+</tr>
+<tr>
+<td>GET</td>
+<td>Samples/<em>pid</em></td>
+<td><em>SampleRead</em></td>
+<td>Public<br/><em>SampleReadOnePublic</em></td>
+<td>Has Access<br/><em>SampleReadOneAccess</em></td>
+<td>Has Access<br/><em>SampleReadOneAccess</em></td>
+<td>Has Access<br/><em>SampleReadOneAccess</em></td>
+<td>Any<br/><em>SampleReadAny</em></td>
+<td><strong>no</strong></td>
+<td></td>
+</tr>
+<tr>
+<td>GET</td>
+<td>Samples/fullquery</td>
+<td><em>SampleRead</em></td>
+<td>Public<br/><em>SampleReadOnePublic</em></td>
+<td>Has Access<br/><em>SampleReadOneAccess</em></td>
+<td>Has Access<br/><em>SampleReadOneAccess</em></td>
+<td>Has Access<br/><em>SampleReadOneAccess</em></td>
+<td>Any<br/><em>SampleReadAny</em></td>
+<td><strong>no</strong></td>
+<td></td>
+</tr>
+<tr>
+<td>PATCH</td>
+<td>Samples/<em>pid</em></td>
+<td><em>SampleUpdate</em></td>
+<td><strong>no</strong></td>
+<td><strong>no</strong></td>
+<td>Owner<br/><em>SampleUpdateOwn</em></td>
+<td>Owner<br/><em>SampleUpdateOwn</em></td>
+<td>Any<br/><em>SampleUpdateAny</em></td>
+<td><strong>no</strong></td>
+<td></td>
+</tr>
+<tr>
+<td>DELETE</td>
+<td>Samples/<em>pid</em></td>
+<td><em>SampleDelete</em></td>
+<td><strong>no</strong></td>
+<td><strong>no</strong></td>
+<td><strong>no</strong></td>
+<td><strong>no</strong></td>
+<td><strong>no</strong></td>
+<td>Any<br/><em>SampleDeleteAny</em></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>POST</td>
+<td>Samples/<em>pid</em>/Attachments</td>
+<td><em>SampleAttachmentCreate</em></td>
+<td><strong>no</strong></td>
+<td><strong>no</strong></td>
+<td>Owner<br><em>SampleAttachmentCreateOwner</em></td>
+<td>Any<br><em>SampleAttachmentCreateAny</em></td>
+<td>Any<br><em>SampleAttachmentCreateAny</em></td>
+<td><strong>no</strong></td>
+<td></td>
+</tr>
+<tr>
+<td>GET</td>
+<td>Samples/<em>pid</em>/Attachments</td>
+<td><em>SampleAttachmentRead</em></td>
+<td>Public<br/><em>SampleAttachmentReadManyPublic</em></td>
+<td>Has Access<br/><em>SampleAttachmentReadManyAccess</em></td>
+<td>Has Access<br/><em>SampleAttachmentReadManyAccess</em></td>
+<td>Has Access<br/><em>SampleAttachmentReadManyAccess</em></td>
+<td>Any<br/><em>SampleAttachmentReadManyAny</em></td>
+<td><strong>no</strong></td>
+<td></td>
+</tr>
+<tr>
+<td>DELETE</td>
+<td>Samples/<em>pid</em>/attachment/<em>aid</em></td>
+<td><em>SampleAttachmentDelete</em></td>
+<td><strong>no</strong></td>
+<td><strong>no</strong></td>
+<td>Owner<br/><em>SampleAttachmentDeleteOwner</em></td>
+<td>Owner<br/><em>SampleAttachmentDeleteOwner</em></td>
+<td>Any<br/><em>SampleAttachmentDeleteAny</em></td>
+<td>Any<br/><em>SampleAttachmentDeleteAny</em></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>GET</td>
+<td>Samples/<em>pid</em>/datasets</td>
+<td><em>SampleDatasetRead</em></td>
+<td>Public<br/><em>SampleDatasetReadOnePublic</em></td>
+<td>Has Access<br/><em>SampleDatasetReadOneAccess</em></td>
+<td>Has Access<br/><em>SampleDatasetReadOneAccess</em></td>
+<td>Has Access<br/><em>SampleDatasetReadOneAccess</em></td>
+<td>Any<br/><em>SampleDatasetReadOneAny</em></td>
+<td><strong>no</strong></td>
+<td></td>
+</tr>
+</tbody>
+</table>
 
 
 

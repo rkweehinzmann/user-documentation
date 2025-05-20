@@ -16,7 +16,7 @@
     
     
       
-        <title>Grouping datasets - SciCat Documentation</title>
+        <title>Users Authorization - SciCat Documentation</title>
       
     
     
@@ -69,7 +69,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#grouping-datasets" class="md-skip">
+        <a href="#users-authorization" class="md-skip">
           Skip to content
         </a>
       
@@ -105,7 +105,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Grouping datasets
+              Users Authorization
             
           </span>
         </div>
@@ -366,7 +366,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../" class="md-nav__link ">
+            <a href="../../datasets/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -397,7 +397,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Publishing/" class="md-nav__link">
+      <a href="../../datasets/Publishing/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -418,7 +418,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../PublishingAdvanced/" class="md-nav__link">
+      <a href="../../datasets/PublishingAdvanced/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -644,7 +644,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../authorization/" class="md-nav__link">
+      <a href="../" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -726,6 +726,65 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#casl-ability-actions" class="md-nav__link">
+    <span class="md-ellipsis">
+      CASL ability actions
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="CASL ability actions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#endpoint-authorization" class="md-nav__link">
+    <span class="md-ellipsis">
+      Endpoint authorization
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#instance-authorization" class="md-nav__link">
+    <span class="md-ellipsis">
+      Instance authorization
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#priority" class="md-nav__link">
+    <span class="md-ellipsis">
+      Priority
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#authorization-table" class="md-nav__link">
+    <span class="md-ellipsis">
+      Authorization table
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -739,15 +798,195 @@
                   
 
 
-<h1 id="grouping-datasets">Grouping datasets</h1>
-<p>An easy way of quickly grouping some of the datasets is the option to tag each dataset individually and then search by this tag. In the General Information of the dataset one can EDIT it by adding a new KEYWORD (note Keywords are not case sensitive). Saving this keyword enables a search on them at a later point. </p>
-<p>Here one sees the EDIT button (bottom right).
-<a class="glightbox" href="../img/groupingByTagging/groupingByTagging_editbutton.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="first photo" src="../img/groupingByTagging/groupingByTagging_editbutton.png" /></a></p>
-<p>// erscheint noch nicht mittig...
-Having added your keywords you can use them to search: 
-<a class="glightbox" href="../img/groupingByTagging/groupingByTagging_searchresults.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="second one" src="../img/groupingByTagging/groupingByTagging_searchresults.png" /></a>{align=center}</p>
-<p>On the left you see the filters of your datasets, all results with e.g. "myowntagtest".
-<a class="glightbox" href="../img/groupingByTagging_searchresults2.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="same topic" src="../img/groupingByTagging_searchresults2.png" /></a></p>
+<h1 id="users-authorization">Users Authorization</h1>
+<h2 id="casl-ability-actions">CASL ability actions</h2>
+<p>This is the list of the permissions methods available for datasets and all their endpoints.</p>
+<h5 id="endpoint-authorization">Endpoint authorization</h5>
+<ol>
+<li>UserLogin</li>
+<li>UserRead</li>
+<li>UserCreate</li>
+<li>UserUpdate</li>
+<li>UserPassword</li>
+<li>UserDelete</li>
+</ol>
+<h5 id="instance-authorization">Instance authorization</h5>
+<ol>
+<li>UserReadOwn</li>
+<li>UserReadAny</li>
+<li>UserCreateOwn</li>
+<li>UserCreateAny</li>
+<li>UserUpdateOwn</li>
+<li>UserUpdateAny</li>
+<li>UserPasswordOwn</li>
+<li>UserPasswordAny</li>
+<li>UserDeleteAny</li>
+</ol>
+<h4 id="priority">Priority</h4>
+<pre><code>    UserLogin(E)
+    UserCreate(E)--&gt;UserCreateOwn(I)--&gt;UserCreateAny(I);
+    UserRead(E)--&gt;UserReadOwn(I)--&gt;UserReadAny(I);
+    UserUpdate(E)--&gt;UserUpdateOwner(I)--&gt;UserUpdateAny(I);
+    UserPassword(E)--&gt;UserPasswordOwner(I)--&gt;UserPasswordAny(I);
+    UserDelete(E)--&gt;UserDeleteOwn(I)--&gt;UserDeleteAny(I);
+</code></pre>
+<h4 id="authorization-table">Authorization table</h4>
+<table>
+<thead>
+<tr>
+<th>HTTP method</th>
+<th>Endpoint</th>
+<th>Endpoint Authorization</th>
+<th>Anonymous</th>
+<th>Authenticated User</th>
+<th>User Privileged Groups</th>
+<th>Admin Groups</th>
+<th>User Delete Groups</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>POST</td>
+<td>Users/jwt</td>
+<td><em>UserRead</em></td>
+<td><strong>no</strong></td>
+<td>Own<br/><em>UserReadOwn</em></td>
+<td><strong>no</strong></td>
+<td><strong>no</strong></td>
+<td><strong>no</strong></td>
+</tr>
+<tr>
+<td>POST</td>
+<td>Users/login</td>
+<td><em>UserLogin</em></td>
+<td><strong>no</strong></td>
+<td><strong>no</strong></td>
+<td><strong>no</strong></td>
+<td><strong>no</strong></td>
+<td><strong>no</strong></td>
+</tr>
+<tr>
+<td>GET</td>
+<td>Users/<em>id</em></td>
+<td><em>UserRead</em></td>
+<td><strong>no</strong></td>
+<td>Own<br/><em>UserReadOwn</em></td>
+<td>Any<br/><em>UserReadAny</em></td>
+<td>Any<br/><em>UserReadAny</em></td>
+<td><strong>no</strong></td>
+</tr>
+<tr>
+<td>GET</td>
+<td>Users/<em>id</em>/userIdentity</td>
+<td><em>UserRead</em></td>
+<td><strong>no</strong></td>
+<td>Own<br/><em>UserReadOwn</em></td>
+<td>Any<br/><em>UserReadAny</em></td>
+<td>Any<br/><em>UserReadAny</em></td>
+<td><strong>no</strong></td>
+</tr>
+<tr>
+<td>POST</td>
+<td>Users/<em>id</em>/settings</td>
+<td><em>UserCreate</em></td>
+<td><strong>no</strong></td>
+<td>Own<br/><em>UserCreateOwn</em></td>
+<td>Any<br/><em>UserCreateAny</em></td>
+<td>Any<br/><em>UserCreateAny</em></td>
+<td><strong>no</strong></td>
+</tr>
+<tr>
+<td>GET</td>
+<td>Users/<em>id</em>/settings</td>
+<td><em>UserUpdate</em></td>
+<td><strong>no</strong></td>
+<td>Own<br/><em>UserReadOwn</em></td>
+<td>Any<br/><em>UserReadAny</em></td>
+<td>Any<br/> <em>UserReadAny</em></td>
+<td><strong>no</strong></td>
+</tr>
+<tr>
+<td>PUT</td>
+<td>Users/<em>id</em>/settings</td>
+<td><em>UserUpdate</em></td>
+<td><strong>no</strong></td>
+<td>Own<br/><em>UserUpdateOwn</em></td>
+<td>Any<br/><em>UserUpdateAny</em></td>
+<td>Any<br/><em>UserUpdateAny</em></td>
+<td><strong>no</strong></td>
+</tr>
+<tr>
+<td>PATCH</td>
+<td>Users/<em>id</em>/settings</td>
+<td><em>UserUpdate</em></td>
+<td><strong>no</strong></td>
+<td>Own<br/><em>UserUpdateOwn</em></td>
+<td>Any<br/><em>UserUpdateAny</em></td>
+<td>Any<br/><em>UserUpdateAny</em></td>
+<td><strong>no</strong></td>
+</tr>
+<tr>
+<td>PATCH</td>
+<td>Users/<em>id</em>/password</td>
+<td><em>UserPassword</em></td>
+<td><strong>no</strong></td>
+<td>Own<br/><em>UserPasswordOwn</em></td>
+<td>Any<br/><em>UserPasswordAny</em></td>
+<td>Any<br/><em>UserPasswordAny</em></td>
+<td><strong>no</strong></td>
+</tr>
+<tr>
+<td>DELETE</td>
+<td>Users/<em>id</em></td>
+<td><em>UserDelete</em></td>
+<td><strong>no</strong></td>
+<td><strong>no</strong></td>
+<td><strong>no</strong></td>
+<td><strong>no</strong></td>
+<td>Any<br/><em>UserDeleteAny</em></td>
+</tr>
+<tr>
+<td>DELETE</td>
+<td>Users/<em>id</em>/settings</td>
+<td><em>UserDelete</em></td>
+<td><strong>no</strong></td>
+<td><strong>no</strong></td>
+<td><strong>no</strong></td>
+<td><strong>no</strong></td>
+<td>Any<br/><em>UserDeleteAny</em></td>
+</tr>
+<tr>
+<td>GET</td>
+<td>Users/<em>id</em>/authorization/dataset/create</td>
+<td><em>UserRead</em></td>
+<td><strong>no</strong></td>
+<td>Own<br/><em>UserReadOwn</em></td>
+<td>Own<br/><em>UserReadOwn</em></td>
+<td>Any<br/><em>UserReadAny</em></td>
+<td><strong>no</strong></td>
+</tr>
+<tr>
+<td>GET</td>
+<td>Users/logout</td>
+<td><em>UserLogout</em></td>
+<td><strong>no</strong></td>
+<td>Own<br/><em>UserLogoutOwn</em></td>
+<td><strong>no</strong></td>
+<td><strong>no</strong></td>
+<td><strong>no</strong></td>
+</tr>
+<tr>
+<td>GET</td>
+<td>useridentities/findOne</td>
+<td><em>UserRead</em></td>
+<td><strong>no</strong></td>
+<td>Own<br/><em>UserReadOwn</em></td>
+<td>Any<br/><em>UserReadAny</em></td>
+<td>Any<br/><em>UserReadAny</em></td>
+<td><strong>no</strong></td>
+</tr>
+</tbody>
+</table>
 
 
 

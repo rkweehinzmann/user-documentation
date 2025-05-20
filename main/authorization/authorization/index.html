@@ -16,7 +16,7 @@
     
     
       
-        <title>Grouping datasets - SciCat Documentation</title>
+        <title>Authorization - SciCat Documentation</title>
       
     
     
@@ -69,7 +69,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#grouping-datasets" class="md-skip">
+        <a href="#authorization" class="md-skip">
           Skip to content
         </a>
       
@@ -105,7 +105,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Grouping datasets
+              Authorization
             
           </span>
         </div>
@@ -366,7 +366,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../" class="md-nav__link ">
+            <a href="../../datasets/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -397,7 +397,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Publishing/" class="md-nav__link">
+      <a href="../../datasets/Publishing/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -418,7 +418,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../PublishingAdvanced/" class="md-nav__link">
+      <a href="../../datasets/PublishingAdvanced/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -644,7 +644,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../authorization/" class="md-nav__link">
+      <a href="../" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -726,6 +726,50 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#aka-permissions" class="md-nav__link">
+    <span class="md-ellipsis">
+      aka permissions
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#aka-who-can-do-what" class="md-nav__link">
+    <span class="md-ellipsis">
+      aka who can do what
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#group-lists-available-in-vanilla-configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      Group Lists available in Vanilla Configuration
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#subsystems" class="md-nav__link">
+    <span class="md-ellipsis">
+      Subsystems
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -739,15 +783,205 @@
                   
 
 
-<h1 id="grouping-datasets">Grouping datasets</h1>
-<p>An easy way of quickly grouping some of the datasets is the option to tag each dataset individually and then search by this tag. In the General Information of the dataset one can EDIT it by adding a new KEYWORD (note Keywords are not case sensitive). Saving this keyword enables a search on them at a later point. </p>
-<p>Here one sees the EDIT button (bottom right).
-<a class="glightbox" href="../img/groupingByTagging/groupingByTagging_editbutton.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="first photo" src="../img/groupingByTagging/groupingByTagging_editbutton.png" /></a></p>
-<p>// erscheint noch nicht mittig...
-Having added your keywords you can use them to search: 
-<a class="glightbox" href="../img/groupingByTagging/groupingByTagging_searchresults.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="second one" src="../img/groupingByTagging/groupingByTagging_searchresults.png" /></a>{align=center}</p>
-<p>On the left you see the filters of your datasets, all results with e.g. "myowntagtest".
-<a class="glightbox" href="../img/groupingByTagging_searchresults2.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="same topic" src="../img/groupingByTagging_searchresults2.png" /></a></p>
+<h1 id="authorization">Authorization</h1>
+<h3 id="aka-permissions">aka permissions</h3>
+<h3 id="aka-who-can-do-what">aka who can do what</h3>
+<p>SciCat backend v4.x rely on <a href="https://casl.js.or">CASL</a> to manage permissions.<br />
+The default vanilla installation of the backend is configured with the permissions described and linked below. <br />
+To avoid confusion and clarify the terminology used below, the term <em>User</em> indicates a normal authenticated user with no elevated permissions, while <em>Admin</em> indicates any user who belongs to a group that it is listed in the environmental variable ADMIN_GROUPS.<br />
+By default ADMIN_GROUPS is set to groups: admin, ingestor, archivemanager.
+Special case is for deleting items in SciCat. Users with groups listed in DELETE_GROUPS, are allowed to perform delete. Default value is archivemanager.</p>
+<p><strong><em>IMPORTANT</em></strong> In V3.x, permissions were managed through roles. In V4.x, roles are not used, and they are converted to user group.</p>
+<p>In the vanilla installation, the default functional accounts are assigned to groups as follow:
+- user: admin<br />
+  group: admin  </p>
+<ul>
+<li>
+<p>user: ingestor<br />
+  group: ingestor  </p>
+</li>
+<li>
+<p>user: archiveManager<br />
+  group: archivemanager</p>
+</li>
+</ul>
+<p>This allow for the flexibility required by many installations in different facilities with different needs.  </p>
+<h2 id="group-lists-available-in-vanilla-configuration">Group Lists available in Vanilla Configuration</h2>
+<p>The permissions in the vanilla installation provides a set of user groups which acquires specific set of permissions. In order to assign a set of permissions to a specific group of user, add such group to the correct list indicated below.</p>
+<table>
+<thead>
+<tr>
+<th>Configuration Group List</th>
+<th>Description</th>
+<th>CASL ability actions</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><em>authenticated users</em></td>
+<td>Authenticated users can view/access all datasets that belong to one of the groups they belong to</td>
+<td>DatasetReadOwn</td>
+</tr>
+<tr>
+<td></td>
+<td>Users can view attachments for datasets belonging to one of their group</td>
+<td>DatasetAttachmentReadOwn</td>
+</tr>
+<tr>
+<td></td>
+<td>Users are allowed to view origdatablocks for datasets belonging to one of their group</td>
+<td>DatasetOrigdatablockReadOwn</td>
+</tr>
+<tr>
+<td></td>
+<td>Users are allowed to view datablocks for datasets belonging to one of their group</td>
+<td>DatasetDatablockReadOwn</td>
+</tr>
+<tr>
+<td></td>
+<td>Users can view the logbook of the datasets that belong to one of their group</td>
+<td>DatasetLogbookReadOwn</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>CREATE_DATASET_GROUPS</td>
+<td>Users of the listed groups can create and modify datasets for any of the groups they belong to. At creation time, the system assignes a pid to the new datasets. If the user assigns one, the system will ignore it.</td>
+<td>DatasetCreateOwn , DatasetReadOwn , DatasetUpdateOwn</td>
+</tr>
+<tr>
+<td></td>
+<td>Users are allowed to perform all operations on attachments for datasets belonging to one of their group</td>
+<td>DatasetAttachmentCreateOwn , DatasetAttachmentReadOwn , DatasetAtatchementUpdateOwn , DatasetAttachmentDeleteOwn</td>
+</tr>
+<tr>
+<td></td>
+<td>Users are allowed to create and update origdatablocks for datasets belonging to one of their group</td>
+<td>DatasetOrigdatablockCreateOwn , DatasetOrigdatablockReadOwn , DatasetOrigdatablockUpdateOwn</td>
+</tr>
+<tr>
+<td></td>
+<td>Users are allowed to create and update datablocks for datasets belonging to one of their group</td>
+<td>DatasetDatablockCreateOwn , DatasetDatablockReadOwn , DatasetDatablockUpdateOwn</td>
+</tr>
+<tr>
+<td></td>
+<td>Users can view the logbook of the datasets that belong to one of their group</td>
+<td>DatasetLogbookReadOwn</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>CREATE_DATASET_WITH_PID_GROUPS</td>
+<td>Users of the listed groups can create and modify datasets for any of the groups they belong to. They are allowed to specify the dataset pid. If they decided not to specify a pid, the system will assign one.</td>
+<td>DatasetCreateOwn , DatasetReadOwn , DatasetUpdateOwn</td>
+</tr>
+<tr>
+<td></td>
+<td>Users are allowed to perform all operations on attachments for datasets belonging to one of their group</td>
+<td>DatasetAttachmentCreateOwn , DatasetAttachmentReadOwn , DatasetAtatchementUpdateOwn , DatasetAttachmentDeleteOwn</td>
+</tr>
+<tr>
+<td></td>
+<td>Users are allowed to create and update origdatablocks for datasets belonging to one of their group</td>
+<td>DatasetOrigdatablockCreateOwn , DatasetOrigdatablockReadOwn , DatasetOrigdatablockUpdateOwn</td>
+</tr>
+<tr>
+<td></td>
+<td>Users are allowed to create and update datablocks for datasets belonging to one of their group</td>
+<td>DatasetDatablockCreateOwn , DatasetDatablockReadOwn , DatasetDatablockUpdateOwn</td>
+</tr>
+<tr>
+<td></td>
+<td>Users can view the logbook of the datasets that belong to one of their group</td>
+<td>DatasetLogbookReadOwn</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>CREATE_DATASET_PRIVILEGED_GROUPS</td>
+<td>Users of the listed groups can create datasets for any group, but can only modify datasets belong to one of the group they belong to. They are allowed to specify pids for new datasets. This settings are suggested for ingestion functional accounts</td>
+<td>DatasetCreateAll , DatasetReadOwn , DatasetUpdateOwn</td>
+</tr>
+<tr>
+<td></td>
+<td>Users are allowed to perform all operations on attachments for datasets belonging to one of their group</td>
+<td>DatasetAttachmentCreateOwn , DatasetAttachmentReadOwn , DatasetAtatchementUpdateOwn , DatasetAttachmentDeleteOwn</td>
+</tr>
+<tr>
+<td></td>
+<td>Users are allowed to create origdatablocks for any datasets, but can only update them for datasets belonging to one of their group</td>
+<td>DatasetOrigdatablockCreateAny , DatasetOrigdatablockReadOwn , DatasetOrigdatablockUpdateOwn</td>
+</tr>
+<tr>
+<td></td>
+<td>Users are allowed to create and update datablocks for datasets belonging to one of their group</td>
+<td>DatasetDatablockCreateOwn , DatasetDatablockReadOwn , DatasetDatablockUpdateOwn</td>
+</tr>
+<tr>
+<td></td>
+<td>Users can view the logbook of the datasets that belong to one of their group</td>
+<td>DatasetLogbookReadOwn</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>ADMIN_GROUPS</td>
+<td>Users of the listed groups can create and modify datasets belonging to any group. They are allowed to specify the dataset's pid at creation time</td>
+<td>DatasetCreateAny , DatasetReadAny , DatasetUpdateAny</td>
+</tr>
+<tr>
+<td></td>
+<td>Users are allowed to perform all operations on attachments for any datasets</td>
+<td>DatasetAttachmentCreateAny , DatasetAttachmentReadAny , DatasetAtatchementUpdateAny , DatasetAttachmentDeleteAny</td>
+</tr>
+<tr>
+<td></td>
+<td>Users are allowed to perform all operations on origdatablocks for any datasets, except delete</td>
+<td>DatasetOrigdatablockCreateAny , DatasetOrigdatablockReadAny , DatasetOrigdatablockUpdateAny</td>
+</tr>
+<tr>
+<td></td>
+<td>Users are allowed to perform all operations on datablocks for any datasets, except delete</td>
+<td>DatasetDatablockCreateAny , DatasetDatablockReadAny , DatasetDatablockUpdateAny</td>
+</tr>
+<tr>
+<td></td>
+<td>Users can view logbook for any datasets</td>
+<td>DatasetLogbookReadAny</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>DELETE_GROUPS</td>
+<td>Users whose group is listed here are allowed to delete datasets, origdatablock or datablock</td>
+<td>DatasetDeleteAny , DatasetOrigdatablockDeleteAny , DatasetDatablockDeleteAny</td>
+</tr>
+</tbody>
+</table>
+<h2 id="subsystems">Subsystems</h2>
+<ul>
+<li><a href="authorization/authorization_datasets.md">Datasets</a></li>
+<li><a href="authorization/authorization_origdatablocks.md">OrigDatablocks</a></li>
+<li><a href="authorization/authorization_jobs.md">Jobs</a></li>
+<li><a href="authorization/authorization_users.md">Users</a></li>
+</ul>
+<p><strong><em>N.B.</em></strong>: we know that many subsystems are still missing. We are working on reviewing the authorization model for each one of them and producing the relative documentation. We welcome any contribution.</p>
 
 
 

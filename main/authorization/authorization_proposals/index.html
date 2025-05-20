@@ -16,7 +16,7 @@
     
     
       
-        <title>Grouping datasets - SciCat Documentation</title>
+        <title>Proposals Authorization - SciCat Documentation</title>
       
     
     
@@ -69,7 +69,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#grouping-datasets" class="md-skip">
+        <a href="#proposals-authorization" class="md-skip">
           Skip to content
         </a>
       
@@ -105,7 +105,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Grouping datasets
+              Proposals Authorization
             
           </span>
         </div>
@@ -366,7 +366,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../" class="md-nav__link ">
+            <a href="../../datasets/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -397,7 +397,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Publishing/" class="md-nav__link">
+      <a href="../../datasets/Publishing/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -418,7 +418,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../PublishingAdvanced/" class="md-nav__link">
+      <a href="../../datasets/PublishingAdvanced/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -644,7 +644,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../authorization/" class="md-nav__link">
+      <a href="../" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -726,6 +726,71 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#casl-ability-actions" class="md-nav__link">
+    <span class="md-ellipsis">
+      CASL ability actions
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="CASL ability actions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#endpoint-authorization" class="md-nav__link">
+    <span class="md-ellipsis">
+      Endpoint Authorization
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#data-instance-authorization" class="md-nav__link">
+    <span class="md-ellipsis">
+      (Data) Instance Authorization
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="(Data) Instance Authorization">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#priority" class="md-nav__link">
+    <span class="md-ellipsis">
+      Priority
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#authorization-table" class="md-nav__link">
+    <span class="md-ellipsis">
+      Authorization table
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -739,15 +804,268 @@
                   
 
 
-<h1 id="grouping-datasets">Grouping datasets</h1>
-<p>An easy way of quickly grouping some of the datasets is the option to tag each dataset individually and then search by this tag. In the General Information of the dataset one can EDIT it by adding a new KEYWORD (note Keywords are not case sensitive). Saving this keyword enables a search on them at a later point. </p>
-<p>Here one sees the EDIT button (bottom right).
-<a class="glightbox" href="../img/groupingByTagging/groupingByTagging_editbutton.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="first photo" src="../img/groupingByTagging/groupingByTagging_editbutton.png" /></a></p>
-<p>// erscheint noch nicht mittig...
-Having added your keywords you can use them to search: 
-<a class="glightbox" href="../img/groupingByTagging/groupingByTagging_searchresults.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="second one" src="../img/groupingByTagging/groupingByTagging_searchresults.png" /></a>{align=center}</p>
-<p>On the left you see the filters of your datasets, all results with e.g. "myowntagtest".
-<a class="glightbox" href="../img/groupingByTagging_searchresults2.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="same topic" src="../img/groupingByTagging_searchresults2.png" /></a></p>
+<h1 id="proposals-authorization">Proposals Authorization</h1>
+<h2 id="casl-ability-actions">CASL ability actions</h2>
+<p>This is the list of the permissions methods available for Proposals and all their endpoints.</p>
+<h3 id="endpoint-authorization">Endpoint Authorization</h3>
+<ol>
+<li>ProposalCreate</li>
+<li>ProposalRead</li>
+<li>ProposalUpdate</li>
+<li>ProposalDelete</li>
+<li>ProposalAttachmentCreate</li>
+<li>ProposalAttachmentRead</li>
+<li>ProposalAttachmentUpdate</li>
+<li>ProposalAttachmentDelete</li>
+<li>ProposalDatasetRead</li>
+</ol>
+<h3 id="data-instance-authorization">(Data) Instance Authorization</h3>
+<ol>
+<li>ProposalCreateOwner</li>
+<li>ProposalCreateAny</li>
+<li>ProposalReadManyPublic</li>
+<li>ProposalReadManyAccess</li>
+<li>ProposalReadManyOwner</li>
+<li>ProposalReadOnePublic</li>
+<li>ProposalReadOneAccess</li>
+<li>ProposalReadOneOwner</li>
+<li>ProposalReadAny</li>
+<li>ProposalUpdateOwner</li>
+<li>ProposalUpdateAny</li>
+<li>ProposalDeleteOwner</li>
+<li>ProposalDeleteAny</li>
+<li>ProposalAttachmentCreateOnwer</li>
+<li>ProposalAttachmentCreateAny</li>
+<li>ProposalAttachmentReadManyPublic</li>
+<li>ProposalAttachmentReadManyAccess</li>
+<li>ProposalAttachmentReadManyOwner</li>
+<li>ProposalAttachmentReadManyAny</li>
+<li>ProposalAttachmentUpdateOwner</li>
+<li>ProposalAttachmentUpdateAny</li>
+<li>ProposalAttachmentDeleteOwner</li>
+<li>ProposalAttachmentDeleteAny</li>
+<li>ProposalDatasetReadPublic</li>
+<li>ProposalDatasetReadAccess</li>
+<li>ProposalDatasetReadOwner</li>
+<li>ProposalDatasetReadAny</li>
+</ol>
+<h4 id="priority">Priority</h4>
+<pre><code>    ProposalCreate--&gt;ProposalsCreateOwner;
+    ProposalCreateOwner--&gt;ProposalCreateAny;
+</code></pre>
+<pre><code>    ProposalRead--&gt;ProposalReadManyPublic;
+    ProposalReadManyPublic--&gt;ProposalReadManyAccess;
+    ProposalReadManyAccess--&gt;ProposalReadManyOwner;
+    ProposalReadManyOwner--&gt;ProposalReadAny;
+    ProposalRead--&gt;ProposalReadOnePublic;
+    ProposalReadOnePublic--&gt;ProposalReadOneAccess;
+    ProposalReadOneAccess--&gt;ProposalReadOneOwner;
+    ProposalReadOneOwner--&gt;ProposalReadAny;
+</code></pre>
+<pre><code>    ProposalUpdate--&gt;ProposalUpdateOwner;
+    ProposalUpdateOwner--&gt;ProposalUpdateAny;
+    ProposalDelete--&gt;ProposalDeleteOwner;
+    ProposalDeleteOwner--&gt;ProposalDeleteAny;
+</code></pre>
+<pre><code>    ProposalAttachmentCreate--&gt;ProposalAttachmentCreateOnwer;
+    ProposalAttachmentCreateOnwer--&gt;ProposalAttachmentCreateAny;
+    ProposalAttachmentRead--&gt;ProposalAttachmentReadManyPublic;
+    ProposalAttachmentReadManyPublic--&gt;ProposalAttachmentReadManyAccess;
+    ProposalAttachmentReadManyAccess--&gt;ProposalAttachmentReadManyOwner;
+    ProposalAttachmentReadManyOwner--&gt;ProposalAttachmentReadManyAny;
+    ProposalAttachmentUpdate--&gt;ProposalAttachmentUpdateOwner;
+    ProposalAttachmentUpdateOwner--&gt;ProposalAttachmentUpdateAny;
+    ProposalAttachmentDelete--&gt;ProposalAttachmentDeleteOwner;
+    ProposalAttachmentDeleteOwner--&gt;ProposalAttachmentDeleteAny;
+</code></pre>
+<pre><code>    ProposalDatasetRead--&gt;ProposalDatasetReadPublic;
+    ProposalDatasetReadPublic--&gt;ProposalDatasetReadAccess;
+    ProposalDatasetReadAccess--&gt;ProposalDatasetReadOwner;
+    ProposalDatasetReadOwner--&gt;ProposalDatasetReadAny;
+</code></pre>
+<h4 id="authorization-table">Authorization table</h4>
+<table>
+<thead>
+<tr>
+<th>HTTP method</th>
+<th>Endpoint</th>
+<th>Endpoint Authentication</th>
+<th>Anonymous</th>
+<th>Authenticated User</th>
+<th>Proposals Groups</th>
+<th>Admin Groups</th>
+<th>Delete Groups</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>POST</td>
+<td>Proposals</td>
+<td><em>ProposalCreate</em></td>
+<td><strong>no</strong></td>
+<td><strong>no</strong></td>
+<td>Any<br><em>ProposalCreateAny</em></td>
+<td>Any<br><em>ProposalCreateAny</em></td>
+<td><strong>no</strong></td>
+<td></td>
+</tr>
+<tr>
+<td>GET</td>
+<td>Proposals</td>
+<td><em>ProposalRead</em></td>
+<td>Public<br/><em>ProposalReadManyPublic</em></td>
+<td>Has Access<br/><em>ProposalReadManyAccess</em></td>
+<td>Has Access<br/><em>ProposalReadManyAccess</em></td>
+<td>Any<br/><em>ProposalReadAny</em></td>
+<td><strong>no</strong></td>
+<td></td>
+</tr>
+<tr>
+<td>GET</td>
+<td>Proposals/fullquery</td>
+<td><em>ProposalRead</em></td>
+<td>Public<br/><em>ProposalReadManyPublic</em></td>
+<td>Has Access<br/><em>ProposalReadManyAccess</em></td>
+<td>Has Access<br/><em>ProposalReadManyAccess</em></td>
+<td>Any<br/><em>ProposalReadAny</em></td>
+<td><strong>no</strong></td>
+<td></td>
+</tr>
+<tr>
+<td>GET</td>
+<td>Proposals/fullfacet</td>
+<td><em>ProposalRead</em></td>
+<td>Public<br/><em>ProposalReadManyPublic</em></td>
+<td>Has Access<br/><em>ProposalReadManyAccess</em></td>
+<td>Has Access<br/><em>ProposalReadManyAccess</em></td>
+<td>Any<br/><em>ProposalReadAny</em></td>
+<td><strong>no</strong></td>
+<td></td>
+</tr>
+<tr>
+<td>GET</td>
+<td>Proposals/<em>pid</em></td>
+<td><em>ProposalRead</em></td>
+<td>Public<br/><em>ProposalReadOnePublic</em></td>
+<td>Has Access<br/><em>ProposalReadOneAccess</em></td>
+<td>Has Access<br/><em>ProposalReadOneAccess</em></td>
+<td>Any<br/><em>ProposalReadAny</em></td>
+<td><strong>no</strong></td>
+<td></td>
+</tr>
+<tr>
+<td>GET</td>
+<td>Proposals/fullquery</td>
+<td><em>ProposalRead</em></td>
+<td>Public<br/><em>ProposalReadOnePublic</em></td>
+<td>Has Access<br/><em>ProposalReadOneAccess</em></td>
+<td>Has Access<br/><em>ProposalReadOneAccess</em></td>
+<td>Any<br/><em>ProposalReadAny</em></td>
+<td><strong>no</strong></td>
+<td></td>
+</tr>
+<tr>
+<td>PATCH</td>
+<td>Proposals/<em>pid</em></td>
+<td><em>ProposalUpdate</em></td>
+<td><strong>no</strong></td>
+<td><strong>no</strong></td>
+<td>Any<br/><em>ProposalUpdateAny</em></td>
+<td>Any<br/><em>ProposalUpdateAny</em></td>
+<td><strong>no</strong></td>
+<td></td>
+</tr>
+<tr>
+<td>DELETE</td>
+<td>Proposals/<em>pid</em></td>
+<td><em>ProposalDelete</em></td>
+<td><strong>no</strong></td>
+<td><strong>no</strong></td>
+<td><strong>no</strong></td>
+<td><strong>no</strong></td>
+<td>Any<br/><em>ProposalDeleteAny</em></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>POST</td>
+<td>Proposals/<em>pid</em>/attachements</td>
+<td><em>ProposalAttachementCreate</em></td>
+<td><strong>no</strong></td>
+<td><strong>no</strong></td>
+<td>Any<br><em>ProposalAttachmentCreateAny</em></td>
+<td>Any<br><em>ProposalAttachmentCreateAny</em></td>
+<td><strong>no</strong></td>
+<td></td>
+</tr>
+<tr>
+<td>GET</td>
+<td>Proposals/<em>pid</em>/attachements</td>
+<td><em>ProposalAttachmentRead</em></td>
+<td>Public<br/><em>ProposalAttachmentReadManyPublic</em></td>
+<td>Has Access<br/><em>ProposalAttachmentReadManyAccess</em></td>
+<td>Has Access<br/><em>ProposalAttachmentReadManyAccess</em></td>
+<td>Any<br/><em>ProposalAttachmentReadManyAny</em></td>
+<td><strong>no</strong></td>
+<td></td>
+</tr>
+<tr>
+<td>PATCH</td>
+<td>Proposals/<em>pid</em>/attachments/<em>aid</em></td>
+<td><em>ProposalAttachmentUpdate</em></td>
+<td><strong>no</strong></td>
+<td><strong>no</strong></td>
+<td>Owner<br/><em>ProposalAttachmentUpdateOwner</em></td>
+<td>Any<br/><em>ProposalAttachmentUpdateAny</em></td>
+<td><strong>no</strong></td>
+<td></td>
+</tr>
+<tr>
+<td>DELETE</td>
+<td>Proposals/<em>pid</em>/attachment/<em>aid</em></td>
+<td><em>ProposalAttachmentDelete</em></td>
+<td><strong>no</strong></td>
+<td><strong>no</strong></td>
+<td>Onwer<br/><em>ProposalAttachmentDeleteOwner</em></td>
+<td>Any<br/><em>ProposalAttachmentDeleteAny</em></td>
+<td><strong>no</strong></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>GET</td>
+<td>Proposals/<em>pid</em>/datasets</td>
+<td><em>ProposalDatasetRead</em></td>
+<td>Public<br/><em>ProposalDatasetReadOnePublic</em></td>
+<td>Has Access<br/><em>ProposalDatasetReadOneAccess</em></td>
+<td>Has Access<br/><em>ProposalDatasetReadOneAccess</em></td>
+<td>Any<br/><em>ProposalDatasetReadOneAny</em></td>
+<td><strong>no</strong></td>
+<td></td>
+</tr>
+</tbody>
+</table>
 
 
 

@@ -16,7 +16,7 @@
     
     
       
-        <title>Grouping datasets - SciCat Documentation</title>
+        <title>Jobs Authorization - SciCat Documentation</title>
       
     
     
@@ -69,7 +69,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#grouping-datasets" class="md-skip">
+        <a href="#jobs-authorization" class="md-skip">
           Skip to content
         </a>
       
@@ -105,7 +105,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Grouping datasets
+              Jobs Authorization
             
           </span>
         </div>
@@ -366,7 +366,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../" class="md-nav__link ">
+            <a href="../../datasets/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -397,7 +397,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Publishing/" class="md-nav__link">
+      <a href="../../datasets/Publishing/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -418,7 +418,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../PublishingAdvanced/" class="md-nav__link">
+      <a href="../../datasets/PublishingAdvanced/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -644,7 +644,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../authorization/" class="md-nav__link">
+      <a href="../" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -726,6 +726,98 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#casl-ability-actions" class="md-nav__link">
+    <span class="md-ellipsis">
+      CASL ability actions
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="CASL ability actions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#endpoint-authorization" class="md-nav__link">
+    <span class="md-ellipsis">
+      Endpoint Authorization
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#data-instance-authorization" class="md-nav__link">
+    <span class="md-ellipsis">
+      (Data) Instance Authorization
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="(Data) Instance Authorization">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#priority" class="md-nav__link">
+    <span class="md-ellipsis">
+      Priority
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#authorization-table" class="md-nav__link">
+    <span class="md-ellipsis">
+      Authorization table
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#job-create-authorization-table" class="md-nav__link">
+    <span class="md-ellipsis">
+      Job Create Authorization Table
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#job-update-authorization-table" class="md-nav__link">
+    <span class="md-ellipsis">
+      Job Update Authorization Table
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#job-authorization-priority" class="md-nav__link">
+    <span class="md-ellipsis">
+      Job Authorization priority
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -739,15 +831,295 @@
                   
 
 
-<h1 id="grouping-datasets">Grouping datasets</h1>
-<p>An easy way of quickly grouping some of the datasets is the option to tag each dataset individually and then search by this tag. In the General Information of the dataset one can EDIT it by adding a new KEYWORD (note Keywords are not case sensitive). Saving this keyword enables a search on them at a later point. </p>
-<p>Here one sees the EDIT button (bottom right).
-<a class="glightbox" href="../img/groupingByTagging/groupingByTagging_editbutton.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="first photo" src="../img/groupingByTagging/groupingByTagging_editbutton.png" /></a></p>
-<p>// erscheint noch nicht mittig...
-Having added your keywords you can use them to search: 
-<a class="glightbox" href="../img/groupingByTagging/groupingByTagging_searchresults.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="second one" src="../img/groupingByTagging/groupingByTagging_searchresults.png" /></a>{align=center}</p>
-<p>On the left you see the filters of your datasets, all results with e.g. "myowntagtest".
-<a class="glightbox" href="../img/groupingByTagging_searchresults2.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="same topic" src="../img/groupingByTagging_searchresults2.png" /></a></p>
+<h1 id="jobs-authorization">Jobs Authorization</h1>
+<p>Jobs subsystem relies on groups defined in the configuration file for the backend: </p>
+<table>
+<thead>
+<tr>
+<th>Configuration Group List</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ADMIN_GROUPS</td>
+<td>Users of the listed groups can create, modify and read any job. They cannot delete jobs.</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>CREATE_JOB_PRIVILEGED_GROUPS</td>
+<td>Users of the listed groups can create and read any job. They can only modify jobs that belong to their user or group depending on the configuration of given job (see Job Create Authorization Table ). They cannot delete jobs.</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>UPDATE_JOB_PRIVILEGED_GROUPS</td>
+<td>Users of the listed groups can modify and read any job. They can only create jobs that belong to their user or group depending on the configuration of given job (see Job Update Authorization Table ). They cannot delete jobs.</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>DELETE_JOB_GROUPS</td>
+<td>Users whose group is listed here are allowed to delete any job</td>
+</tr>
+</tbody>
+</table>
+<h2 id="casl-ability-actions">CASL ability actions</h2>
+<p>This is the list of the permission methods available for Jobs and all their endpoints.<br />
+The authorization for jobs is consistently different from all the other endpoints.</p>
+<h3 id="endpoint-authorization">Endpoint Authorization</h3>
+<ol>
+<li>JobCreate</li>
+<li>JobRead</li>
+<li>JobUpdate</li>
+<li>JobDelete</li>
+</ol>
+<h3 id="data-instance-authorization">(Data) Instance Authorization</h3>
+<ol>
+<li>JobCreateConfiguration (The job's create section of the configuration dictates if the user can create the job)</li>
+<li>JobCreateOwner (Users with this privilege can create jobs for others)</li>
+<li>JobCreateAny (Users with this privilege can create jobs for any of the users that are defined in the create section of the job configuration)</li>
+<li>JobReadAccess</li>
+<li>JobReadAny</li>
+<li>JobUpdateConfiguration (The job's update section in configuration dictates if the user can update the job)</li>
+<li>JobUpdateOwner (Users with this privilege can update jobs belonging to others)</li>
+<li>JobUpdateAny (Users with this privilege can update any job)</li>
+</ol>
+<h4 id="priority">Priority</h4>
+<pre><code class="language-mermaid">    JobCreate--&gt;JobCreateConfiguration;
+    JobCreateConfiguration--&gt;JobCreateAny;
+    JobRead--&gt;JobReadAccess;
+    JobReadAccess--&gt;JobReadAny;
+    JobUpdate--&gt;JobUpdateConfiguration;
+    JobUpdateConfiguration--&gt;JobUpdateAny;
+    JobDelete;
+</code></pre>
+<h4 id="authorization-table">Authorization table</h4>
+<table>
+<thead>
+<tr>
+<th>HTTP method</th>
+<th>Endpoint</th>
+<th>Endpoint Authentication</th>
+<th>Anonymous</th>
+<th>Authenticated</th>
+<th>Create Jobs Groups</th>
+<th>Update Jobs Groups</th>
+<th>Admin Groups</th>
+<th>Delete Groups</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>POST</td>
+<td>Jobs</td>
+<td><em>JobCreate</em></td>
+<td><em>JobCreateConfiguration</em></td>
+<td><em>JobCreateConfiguration</em></td>
+<td>Any<br><em>JobsCreateOwner</em></td>
+<td><strong>no</strong></td>
+<td>Any<br><em>JobsCreateAny</em></td>
+<td><strong>no</strong></td>
+</tr>
+<tr>
+<td>GET</td>
+<td>Jobs</td>
+<td><em>JobReadMany</em></td>
+<td><strong>no</strong></td>
+<td>Has Access<br><em>JobReadAccess</em></td>
+<td>Has Access<br><em>JobReadAccess</em></td>
+<td><strong>no</strong></td>
+<td>Any<br><em>JobReadAny</em></td>
+<td><strong>no</strong></td>
+</tr>
+<tr>
+<td>GET</td>
+<td>Jobs/<em>jid</em></td>
+<td><em>JobReadOne</em></td>
+<td><strong>no</strong></td>
+<td>Has Access<br><em>JobReadAccess</em></td>
+<td>Has Access<br><em>JobReadAccess</em></td>
+<td><strong>no</strong></td>
+<td>Any<br><em>JobReadAny</em></td>
+<td><strong>no</strong></td>
+</tr>
+<tr>
+<td>PATCH</td>
+<td>Jobs/<em>jid</em></td>
+<td><em>JobUpdate</em></td>
+<td><strong>no</strong></td>
+<td><em>JobUpdateConfiguration</em></td>
+<td><strong>no</strong></td>
+<td>Owner<br><em>JobUpdateOwner</em></td>
+<td>Any<br><em>JobUpdateAny</em></td>
+<td><strong>no</strong></td>
+</tr>
+<tr>
+<td>DELETE</td>
+<td>Jobs/<em>jid</em></td>
+<td><em>JobDelete</em></td>
+<td><strong>no</strong></td>
+<td><strong>no</strong></td>
+<td><strong>no</strong></td>
+<td><strong>no</strong></td>
+<td><strong>no</strong></td>
+<td><strong>no</strong></td>
+</tr>
+</tbody>
+</table>
+<h4 id="job-create-authorization-table">Job Create Authorization Table</h4>
+<p>The <em>JobCreateConfiguration</em> authorization permissions are configured directly in the <strong><em>create</em></strong> section of the job configuration.<br />
+Any positive match will result in the user acquiring <em>JobCreate</em> endpoint authorization, which applies to the jobs endpoint <code>POST:Jobs</code> </p>
+<table>
+<thead>
+<tr>
+<th>Job Create Authorization</th>
+<th>Endpoint Authentication Translation</th>
+<th>Endpoint Authentication Description</th>
+<th>Instance Authentication Translation</th>
+<th>Instance Authentication Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><em>#all</em></td>
+<td><em>#all</em></td>
+<td>any user can access this endpoint, both anonymous and authenticated</td>
+<td><em>#all</em></td>
+<td>Any user can create this instance of the job</td>
+</tr>
+<tr>
+<td><em>#datasetPublic</em></td>
+<td><em>#all</em></td>
+<td>any user can access this endpoint, both anonymous and authenticated</td>
+<td><em>#datasetPublic</em></td>
+<td>the job instance will be created only if all the datasets listed are <strong>public</strong></td>
+</tr>
+<tr>
+<td><em>#authenticated</em></td>
+<td><em>#user</em></td>
+<td>any valid users can access the endpoint, independently from their groups</td>
+<td><em>#user</em></td>
+<td>any valid users can create this instance of the job</td>
+</tr>
+<tr>
+<td><em>#datasetAccess</em></td>
+<td><em>#all</em></td>
+<td>any user can access this endpoint, both anonymous and authenticated</td>
+<td><em>#datasetAccess</em></td>
+<td>the job instance will be created only if the specified user group or otherwise any of the user's groups has access to all the datasets listed</td>
+</tr>
+<tr>
+<td><em>#datasetOwner</em></td>
+<td><em>#all</em></td>
+<td>any user can access this endpoint, both anonymous and authenticated</td>
+<td><em>#datasetOwner</em></td>
+<td>the job instance will be created only if the specified user group or otherwise any of the user's groups is part of all the datasets' owner group</td>
+</tr>
+<tr>
+<td><strong><em>@GROUP</em></strong></td>
+<td><em>#all</em></td>
+<td>any user can access this endpoint, both anonymous and authenticated</td>
+<td><strong><em>GROUP</em></strong></td>
+<td>the job instance will be created only if the user belongs to the group specified</td>
+</tr>
+<tr>
+<td><strong><em>USER</em></strong></td>
+<td><em>#all</em></td>
+<td>any user can access this endpoint, both anonymous and authenticated</td>
+<td><strong><em>USER</em></strong></td>
+<td>the job instance can be created only by the user indicated</td>
+</tr>
+<tr>
+<td>#jobAdmin</td>
+<td>#all</td>
+<td>any user can access this endpoint, both anonymous and authenticated</td>
+<td><em>#jobAdmin</em></td>
+<td>the job instance can be created by users of ADMIN_GROUPS and CREATE_JOB_PRIVILEGED only</td>
+</tr>
+<tr>
+<td><strong>IMPORTANT</strong>: use option <em>#all</em> carefully, as it allows anybody to create a new job. It is mostly used for debugging and testing.</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h4 id="job-update-authorization-table">Job Update Authorization Table</h4>
+<p>The <em>JobUpdateConfiguration</em> authorization permissions are configured directly in the <strong><em>update</em></strong> section of the job configuration.<br />
+Any positive match will result in the user acquiring  <em>JobUpdate</em> endpoint authorization, which applies to the jobs endpoint <code>PATCH:Jobs/id</code> </p>
+<table>
+<thead>
+<tr>
+<th>Job Update Authorization</th>
+<th>Endpoint Authentication Translation</th>
+<th>Endpoint Authentication Description</th>
+<th>Instance Authentication Translation</th>
+<th>Instance Authentication Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><em>#all</em></td>
+<td><em>#all</em></td>
+<td>any user can access this endpoint, both anonymous and authenticated</td>
+<td><em>#all</em></td>
+<td>Any user can update this job instance</td>
+</tr>
+<tr>
+<td><em>#jobOwnerUser</em></td>
+<td><em>#user</em></td>
+<td>any user can access this endpoint, both anonymous and authenticated</td>
+<td><em>#jobOwnerUser</em></td>
+<td>only the user that is listed in field <em>ownerUser</em> can perform the update</td>
+</tr>
+<tr>
+<td><em>#jobOwnerGroup</em></td>
+<td><em>#user</em></td>
+<td>any user can access this endpoint, both anonymous and authenticated</td>
+<td><em>#jobOwnerGroup</em></td>
+<td>any user that belongs to the group listed in field <em>ownerGroup</em> can perform the update</td>
+</tr>
+<tr>
+<td><strong><em>@GROUP</em></strong></td>
+<td><strong><em>GROUP</em></strong></td>
+<td>any user can access this endpoint, both anonymous and authenticated</td>
+<td><strong><em>GROUP</em></strong></td>
+<td>the job can be updated only by users who belong to the group specified</td>
+</tr>
+<tr>
+<td><strong><em>USER</em></strong></td>
+<td><strong><em>USER</em></strong></td>
+<td>any user can access this endpoint, both anonymous and authenticated</td>
+<td><strong><em>USER</em></strong></td>
+<td>the job can be updated only by the user indicated</td>
+</tr>
+<tr>
+<td>#jobAdmin</td>
+<td>#all</td>
+<td>any user can access this endpoint, both anonymous and authenticated</td>
+<td><em>#jobAdmin</em></td>
+<td>the job instance can be created by users of ADMIN_GROUPS and UPDATE_JOB_PRIVILEGED only</td>
+</tr>
+</tbody>
+</table>
+<p><strong>IMPORTANT</strong>: use option <em>#all</em> carefully, as it allows anybody to update the job. It is mostly used for debugging and testing.</p>
+<h4 id="job-authorization-priority">Job Authorization priority</h4>
+<p>The endpoint authorization is the most permissive authorization across all the jobs defined.
+The priority between job create and update authorization is as follows:</p>
+<pre><code class="language-mermaid">    all--&gt;user;
+    user--&gt;GROUP;
+    GROUP--&gt;USER;
+    USER--&gt;ADMIN_GROUPS;
+</code></pre>
 
 
 

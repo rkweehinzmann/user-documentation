@@ -16,7 +16,7 @@
     
     
       
-        <title>Grouping datasets - SciCat Documentation</title>
+        <title>Instruments Authorization - SciCat Documentation</title>
       
     
     
@@ -69,7 +69,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#grouping-datasets" class="md-skip">
+        <a href="#instruments-authorization" class="md-skip">
           Skip to content
         </a>
       
@@ -105,7 +105,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Grouping datasets
+              Instruments Authorization
             
           </span>
         </div>
@@ -366,7 +366,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../" class="md-nav__link ">
+            <a href="../../datasets/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -397,7 +397,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Publishing/" class="md-nav__link">
+      <a href="../../datasets/Publishing/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -418,7 +418,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../PublishingAdvanced/" class="md-nav__link">
+      <a href="../../datasets/PublishingAdvanced/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -644,7 +644,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../authorization/" class="md-nav__link">
+      <a href="../" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -726,6 +726,62 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#casl-ability-actions" class="md-nav__link">
+    <span class="md-ellipsis">
+      CASL ability actions
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="CASL ability actions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#endpoint-authorization" class="md-nav__link">
+    <span class="md-ellipsis">
+      Endpoint Authorization
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Endpoint Authorization">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#priority" class="md-nav__link">
+    <span class="md-ellipsis">
+      Priority
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#authorization-table" class="md-nav__link">
+    <span class="md-ellipsis">
+      Authorization table
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -739,15 +795,89 @@
                   
 
 
-<h1 id="grouping-datasets">Grouping datasets</h1>
-<p>An easy way of quickly grouping some of the datasets is the option to tag each dataset individually and then search by this tag. In the General Information of the dataset one can EDIT it by adding a new KEYWORD (note Keywords are not case sensitive). Saving this keyword enables a search on them at a later point. </p>
-<p>Here one sees the EDIT button (bottom right).
-<a class="glightbox" href="../img/groupingByTagging/groupingByTagging_editbutton.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="first photo" src="../img/groupingByTagging/groupingByTagging_editbutton.png" /></a></p>
-<p>// erscheint noch nicht mittig...
-Having added your keywords you can use them to search: 
-<a class="glightbox" href="../img/groupingByTagging/groupingByTagging_searchresults.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="second one" src="../img/groupingByTagging/groupingByTagging_searchresults.png" /></a>{align=center}</p>
-<p>On the left you see the filters of your datasets, all results with e.g. "myowntagtest".
-<a class="glightbox" href="../img/groupingByTagging_searchresults2.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="same topic" src="../img/groupingByTagging_searchresults2.png" /></a></p>
+<h1 id="instruments-authorization">Instruments Authorization</h1>
+<h2 id="casl-ability-actions">CASL ability actions</h2>
+<p>This is the list of the permissions methods available for Instrument and all their endpoints</p>
+<h3 id="endpoint-authorization">Endpoint Authorization</h3>
+<ol>
+<li>InstrumentCreate</li>
+<li>InstrumentRead</li>
+<li>InstrumentUpdate</li>
+<li>InstrumentDelete</li>
+</ol>
+<h4 id="priority">Priority</h4>
+<pre><code>    InstrumentCreate;
+    InstrumentRead;
+    InstrumentUpdate;
+    InstrumentDelete;
+</code></pre>
+<h4 id="authorization-table">Authorization table</h4>
+<table>
+<thead>
+<tr>
+<th>HTTP method</th>
+<th>Endpoint</th>
+<th>Endpoint Authentication</th>
+<th>Anonymous</th>
+<th>Authenticated User</th>
+<th>Admin Groups</th>
+<th>Delete Groups</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>POST</td>
+<td>instruments</td>
+<td><em>InstrumentCreate</em></td>
+<td><strong>no</strong></td>
+<td><strong>no</strong></td>
+<td><em>InstrumentCreate</em></td>
+<td><strong>no</strong></td>
+<td>-</td>
+</tr>
+<tr>
+<td>GET</td>
+<td>instruments</td>
+<td><em>InstrumentRead</em></td>
+<td><em>InstrumentRead</em></td>
+<td><em>InstrumentRead</em></td>
+<td><em>InstrumentRead</em></td>
+<td><strong>no</strong></td>
+<td>-</td>
+</tr>
+<tr>
+<td>GET</td>
+<td>instruments/<em>id</em></td>
+<td><em>InstrumentRead</em></td>
+<td><em>InstrumentRead</em></td>
+<td><em>InstrumentRead</em></td>
+<td><em>InstrumentRead</em></td>
+<td><strong>no</strong></td>
+<td>-</td>
+</tr>
+<tr>
+<td>PATCH</td>
+<td>instruments/<em>id</em></td>
+<td><em>InstrumentUpdate</em></td>
+<td><strong>no</strong></td>
+<td><strong>no</strong></td>
+<td><em>InstrumentUpdate</em></td>
+<td><strong>no</strong></td>
+<td>-</td>
+</tr>
+<tr>
+<td>DELETE</td>
+<td>instruments/<em>id</em></td>
+<td><em>InstrumentDelete</em></td>
+<td><strong>no</strong></td>
+<td><strong>no</strong></td>
+<td><strong>no</strong></td>
+<td><em>InstrumentDelete</em></td>
+<td>-</td>
+</tr>
+</tbody>
+</table>
 
 
 
