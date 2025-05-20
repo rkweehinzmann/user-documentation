@@ -25,6 +25,7 @@ nav:
     - sites/DESY/index.md
     - swagger/index.md
     - backendconfig/index.md
+    - authorization/index.md
     - backendconfig/dois.md
     
 
