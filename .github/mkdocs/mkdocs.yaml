@@ -23,7 +23,6 @@ nav:
   
   - SciCat Operator Guide: 
     - operator-manual/index.md
-    - sites/DESY/index.md
     - swagger/index.md
     - backendconfig/index.md
     - authorization/index.md
