@@ -2,7 +2,7 @@
 
 The previously described options to [publish datasets](Publishing.md) in SciCat - the process of registration of a selection of datasets - is here outlined in a more technical way.
 
-## Implementation workflow: The purpose.
+## Implementation workflow target
 
 This diagram shows the essential steps in the workflow to be implemented. Please note, that SciCat datasets are *always* only *meta datasets*, SciCat has no direct to the storage system there is no default coupling to such systems.
 
