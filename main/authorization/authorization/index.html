@@ -712,18 +712,9 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#aka-permissions" class="md-nav__link">
+  <a href="#permission-settings-or-who-can-do-what" class="md-nav__link">
     <span class="md-ellipsis">
-      aka permissions
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#aka-who-can-do-what" class="md-nav__link">
-    <span class="md-ellipsis">
-      aka who can do what
+      Permission settings or who can do what?
     </span>
   </a>
   
@@ -763,14 +754,13 @@
 
 
 <h1 id="authorization">Authorization</h1>
-<h3 id="aka-permissions">aka permissions</h3>
-<h3 id="aka-who-can-do-what">aka who can do what</h3>
+<h3 id="permission-settings-or-who-can-do-what">Permission settings or who can do what?</h3>
 <p>SciCat backend v4.x rely on <a href="https://casl.js.or">CASL</a> to manage permissions.<br />
 The default vanilla installation of the backend is configured with the permissions described and linked below. <br />
 To avoid confusion and clarify the terminology used below, the term <em>User</em> indicates a normal authenticated user with no elevated permissions, while <em>Admin</em> indicates any user who belongs to a group that it is listed in the environmental variable ADMIN_GROUPS.<br />
 By default ADMIN_GROUPS is set to groups: admin, ingestor, archivemanager.
 Special case is for deleting items in SciCat. Users with groups listed in DELETE_GROUPS, are allowed to perform delete. Default value is archivemanager.</p>
-<p><strong><em>IMPORTANT</em></strong> In V3.x, permissions were managed through roles. In V4.x, roles are not used, and they are converted to user group.</p>
+<p><strong><em>IMPORTANT</em></strong> In v3.x, permissions were managed through roles. In v4.x, roles are not used, and they are converted to user groups.</p>
 <p>In the vanilla installation, the default functional accounts are assigned to groups as follow:
 - user: admin<br />
   group: admin  </p>
