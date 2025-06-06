@@ -1,6 +1,5 @@
 # Authorization
-### aka permissions 
-### aka who can do what
+### Permission settings or who can do what?
 
 SciCat backend v4.x rely on [CASL](https://casl.js.or) to manage permissions.  
 The default vanilla installation of the backend is configured with the permissions described and linked below.   
@@ -8,7 +7,7 @@ To avoid confusion and clarify the terminology used below, the term _User_ indic
 By default ADMIN_GROUPS is set to groups: admin, ingestor, archivemanager.
 Special case is for deleting items in SciCat. Users with groups listed in DELETE_GROUPS, are allowed to perform delete. Default value is archivemanager.
 
-___IMPORTANT___ In V3.x, permissions were managed through roles. In V4.x, roles are not used, and they are converted to user group.
+___IMPORTANT___ In v3.x, permissions were managed through roles. In v4.x, roles are not used, and they are converted to user groups.
 
 In the vanilla installation, the default functional accounts are assigned to groups as follow:
 - user: admin  
