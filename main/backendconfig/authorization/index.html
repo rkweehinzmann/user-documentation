@@ -16,7 +16,7 @@
     
     
       
-        <title>Users Authorization - SciCat Documentation</title>
+        <title>Authorization Model - SciCat Documentation</title>
       
     
     
@@ -69,7 +69,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#users-authorization" class="md-skip">
+        <a href="#authorization-model" class="md-skip">
           Skip to content
         </a>
       
@@ -105,7 +105,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Users Authorization
+              Authorization Model
             
           </span>
         </div>
@@ -468,7 +468,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../samples/" class="md-nav__link">
+      <a href="../../samples.md" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -489,7 +489,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../instruments/" class="md-nav__link">
+      <a href="../../instruments.md" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -602,7 +602,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../backendconfig/" class="md-nav__link">
+      <a href="../" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -623,11 +623,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../" class="md-nav__link">
+      <a href="../../authorization/index.md" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Authorization Model
+    None
   </span>
   
 
@@ -644,7 +644,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../backendconfig/dois/" class="md-nav__link">
+      <a href="../dois/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -712,53 +712,65 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#casl-ability-actions" class="md-nav__link">
+  <a href="#general" class="md-nav__link">
     <span class="md-ellipsis">
-      CASL ability actions
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="CASL ability actions">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#endpoint-authorization" class="md-nav__link">
-    <span class="md-ellipsis">
-      Endpoint authorization
+      General
     </span>
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#instance-authorization" class="md-nav__link">
+      
+        <li class="md-nav__item">
+  <a href="#authorization-datasets" class="md-nav__link">
     <span class="md-ellipsis">
-      Instance authorization
+      Authorization Datasets
     </span>
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#priority" class="md-nav__link">
+      
+        <li class="md-nav__item">
+  <a href="#authorization-origdatablocks" class="md-nav__link">
     <span class="md-ellipsis">
-      Priority
+      Authorization OrigDatablocks
     </span>
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#authorization-table" class="md-nav__link">
+      
+        <li class="md-nav__item">
+  <a href="#authorization-jobs" class="md-nav__link">
     <span class="md-ellipsis">
-      Authorization table
+      Authorization Jobs
     </span>
   </a>
   
 </li>
-        
-      </ul>
-    </nav>
+      
+        <li class="md-nav__item">
+  <a href="#authorization-users" class="md-nav__link">
+    <span class="md-ellipsis">
+      Authorization Users
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#authorization-proposals" class="md-nav__link">
+    <span class="md-ellipsis">
+      Authorization Proposals
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#authorization-intruments" class="md-nav__link">
+    <span class="md-ellipsis">
+      Authorization Intruments
+    </span>
+  </a>
   
 </li>
       
@@ -777,195 +789,28 @@
                   
 
 
-<h1 id="users-authorization">Users Authorization</h1>
-<h2 id="casl-ability-actions">CASL ability actions</h2>
-<p>This is the list of the permissions methods available for datasets and all their endpoints.</p>
-<h5 id="endpoint-authorization">Endpoint authorization</h5>
-<ol>
-<li>UserLogin</li>
-<li>UserRead</li>
-<li>UserCreate</li>
-<li>UserUpdate</li>
-<li>UserPassword</li>
-<li>UserDelete</li>
-</ol>
-<h5 id="instance-authorization">Instance authorization</h5>
-<ol>
-<li>UserReadOwn</li>
-<li>UserReadAny</li>
-<li>UserCreateOwn</li>
-<li>UserCreateAny</li>
-<li>UserUpdateOwn</li>
-<li>UserUpdateAny</li>
-<li>UserPasswordOwn</li>
-<li>UserPasswordAny</li>
-<li>UserDeleteAny</li>
-</ol>
-<h4 id="priority">Priority</h4>
-<pre><code>    UserLogin(E)
-    UserCreate(E)--&gt;UserCreateOwn(I)--&gt;UserCreateAny(I);
-    UserRead(E)--&gt;UserReadOwn(I)--&gt;UserReadAny(I);
-    UserUpdate(E)--&gt;UserUpdateOwner(I)--&gt;UserUpdateAny(I);
-    UserPassword(E)--&gt;UserPasswordOwner(I)--&gt;UserPasswordAny(I);
-    UserDelete(E)--&gt;UserDeleteOwn(I)--&gt;UserDeleteAny(I);
-</code></pre>
-<h4 id="authorization-table">Authorization table</h4>
-<table>
-<thead>
-<tr>
-<th>HTTP method</th>
-<th>Endpoint</th>
-<th>Endpoint Authorization</th>
-<th>Anonymous</th>
-<th>Authenticated User</th>
-<th>User Privileged Groups</th>
-<th>Admin Groups</th>
-<th>User Delete Groups</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>POST</td>
-<td>Users/jwt</td>
-<td><em>UserRead</em></td>
-<td><strong>no</strong></td>
-<td>Own<br/><em>UserReadOwn</em></td>
-<td><strong>no</strong></td>
-<td><strong>no</strong></td>
-<td><strong>no</strong></td>
-</tr>
-<tr>
-<td>POST</td>
-<td>Users/login</td>
-<td><em>UserLogin</em></td>
-<td><strong>no</strong></td>
-<td><strong>no</strong></td>
-<td><strong>no</strong></td>
-<td><strong>no</strong></td>
-<td><strong>no</strong></td>
-</tr>
-<tr>
-<td>GET</td>
-<td>Users/<em>id</em></td>
-<td><em>UserRead</em></td>
-<td><strong>no</strong></td>
-<td>Own<br/><em>UserReadOwn</em></td>
-<td>Any<br/><em>UserReadAny</em></td>
-<td>Any<br/><em>UserReadAny</em></td>
-<td><strong>no</strong></td>
-</tr>
-<tr>
-<td>GET</td>
-<td>Users/<em>id</em>/userIdentity</td>
-<td><em>UserRead</em></td>
-<td><strong>no</strong></td>
-<td>Own<br/><em>UserReadOwn</em></td>
-<td>Any<br/><em>UserReadAny</em></td>
-<td>Any<br/><em>UserReadAny</em></td>
-<td><strong>no</strong></td>
-</tr>
-<tr>
-<td>POST</td>
-<td>Users/<em>id</em>/settings</td>
-<td><em>UserCreate</em></td>
-<td><strong>no</strong></td>
-<td>Own<br/><em>UserCreateOwn</em></td>
-<td>Any<br/><em>UserCreateAny</em></td>
-<td>Any<br/><em>UserCreateAny</em></td>
-<td><strong>no</strong></td>
-</tr>
-<tr>
-<td>GET</td>
-<td>Users/<em>id</em>/settings</td>
-<td><em>UserUpdate</em></td>
-<td><strong>no</strong></td>
-<td>Own<br/><em>UserReadOwn</em></td>
-<td>Any<br/><em>UserReadAny</em></td>
-<td>Any<br/> <em>UserReadAny</em></td>
-<td><strong>no</strong></td>
-</tr>
-<tr>
-<td>PUT</td>
-<td>Users/<em>id</em>/settings</td>
-<td><em>UserUpdate</em></td>
-<td><strong>no</strong></td>
-<td>Own<br/><em>UserUpdateOwn</em></td>
-<td>Any<br/><em>UserUpdateAny</em></td>
-<td>Any<br/><em>UserUpdateAny</em></td>
-<td><strong>no</strong></td>
-</tr>
-<tr>
-<td>PATCH</td>
-<td>Users/<em>id</em>/settings</td>
-<td><em>UserUpdate</em></td>
-<td><strong>no</strong></td>
-<td>Own<br/><em>UserUpdateOwn</em></td>
-<td>Any<br/><em>UserUpdateAny</em></td>
-<td>Any<br/><em>UserUpdateAny</em></td>
-<td><strong>no</strong></td>
-</tr>
-<tr>
-<td>PATCH</td>
-<td>Users/<em>id</em>/password</td>
-<td><em>UserPassword</em></td>
-<td><strong>no</strong></td>
-<td>Own<br/><em>UserPasswordOwn</em></td>
-<td>Any<br/><em>UserPasswordAny</em></td>
-<td>Any<br/><em>UserPasswordAny</em></td>
-<td><strong>no</strong></td>
-</tr>
-<tr>
-<td>DELETE</td>
-<td>Users/<em>id</em></td>
-<td><em>UserDelete</em></td>
-<td><strong>no</strong></td>
-<td><strong>no</strong></td>
-<td><strong>no</strong></td>
-<td><strong>no</strong></td>
-<td>Any<br/><em>UserDeleteAny</em></td>
-</tr>
-<tr>
-<td>DELETE</td>
-<td>Users/<em>id</em>/settings</td>
-<td><em>UserDelete</em></td>
-<td><strong>no</strong></td>
-<td><strong>no</strong></td>
-<td><strong>no</strong></td>
-<td><strong>no</strong></td>
-<td>Any<br/><em>UserDeleteAny</em></td>
-</tr>
-<tr>
-<td>GET</td>
-<td>Users/<em>id</em>/authorization/dataset/create</td>
-<td><em>UserRead</em></td>
-<td><strong>no</strong></td>
-<td>Own<br/><em>UserReadOwn</em></td>
-<td>Own<br/><em>UserReadOwn</em></td>
-<td>Any<br/><em>UserReadAny</em></td>
-<td><strong>no</strong></td>
-</tr>
-<tr>
-<td>GET</td>
-<td>Users/logout</td>
-<td><em>UserLogout</em></td>
-<td><strong>no</strong></td>
-<td>Own<br/><em>UserLogoutOwn</em></td>
-<td><strong>no</strong></td>
-<td><strong>no</strong></td>
-<td><strong>no</strong></td>
-</tr>
-<tr>
-<td>GET</td>
-<td>useridentities/findOne</td>
-<td><em>UserRead</em></td>
-<td><strong>no</strong></td>
-<td>Own<br/><em>UserReadOwn</em></td>
-<td>Any<br/><em>UserReadAny</em></td>
-<td>Any<br/><em>UserReadAny</em></td>
-<td><strong>no</strong></td>
-</tr>
-</tbody>
-</table>
+<h1 id="authorization-model">Authorization Model</h1>
+<h2 id="general">General</h2>
+<p>How authorization is handled in SciCat, see <a href="authorization/">general</a> description.</p>
+<p>Developers information, see <a href="https://github.com/SciCatProject/documentation/blob/master/Development/v4.x/backend/authorization/authorization.md">github</a>.</p>
+<h2 id="authorization-datasets">Authorization Datasets</h2>
+<p>Summary of how authorization for Datasets are handeld <a href="authorization_datasets/">better visible</a> displayed.</p>
+<p>Developers information, see <a href="https://github.com/SciCatProject/documentation/blob/master/Development/v4.x/backend/authorization/authorization_datasets.md">github</a>.</p>
+<h2 id="authorization-origdatablocks">Authorization OrigDatablocks</h2>
+<p>Summary of how authorization for OrigDatablocks are handeld <a href="authorization_origdatablocks/">better visible</a> displayed.</p>
+<p>Developers information, see <a href="https://github.com/SciCatProject/documentation/blob/master/Development/v4.x/backend/authorization/authorization_origdatablocks.md">github</a>.</p>
+<h2 id="authorization-jobs">Authorization Jobs</h2>
+<p>Summary of how authorization for OrigDatablocks are handeld <a href="authorization_jobs/">better visible</a> displayed.</p>
+<p>Developers information, see <a href="https://github.com/SciCatProject/documentation/blob/master/Development/v4.x/backend/authorization/authorization_jobs.md">github</a>.</p>
+<h2 id="authorization-users">Authorization Users</h2>
+<p>Summary of how authorization for Users are handeld <a href="authorization_users/">better visible</a> displayed.</p>
+<p>Developers information, see <a href="https://github.com/SciCatProject/documentation/blob/master/Development/v4.x/backend/authorization/authorization_users.md">github</a>.</p>
+<h2 id="authorization-proposals">Authorization Proposals</h2>
+<p>Summary of how authorization for proposals are handeld <a href="authorization_proposals/">better visible</a> displayed.</p>
+<p>Developers information, see <a href="https://github.com/SciCatProject/documentation/blob/master/Development/v4.x/backend/authorization/authorization_proposals.md">github</a>.</p>
+<h2 id="authorization-intruments">Authorization Intruments</h2>
+<p>Summary of how authorization for instruments are handeld <a href="authorization_instruments/">better visible</a> displayed.</p>
+<p>Developers information, see <a href="https://github.com/SciCatProject/documentation/blob/master/Development/v4.x/backend/authorization/authorization_instruments.md">github</a>.</p>
 
 
 
