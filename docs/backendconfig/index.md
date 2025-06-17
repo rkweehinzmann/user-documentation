@@ -503,7 +503,7 @@ PROPOSAL_TYPES_FILE="proposalTypes.json"
 In [scicatlive](https://www.scicatproject.org/scicatlive/latest/services/backend/) you find documentation on how to integrate your SciCat system with services providing identities, (e.g. KeyCloak) and authentication (OpenLDAP).
 
 ### How to configure DOI minting 
-In SciCat one can publish selected datasets that triggers a DOI minting process. Find [here](../datasets/Publishing.md) a short introduction and instructions how to set up such a service. SciCat also has the option to make datasets publicly via APIs available, to get a better idea of that follow [this Link](dois.md)
+In SciCat one can publish selected datasets that triggers a DOI minting process. Find [here](../datasets/Publishing.md) a short introduction on SciCats Published Data class. Instructions how to configure this DOI minting service and in addition make datasets publicly via APIs follow [this Link.](dois.md)
 
 
 ## More advanced options

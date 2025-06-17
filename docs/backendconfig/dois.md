@@ -1,7 +1,7 @@
 # DOI minting in SciCat - How to set up publication of datasets
 
 ## Introduction
-User introduction can be found [here](../doisIntro.md).
+User introduction can be found [here](../datasets/Publishing.md).
 
 ## Variables to configure
 
