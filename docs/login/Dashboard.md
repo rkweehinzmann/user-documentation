@@ -1,6 +1,6 @@
-## Dashboard
+# Dashboard
 
-The dashboard is the first page that you see after being logged in. It contains an overview of all datasets that you have access to.
+The dashboard is the first page that you see when you are logged in. When set to datasets as main access point, it will show an overview of all datasets that you have access to. <!--Soon it will be possible to obtain this overview page for the other objects such as proposals, samples, published data and instruments. This can be configured by your site-admin.-->
 
 ![dashboard](img/dashboard.png)
 
@@ -10,23 +10,27 @@ You can always navigate to other parts of the application, simply by clicking on
 
 ![Overall Menu](img/menu_dropdown.png)
 
-## Filtering Datasets
+## Finding Datasets
+SciCat provides several possibilities for finding the right datasets. One can use the tob search bar, one can narrow down your selection by applying filters and/or conditions and the user can search on his scientific metadata as well.
 
-You can currently filter across 5 different fields:
-1. Location (= field creationLocation)
-2. Groups (= field ownerGroup)
-3. Type (=field type - e.g. raw data or derived data )
-4. Keywords  =field keywords, the tags added to the datasets)
-5. Start - End Date ( = field createdAt, show datasets captured between the dates that you have set)
+### Using Filters and Conditions
+
+On the left one can apply most common filters. Currently there are
+
+1. Location: location of creation of the dataset.
+2. PID: Identifier of the dataset.
+3. Groups: who owns the dataset.
+4. Type: data type - e.g. raw data or derived data.
+5. Keywords: tags added to the dataset.
+6. Start - End Date: show datasets captured between the dates that you have set.
+7. Text: which searches across dataset name and description.
 
 The text fields provide an auto completion, which becomes visible as you type. 
 
-One click on the date calendar selects the start date and a second selects the end date. Make sure you select 2 dates.
+You can click on the date calendar to select the start date and a second to select end date. Make sure you select 2 dates.
 
-In the following screenshot the datasets are filterd by the condition ownerGroup="p17301"
-
-![filters](img/dashboard_PSI_pgroup_public.png)
-
+One can configure the selection of filters and add specific _conditions_. An example shows two additional conditions added:
+![filters](./img/dashboard_filters.png)
 
 ## Searching
 
