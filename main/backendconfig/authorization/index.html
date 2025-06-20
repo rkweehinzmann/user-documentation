@@ -9,6 +9,10 @@
       
       
       
+        <link rel="prev" href="../">
+      
+      
+        <link rel="next" href="../dois/">
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
@@ -468,7 +472,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../samples.md" class="md-nav__link">
+      <a href="../../samples/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -535,17 +539,19 @@
       
   
   
+    
   
   
+  
     
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
         
           
           
@@ -567,7 +573,7 @@
             
           </div>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
             SciCat Operator Guide
@@ -620,18 +626,121 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../../authorization/index.md" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Authorization Model
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
-    None
+    Authorization Model
   </span>
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#general" class="md-nav__link">
+    <span class="md-ellipsis">
+      General
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#authorization-datasets" class="md-nav__link">
+    <span class="md-ellipsis">
+      Authorization Datasets
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#authorization-origdatablocks" class="md-nav__link">
+    <span class="md-ellipsis">
+      Authorization OrigDatablocks
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#authorization-jobs" class="md-nav__link">
+    <span class="md-ellipsis">
+      Authorization Jobs
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#authorization-users" class="md-nav__link">
+    <span class="md-ellipsis">
+      Authorization Users
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#authorization-proposals" class="md-nav__link">
+    <span class="md-ellipsis">
+      Authorization Proposals
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#authorization-intruments" class="md-nav__link">
+    <span class="md-ellipsis">
+      Authorization Intruments
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -791,7 +900,7 @@
 
 <h1 id="authorization-model">Authorization Model</h1>
 <h2 id="general">General</h2>
-<p>How authorization is handled in SciCat, see <a href="authorization/">general</a> description.</p>
+<p>For how authorization is handled in SciCat, see <a href="authorization/">general</a> description.</p>
 <p>Developers information, see <a href="https://github.com/SciCatProject/documentation/blob/master/Development/v4.x/backend/authorization/authorization.md">github</a>.</p>
 <h2 id="authorization-datasets">Authorization Datasets</h2>
 <p>Summary of how authorization for Datasets are handeld <a href="authorization_datasets/">better visible</a> displayed.</p>
