@@ -1,7 +1,7 @@
 # Authorization
 ### Permission settings or who can do what?
 
-SciCat backend v4.x rely on [CASL](https://casl.js.or) to manage permissions.  
+SciCat backend v4.x relies on [CASL](https://casl.js.or) to manage permissions.  
 The default vanilla installation of the backend is configured with the permissions described and linked below.   
 To avoid confusion and clarify the terminology used below, the term _User_ indicates a normal authenticated user with no elevated permissions, while _Admin_ indicates any user who belongs to a group that it is listed in the environmental variable ADMIN_GROUPS.  
 By default ADMIN_GROUPS is set to groups: admin, ingestor, archivemanager.
@@ -60,10 +60,10 @@ The permissions in the vanilla installation provides a set of user groups which 
 | DELETE_GROUPS | Users whose group is listed here are allowed to delete datasets, origdatablock or datablock | DatasetDeleteAny , DatasetOrigdatablockDeleteAny , DatasetDatablockDeleteAny |
 
 ## Subsystems
-- [Datasets](authorization/authorization_datasets.md)
-- [OrigDatablocks](authorization/authorization_origdatablocks.md)
-- [Jobs](authorization/authorization_jobs.md)
-- [Users](authorization/authorization_users.md)
+- [Datasets](./authorization_datasets.md)
+- [OrigDatablocks](./authorization_origdatablocks.md)
+- [Jobs](./authorization_jobs.md)
+- [Users](./authorization_users.md)
 
 ___N.B.___: we know that many subsystems are still missing. We are working on reviewing the authorization model for each one of them and producing the relative documentation. We welcome any contribution.
 
