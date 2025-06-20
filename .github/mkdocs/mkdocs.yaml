@@ -16,7 +16,7 @@ nav:
       - Publishing data Advanced: datasets/PublishingAdvanced.md
     - Proposals: 
       - proposals/index.md
-    - Samples: samples.md
+    - Samples: samples/index.md
     - Instruments: instruments.md
     - Troubleshooting:
       - troubleshoot/index.md
@@ -25,7 +25,7 @@ nav:
     - operator-manual/index.md
     - swagger/index.md
     - backendconfig/index.md
-    - authorization/index.md
+    - backendconfig/authorization/index.md
     - backendconfig/dois.md
     
 

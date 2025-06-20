@@ -1,7 +1,7 @@
 # Authorization Model 
 
 ## General 
-How authorization is handled in SciCat, see [general](./authorization.md) description.
+For how authorization is handled in SciCat, see [general](./authorization.md) description.
 
 Developers information, see [github](https://github.com/SciCatProject/documentation/blob/master/Development/v4.x/backend/authorization/authorization.md).
 
