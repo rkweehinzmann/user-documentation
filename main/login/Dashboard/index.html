@@ -339,6 +339,8 @@
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
+        
+      
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
           
@@ -367,21 +369,14 @@
   
   
   
+    
+  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
       Table of contents
     </label>
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#dashboard" class="md-nav__link">
-    <span class="md-ellipsis">
-      Dashboard
-    </span>
-  </a>
-  
-</li>
       
         <li class="md-nav__item">
   <a href="#menu-access-to-different-information-pages" class="md-nav__link">
@@ -393,11 +388,26 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#filtering-datasets" class="md-nav__link">
+  <a href="#finding-datasets" class="md-nav__link">
     <span class="md-ellipsis">
-      Filtering Datasets
+      Finding Datasets
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="Finding Datasets">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#using-filters-and-conditions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Using Filters and Conditions
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -800,21 +810,14 @@
   
   
   
+    
+  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
       Table of contents
     </label>
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#dashboard" class="md-nav__link">
-    <span class="md-ellipsis">
-      Dashboard
-    </span>
-  </a>
-  
-</li>
       
         <li class="md-nav__item">
   <a href="#menu-access-to-different-information-pages" class="md-nav__link">
@@ -826,11 +829,26 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#filtering-datasets" class="md-nav__link">
+  <a href="#finding-datasets" class="md-nav__link">
     <span class="md-ellipsis">
-      Filtering Datasets
+      Finding Datasets
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="Finding Datasets">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#using-filters-and-conditions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Using Filters and Conditions
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -876,25 +894,29 @@
                   
 
 
-  <h1>Dashboard</h1>
-
-<h2 id="dashboard">Dashboard</h2>
-<p>The dashboard is the first page that you see after being logged in. It contains an overview of all datasets that you have access to.</p>
+<h1 id="dashboard">Dashboard</h1>
+<p>The dashboard is the first page that you see when you are logged in. When set to datasets as main access point, it will show an overview of all datasets that you have access to. <!--Soon it will be possible to obtain this overview page for the other objects such as proposals, samples, published data and instruments. This can be configured by your site-admin.--></p>
 <p><a class="glightbox" href="../img/dashboard.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="dashboard" src="../img/dashboard.png" /></a></p>
 <h2 id="menu-access-to-different-information-pages">Menu access to different information pages</h2>
 <p>You can always navigate to other parts of the application, simply by clicking on the user icon on the top right corner </p>
 <p><a class="glightbox" href="../img/menu_dropdown.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Overall Menu" src="../img/menu_dropdown.png" /></a></p>
-<h2 id="filtering-datasets">Filtering Datasets</h2>
-<p>You can currently filter across 5 different fields:
-1. Location (= field creationLocation)
-2. Groups (= field ownerGroup)
-3. Type (=field type - e.g. raw data or derived data )
-4. Keywords  =field keywords, the tags added to the datasets)
-5. Start - End Date ( = field createdAt, show datasets captured between the dates that you have set)</p>
+<h2 id="finding-datasets">Finding Datasets</h2>
+<p>SciCat provides several possibilities for finding the right datasets. One can use the tob search bar, one can narrow down your selection by applying filters and/or conditions and the user can search on his scientific metadata as well.</p>
+<h3 id="using-filters-and-conditions">Using Filters and Conditions</h3>
+<p>On the left one can apply most common filters. Currently there are</p>
+<ol>
+<li>Location: location of creation of the dataset.</li>
+<li>PID: Identifier of the dataset.</li>
+<li>Groups: who owns the dataset.</li>
+<li>Type: data type - e.g. raw data or derived data.</li>
+<li>Keywords: tags added to the dataset.</li>
+<li>Start - End Date: show datasets captured between the dates that you have set.</li>
+<li>Text: which searches across dataset name and description.</li>
+</ol>
 <p>The text fields provide an auto completion, which becomes visible as you type. </p>
-<p>One click on the date calendar selects the start date and a second selects the end date. Make sure you select 2 dates.</p>
-<p>In the following screenshot the datasets are filterd by the condition ownerGroup="p17301"</p>
-<p><a class="glightbox" href="../img/dashboard_PSI_pgroup_public.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="filters" src="../img/dashboard_PSI_pgroup_public.png" /></a></p>
+<p>You can click on the date calendar to select the start date and a second to select end date. Make sure you select 2 dates.</p>
+<p>One can configure the selection of filters and add specific <em>conditions</em>. An example shows two additional conditions added:
+<a class="glightbox" href="../img/dashboard_filters.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="filters" src="../img/dashboard_filters.png" /></a></p>
 <h2 id="searching">Searching</h2>
 <p>The text field at the top of the navigation bar allows you to search the metadata for any word contained in the metadata (but not arbitrary substrings). The search starts automatically when to start to type in this textfield, so better type fast ;-) </p>
 <h2 id="configure-table-columns">Configure table columns</h2>
