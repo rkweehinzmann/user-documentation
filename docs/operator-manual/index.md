@@ -4,11 +4,16 @@
 
 Getting SciCat up and running at your site should be rather straight forward for a test deployment. However turning into a production ready system may involve a bit more work, because different existing systems will need to be interfaced to SciCat.
 
-## Understanding the Components
+We highlight the core systems, backend and frontend, its features, configurations, and what else one could do to use exploit all of SciCat's capabilities.
 
-For the subsequent sections it will be useful to have a "helicopter" overview of the various components that need to play together seamlessly. The following diagram shows these components and also shows potentially existing components at your site, that you would likely want to interface to SciCat. The specific diagram reflects essentially the situation at PSI as of Sept. 2020. Of course your situation may look different. The diagram should therefore be seen as an example, which you need to adapt to your situation.
+## Features 
 
-![ToDo: Updated schematic view of SciCat components](img/DacatDataflowV3.png)
+SciCat promises to cover these core aspects in a flexible way:
+
+1. Searchable metadata fields, most common and highly specific ones. Thereby, SciCat can answer the needs of several, not all, photon and neutron sources. Since the needs may differ many great features are configurable.
+2. Provision of unique persistent identifiers not only for the internal catalogue, but also for to the global DOI system through e.g. ready pathway to publication via [DataCite](https://datacite.org/). 
+
+
 
 ## Up-to-date operator's information
 Generally, the [**scicatlive**](https://www.scicatproject.org/scicatlive/latest/) documentation contains an up-to-date information how to set up and run the system ```SciCat``` interfacing it with various external, site-specific services. For troublshooting issues, please refer [the User's Guide](../troubleshoot/index.md).
