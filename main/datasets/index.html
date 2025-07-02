@@ -720,9 +720,9 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#how-to-query-datasets" class="md-nav__link">
+  <a href="#how-to-search-for-datasets" class="md-nav__link">
     <span class="md-ellipsis">
-      How to query datasets
+      How to search for datasets
     </span>
   </a>
   
@@ -774,11 +774,26 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#properties-of-a-dataset-in-scicat" class="md-nav__link">
+    <span class="md-ellipsis">
+      Properties of a dataset in SciCat
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Properties of a dataset in SciCat">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#new-developments-on-dataset-types" class="md-nav__link">
     <span class="md-ellipsis">
       New developments on dataset types
     </span>
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -798,12 +813,24 @@
 
 
 <h1 id="datasets">Datasets</h1>
-<p>SciCat datasets are sets of meta data and can include several files which e.g. comprise a self-contained measurement - which is fully customizeable during ingestion of meta data. Users can search, view, list the meta data of a dataset. </p>
-<p>To group and tag datasets is depicted <a href="grouping_tagging_ds/">here</a>. Datasets can also be issued to be <strong>published</strong>: either removing the restricted view or triggering the process of obtaining a DOI for the selected datasets, see description of <a href="Publishing/">publication of SciCat datasets</a>.</p>
-<h3 id="how-to-query-datasets">How to query datasets</h3>
+<p>SciCat datasets are sets of metadata and can include several files which e.g. comprise a self-contained measurement - which is fully customizeable during ingestion of metadata. Users can search, view different formats (e.g. in tree, tables or as JSON) of the dataset and list them. </p>
+<p>To group and tag datasets is depicted <a href="grouping_tagging_ds/">here</a>. Datasets can also be issued to be <strong>published</strong>: either removing the restricted view or triggering the process of obtaining a DOI for the selected datasets. For more details see <a href="Publishing/">publication of SciCat datasets</a>.</p>
+<h2 id="how-to-search-for-datasets">How to search for datasets</h2>
+<p>You can use several places to query your datasets: </p>
+<ul>
+<li>on the top the search bar and</li>
+<li>on the left in the filter &amp; conditions column. The search is configurable to show only what you would like to see and you can define your own conditions making use of your specific scientific metadata.</li>
+</ul>
+<p>The bar looks like this:
+<a class="glightbox" href="img/datasets_SearchBar.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="search bar" src="img/datasets_SearchBar.png" /></a></p>
+<p>Filtering and condtions can be applied like that. On the very left one sees this column:</p>
+<p><a class="glightbox" href="img/datasets_filterNConditions_1.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="filterColumn" src="img/datasets_filterNConditions_1.png" /></a></p>
+<p>If you chose "More Filters" a pop-up window appears where you can chose which of the filters you want to display. You can also add your own conditions as well (visible in the background under conditions):
+<a class="glightbox" href="img/datasets_filterNConditions_2.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="apply filters and conditions" src="img/datasets_filterNConditions_2.png" /></a></p>
 <h2 id="dataset-file-listing">Dataset file listing</h2>
 <p>Here is the view of files belonging to a dataset: Below the PID on the top, one finds the tab <strong>Datafiles</strong>:
 <a class="glightbox" href="img/dataset_details_filelist.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="list" src="img/dataset_details_filelist.png" /></a></p>
+<p>Do not forget to reset your filters if you will be searching with new criteria! </p>
 <h2 id="dataset-attachments">Dataset attachments</h2>
 <p>What kind of attachement can be saved? Will they be searchable? Can also other formats be attached than pngs?</p>
 <p>On the dataset details page, you can click on the Attachments tab
@@ -815,11 +842,13 @@
 <h2 id="get-raw-json-data">Get raw JSON data</h2>
 <p>One can also get the JSON file via the swagger API. If set up, one can directly access the API endpoints of SciCat backend. Usually the address is in the form: <code>my-scicat-instance.country/explorer</code>, swagger is accessible via the explorer. One needs to authenticate by copying the token from the GUI into the field <strong>authorize</strong>, then find the dataset of interest, by trying it out it will display you dataset and you can download it in JSON format.</p>
 <h2 id="edit-scientific-meta-data">Edit Scientific meta data</h2>
-<p>// WARNING: this is the old text! 
-If enabled, fields in the scientific metadata can be modified and edited by the owner of the data by hitting the "Edit" Icon. The user can add,remove or change metadata fields, every change will create a new record in the databse with it's history.</p>
+<p>If enabled, fields in the scientific metadata can be modified and edited by the owner of the data by hitting the "Edit" Icon. The user can add,remove or change metadata fields, every change will create a new record in the databse with it's history [feature is soon available again from 2025-07-02].</p>
 <p><a class="glightbox" href="img/editMetadata.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Image edit metadata" src="img/editMetadata.png" /></a></p>
-<h2 id="new-developments-on-dataset-types">New developments on dataset types</h2>
-<p>Generalize datatypes to remove restrictions of <code>raw</code> and <code>derived</code> types (difference was a set of dataset properties).</p>
+<h2 id="properties-of-a-dataset-in-scicat">Properties of a dataset in SciCat</h2>
+<p>In the section General information one can input names, owner, PID, data type and more. Additional information is displayed on the detailed dataset overview page:  NOTE THERE ARE OBVIOUSLY THINGS TO BE FIXED!!
+<a class="glightbox" href="img/datasets_detailedView.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Image edit metadata" src="img/datasets_detailedView.png" /></a></p>
+<h3 id="new-developments-on-dataset-types">New developments on dataset types</h3>
+<p>Generalize datatypes to remove restrictions of <code>raw</code> and <code>derived</code> types.</p>
 <p><a href="datasetTypes/">datasetTypes</a></p>
 
 
