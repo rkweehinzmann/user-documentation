@@ -1,4 +1,4 @@
-# Welcome to SciCat Operator's Manual
+# Welcome to SciCat Operator's Guide
 
 ## Overview
 

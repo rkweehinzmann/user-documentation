@@ -1,4 +1,4 @@
-# Welcome to SciCat Users Manual
+# Welcome to SciCat Users Guide
 
 This is a short guide to most common questions users of SciCat can face. 
 First of all: What is SciCat? And what are its features, how can I use it? 
