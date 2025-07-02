@@ -1,6 +1,9 @@
 # Welcome to SciCat Users Manual
 
-This is a short guide to most common questions users of SciCat can face. First of all: What is SciCat? And what are its features, how can I use it? SciCat, a _science catalogue_, should serve you to find back your data through its **metadata**. Genrally all datasets in SciCat are a priori datasets of _metadata_. In a further step, SciCat can handle access to the actual the experimental data. 
+This is a short guide to most common questions users of SciCat can face. 
+First of all: What is SciCat? And what are its features, how can I use it? 
+
+SciCat, a _science catalogue_, should serve you to find back your data through its **metadata**. Genrally all datasets in SciCat are a priori datasets of _metadata_. In a further step, SciCat can handle access to the actual the experimental data. 
 
 SciCat is a bookkeeping tool accompanying some critical steps during the entire data life cycle which are: getting an overview of datasets for data analysis, for re-analysis, for publishing datasets, and in particular for publication. 
 
