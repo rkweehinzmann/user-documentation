@@ -718,9 +718,27 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#features-quick-links-to-how-tos-for-users" class="md-nav__link">
+  <a href="#how-to-run-scicat" class="md-nav__link">
     <span class="md-ellipsis">
-      Features: Quick links to How-To's for users
+      How to run SciCat
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-to-use-scicat" class="md-nav__link">
+    <span class="md-ellipsis">
+      How to use SciCat
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-tos-for-users-quick-links" class="md-nav__link">
+    <span class="md-ellipsis">
+      How-Tos for Users (Quick-links)
     </span>
   </a>
   
@@ -730,15 +748,6 @@
   <a href="#a-few-more-how-tos-for-users-and-site-admins" class="md-nav__link">
     <span class="md-ellipsis">
       A few more How-To's for users and site-admins
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#structure-of-scicat" class="md-nav__link">
-    <span class="md-ellipsis">
-      Structure of SciCat
     </span>
   </a>
   
@@ -768,12 +777,23 @@
 <li>The Data Model of SciCat forsees a schemaless fields for quite different use cases. This concept has been implemented for the main class, Datasets, but is extended to function in the same way for the other classes e.g. Proposlas, Samples, Intstruments and Published Data.</li>
 <li>Its components are based on OpenSource software projects and state of the art technologies. </li>
 </ul>
-<p>For more detailed information on how to run scicat, see <a href="https://www.scicatproject.org/scicatlive/latest/">scicatlive documentation</a>. For more details on how to ingest, setup and deploy information from SciCat, see the <a href="operator/index.md">site admin manual</a>. </p>
-<h2 id="features-quick-links-to-how-tos-for-users">Features: Quick links to How-To's for users</h2>
-<p>You can just browse what's in the catalogue for any published datasets. Else one can list all datasets that I either own or have access to. Here is how to find more on how to proceed:</p>
+<p>In the past 5 years SciCat has undergone major improvments in key areas for better user experience and re-structuring to meet the various different needs of photon science labs. The collaboration has grown and governance will be soon established.</p>
+<h2 id="how-to-run-scicat">How to run SciCat</h2>
+<p>More detailed information on how to run scicat, see <a href="https://www.scicatproject.org/scicatlive/latest/">scicatlive documentation</a>. For more details on how to ingest, setup and deploy information from SciCat, see the <a href="operator/index.md">site admin manual</a>. </p>
+<h2 id="how-to-use-scicat">How to use SciCat</h2>
+<p>Once metadata is ingested into SciCat, the user can login and view, edit the metadata. There are four main classes which determine the functionality of SciCat: </p>
+<ol>
+<li><a href="../datasets/">Datasets</a>: Metadata in SciCat is therefore ideally sorted according to a dataset. It can have several associated files to which have the same metadata like thumbnail or e.g. tif files.</li>
+<li><a href="../proposals.md">Proposals</a>: are used to link datasets to the proposal under which beamtime was granted.</li>
+<li><a href="../instruments.md">Instruments</a>: Due to the nature of neutron science instruments can mean something different for photon scientists meaning. Here, if wanted, SciCat offers to add clear descriptions of your instruments used.</li>
+<li><a href="../samples.md">Samples</a>: SciCat offeres here the option to related its datasets with the physical sample or just related to other more sophisticated sample databases to track sample information, state, including storage location, characteristics and associated research data.</li>
+</ol>
+<p>For many the SciCat datasets are the entry point to the catalogue, but soon it will be possible to start with samples or published data records (registered metadata sets).
+You can just browse what's in the catalogue for any published datasets. Else one can list all datasets that I either own or have access to. Here is how to find more on how to proceed:</p>
+<h2 id="how-tos-for-users-quick-links">How-Tos for Users (Quick-links)</h2>
 <ul>
 <li><a href="../login/">Login</a></li>
-<li>Search and find your data, see <a href="datasets/index.md#how-to-query-datasets">Datasets How to query</a></li>
+<li>Search and find your data, see <a href="../datasets/#how-to-query-datasets">Datasets How to query</a></li>
 <li>How to change some fields after ingestion</li>
 <li>How to view history of changes to a dataset</li>
 <li>How to <a href="../datasets/grouping_tagging_ds/">group and tag datasets</a>.</li>
@@ -781,16 +801,8 @@
 </ul>
 <h2 id="a-few-more-how-tos-for-users-and-site-admins">A few more How-To's for users and site-admins</h2>
 <ul>
-<li>Where to find the version of the deployed SciCat Frontend? Check <a href="about/operatorHowTos.md">here</a>.</li>
+<li>Where to find the version of the deployed SciCat Frontend? Check <a href="../about/operatorHowTos/">here</a>.</li>
 </ul>
-<h2 id="structure-of-scicat">Structure of SciCat</h2>
-<p>These main classes determine the functionality of SciCat: </p>
-<ol>
-<li><a href="datasets/index.md">Datasets</a>: This class is the most elaborated one. </li>
-<li><a href="proposals.md">Proposals</a>: are used to link datasets to the proposal under which beamtime was granted.</li>
-<li><a href="instruments.md">Instruments</a>: Depending on the science background <code>instruments</code> can mean something different.</li>
-<li><a href="samples.md">Samples</a>: </li>
-</ol>
 
 
 
