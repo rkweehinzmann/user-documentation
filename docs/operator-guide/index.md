@@ -2,18 +2,18 @@
 
 ## Overview
 
-Getting SciCat up and running at your site should be rather straight forward for a test deployment. However turning into a production ready system may involve a bit more work, because different existing systems will need to be interfaced to SciCat.
+Getting SciCat up and running at your site should be rather straight forward for a test deployment. However turning into a production ready system may involve some more work, because different existing systems will need to be interfaced to SciCat.
 
-We highlight the core systems, backend and frontend, its features, configurations, and what else one could do to use exploit all of SciCat's capabilities.
+We highlight the core systems, backend and frontend, its features, configurations, and what else one could do to fully exploit all of SciCat's capabilities.
 
 ## Features 
 
 SciCat promises to cover these core aspects in a flexible way:
 
-1. Searchable metadata fields, most common and highly specific ones. Thereby, SciCat can answer the needs of several, not all, photon and neutron sources. Since the needs may differ many great features are configurable.
-2. Provision of unique persistent identifiers not only for the internal catalogue, but also for to the global DOI system through e.g. ready pathway to publication via [DataCite](https://datacite.org/). 
+1. Searchable metadata fields, most common and highly specific ones. Thereby, SciCat can answer the needs of several, not all, facilities running photon and neutron sources. Since the needs may differ many great features are configurable.
+2. Provision of unique persistent identifiers not only for the internal catalogue, but also connecting to the global DOI system through e.g. ready pathway to publication via [DataCite](https://datacite.org/). 
 
-
+SciCat being an open source project in principle can be changed, adopted and used to do whatever you need to make it fit to your case.
 
 ## Up-to-date operator's information
 Generally, the [**scicatlive**](https://www.scicatproject.org/scicatlive/latest/) documentation contains an up-to-date information how to set up and run the system ```SciCat``` interfacing it with various external, site-specific services. For troublshooting issues, please refer [the User's Guide](../troubleshoot/index.md).

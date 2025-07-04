@@ -17,7 +17,7 @@ nav:
     - Proposals: 
       - proposals/index.md
     - Samples: samples/index.md
-    - Instruments: instruments.md
+    - Instruments: instruments/index.md
     - Troubleshooting:
       - troubleshoot/index.md
   
