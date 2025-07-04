@@ -4,4 +4,6 @@ If set up at your site you can list, search and view samples that have been ente
 
 ![samples](./img/sample_popUp.png)
 
-<!--![samples](./img/sampleDetails.png) -->
+
+When selecting a such sample one sees the details
+![samples](./img/sampleDetails.png)
