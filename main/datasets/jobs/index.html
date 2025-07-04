@@ -9,6 +9,10 @@
       
       
       
+        <link rel="prev" href="../PublishingAdvanced/">
+      
+      
+        <link rel="next" href="../../proposals/">
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
@@ -16,7 +20,7 @@
     
     
       
-        <title>How to run new dataset endpoint in v4 - SciCat Documentation</title>
+        <title>Data Retrieval - SciCat Documentation</title>
       
     
     
@@ -69,7 +73,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#how-to-run-new-dataset-endpoint-in-v4" class="md-skip">
+        <a href="#archival-and-retrieval-of-experimental-data" class="md-skip">
           Skip to content
         </a>
       
@@ -105,7 +109,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              How to run new dataset endpoint in v4
+              Data Retrieval
             
           </span>
         </div>
@@ -215,17 +219,19 @@
       
   
   
+    
   
   
+  
     
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
         
           
           
@@ -247,7 +253,7 @@
             
           </div>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
             SciCat User Guide
@@ -351,22 +357,24 @@
                 
   
   
+    
   
   
+  
     
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" checked>
         
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../datasets/" class="md-nav__link ">
+            <a href="../" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -383,7 +391,7 @@
             
           </div>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2_2">
             <span class="md-nav__icon md-icon"></span>
             Datasets
@@ -397,7 +405,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../datasets/Publishing/" class="md-nav__link">
+      <a href="../Publishing/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -418,7 +426,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../datasets/PublishingAdvanced/" class="md-nav__link">
+      <a href="../PublishingAdvanced/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -436,10 +444,19 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../../datasets/jobs/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -448,6 +465,7 @@
   
 
       </a>
+      
     </li>
   
 
@@ -739,53 +757,9 @@
                   
 
 
-<h1 id="how-to-run-new-dataset-endpoint-in-v4">How to run new dataset endpoint in v4</h1>
-<p>For now one can run and play with the new version of dataset endpoints v4. Here is how to set it up:</p>
-<ol>
-<li>Pre-requisits: admin rights, git, docker, nodejs (v.20.18.2) and npm (v10.8.2).</li>
-<li>For frontend to run, install angular like this: "npm install -g @angular"</li>
-<li>Git clone frontend and backend repository.</li>
-<li>Launch "npm install" in each dir by entering "npm install", respectively.</li>
-<li>Configuration of backend: add "loggers.json", "functionalAccounts.json",
-"proposalTypes.json", "datasetTypes.json" und ".env" files (there are examples named *.example).</li>
-<li>Start MongoDB: I do it using docker container. Recipe is get the image, e.g. bitnami/mongodb:latest, attach volume to it, e.g. "mongodb", mount it, e.g. to /bitnami/mongodb, port 27017. Open in host on 27017.</li>
-<li>Optional</li>
-<li>Start backend: in dir of backend run "npm run start". After about 10s you should be able to view the APIs from "localhost:3000/explorer" in the browser.</li>
-<li>
-<p>Start frontend: in dir of frontend run "npm run start". After about 40s one should see under "localhost:4200" to SciCat frontend.</p>
-</li>
-<li>
-<p>Voraussetzungen: Adminrechte, Git, Docker, NodeJS (ich habe es jetzt
-mit v.20.18.2 laufen) inkl. npm (bei mir v10.8.2).</p>
-</li>
-<li>Wenn Frontend laufen soll: Über npm angular installieren via "npm
-install -g @angular".</li>
-<li>Front- und Backend Repositories von GitHub klonen.</li>
-<li>Jeweils im Verzeichnis von Backend und Frontend einmal "npm install"
-um die Dependencies zu installieren.</li>
-<li>Backendkonfiguration: Das Backend braucht fünf zusätzliche Dateien um
-richtig zu laufen: "loggers.json", "functionalAccounts.json",
-"proposalTypes.json", "datasetTypes.json" und ".env". Für alle davon ist
-eine Beispieldatei schon vorhanden (die .env.example ist allerdings
-Mist, ich habe mal meine momentane angehängt mit der es läuft).</li>
-<li>MongoDB starten: Mache ich über einen Docker-Container. Rezept: Image
-bitnami/mongodb:latest, Volumen "mongodb" anlegen und im Container auf
-/bitnami/mongodb mounten, Port 27017 im Container auf 27017 im Host
-öffnen.</li>
-<li>(Optional?) MongoDB anlegen: Über Docker in den laufenden mongodb
-Container einloggen. Auf der Shell "mongosh dacat" ausführen, das legt
-die DB "dacat" an (andere name geht auch, dann muss das nur auch in der
-.env anders!). Laut der alten Dokumentation muss man dann in der mongosh
-den Befehl "db.Dataset.createIndex( { "$**" : "text" } )" ausführen, um
-Textindexing zu bekommen. Nicht 100% sicher ob das noch aktuell ist,
-musst du mal Max zu fragen.</li>
-<li>Backend starten: Im Backendverzeichnis "npm run start", sollte dann
-nach ca. 10s laufen. Testen, indem "localhost:3000/explorer" im Browser
-geöffnet wird - wenn Swagger zu sehen ist, läuft es.</li>
-<li>Frontend starten: Nachdem das Backend läuft, wieder "npm run start"
-im Frontendverzeichnis ausführen. Frontend sollte nach Kompilierung (ca.
-30s) auf "localhost:4200" zu sehen sein.</li>
-</ol>
+<h1 id="archival-and-retrieval-of-experimental-data">Archival and retrieval of experimental data</h1>
+<p>In SciCat so-called <em>jobs</em> can be setup to interconnect to your local storage system to request a copy to a dedicated place for a certain period of time. A SciCat jobs description how to use the can be found <a href="">here</a>.</p>
+<p>There used and still is the state of a dataset to be <em>archivable</em>. It will be seen if this kept or not. In case of questions please contact the SciCat <a href="../../about/">team</a>.</p>
 
 
 
