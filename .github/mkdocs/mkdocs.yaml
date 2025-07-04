@@ -14,6 +14,7 @@ nav:
       - datasets/index.md
       - Publishing data: datasets/Publishing.md
       - Publishing data Advanced: datasets/PublishingAdvanced.md
+      - Data Retrieval: datasets/jobs.md 
     - Proposals: 
       - proposals/index.md
     - Samples: samples/index.md
