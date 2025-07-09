@@ -16,13 +16,12 @@ SciCat has several strong points:
 In the past 5 years SciCat has undergone major improvments in key areas for better user experience and re-structuring to meet the various different needs of photon science labs. The collaboration has grown and governance will be soon established.
 
 ## How to run SciCat
-More detailed information on how to run scicat, see [scicatlive documentation](https://www.scicatproject.org/scicatlive/latest/). For more details on how to ingest, setup and deploy information from SciCat, see the [site admin manual](operator/index.md). 
+More detailed information on how to run scicat, see [scicatlive documentation](https://www.scicatproject.org/scicatlive/latest/). For more details on how to ingest, setup and deploy information from SciCat, see the [operator's guide](../operator-guide/index.md). 
 
 ## How to use SciCat
+Once metadata is ingested into SciCat, the user can login and view, edit the metadata, list, filter and make a selection of interesting datasets using also scientific metadata. There are four main classes which determine the functionality of SciCat: 
 
-Once metadata is ingested into SciCat, the user can login and view, edit the metadata. There are four main classes which determine the functionality of SciCat: 
-
-1. [Datasets](../datasets/index.md): Metadata in SciCat is therefore ideally sorted according to a dataset. It can have several associated files to which have the same metadata like thumbnail or e.g. tif files.
+1. [Datasets](../datasets/index.md): Metadata in SciCat is ideally sorted according to a dataset. It can have several associated files to which have the same metadata like thumbnail or e.g. tif files.
 2. [Proposals](../proposals.md): are used to link datasets to the proposal under which beamtime was granted.
 3. [Instruments](../instruments.md): Due to the nature of neutron science instruments can mean something different for photon scientists meaning. Here, if wanted, SciCat offers to add clear descriptions of your instruments used.
 4. [Samples](../samples.md): SciCat offeres here the option to related its datasets with the physical sample or just related to other more sophisticated sample databases to track sample information, state, including storage location, characteristics and associated research data.

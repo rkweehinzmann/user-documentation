@@ -4,7 +4,9 @@
 
 Getting SciCat up and running at your site should be rather straight forward for a test deployment. However turning into a production ready system may involve some more work, because different existing systems will need to be interfaced to SciCat.
 
-We highlight the core systems, backend and frontend, its features, configurations, and what else one could do to fully exploit all of SciCat's capabilities.
+How to ingest metadata, set SciCat up to deploy it is best covered by understanding its core systems, backend and frontend, its features, configurations, and what else one could do to fully exploit all of SciCat's capabilities.
+
+SciCat consists of a backend application, that is connected to the database - a MongoDB - and a frontend client exposing database content through a GUI to a user. At large scale facilities SciCat handles about 30 PB of data. 
 
 ## Features 
 
@@ -50,9 +52,7 @@ See [here](https://github.com/SciCatProject/frontend/blob/master/SITE-LOGO-CONFI
 
 SciCat strength is to intergrate into almost any existing infrastructure because **messaging systems** can be easily interfaced to SciCat that take over the communication to other services and systems.
 
-In particular RabbitMQ (used at PSI) and Apache Kafka are in use. Such systems can e.g. be used to interface to an tape archive system. To add the specific business logic you can e.g. add your own scripting layer. At PSI however a Node-RED based solution proved to be a stable and flexible platform for this purpose. Node-RED is a A NodeJS based visual programming tool to handle flows of data from one source to another. The following shows the Nod-RED flow used for communicating job requests to the PSI archive system.
-
-![Node-RED](img/job-assembler.png)
+A detailed description of jobs in for the new backend can be found [here](https://github.com/SciCatProject/documentation/blob/master/Development/v4.x/backend/configuration/jobconfig.md).
 
 
 ### Different entry points to SciCat

@@ -21,6 +21,9 @@ Filtering and condtions can be applied like that. On the very left one sees this
 ![apply filters and conditions](../datasets/img/datasets_filterNConditions_2.png)
 
 ## Dataset file listing
+
+Datasets can be viewed in different columns, sorted
+
 Here is the view of files belonging to a dataset: Below the PID on the top, one finds the tab **Datafiles**:
 ![list](img/dataset_details_filelist.png)
 
