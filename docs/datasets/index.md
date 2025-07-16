@@ -3,7 +3,7 @@ SciCat datasets are sets of metadata and can include several files which e.g. co
 
 ## Features
 * A very handy feature is to group and tag datasets. Find [here](grouping_tagging_ds.md) more details how to do it. 
-* Datasets can also be selected for several actions. One such action is the *publication* of that selection. For more details see [publication of SciCat datasets](Publishing.md). Generally, actions depend on what is implemented at your site and can cover a wide range from comprising them into a new datacollection of a custom type to using that selection of datasets to run an analysis on them.
+* Datasets can also be selected for several actions. One such action is the *publication* of that selection. For more details see [publication of SciCat datasets](Publishing.md). Generally, actions depend on what is implemented at your site and can cover a wide range from comprising them into a new datacollection of a custom type [(see advanced documentation)](../datasets/datasetTypes.md) to using that selection of datasets to run an analysis on them.
 
 ## How to search for datasets
 You can use several places to query your datasets: 
@@ -51,9 +51,3 @@ One can also get the JSON file via the swagger API. If set up, one can directly 
 If enabled, fields in the scientific metadata can be modified and edited by the owner of the data by hitting the "Edit" Icon. The user can add,remove or change metadata fields, every change will create a new record in the databse with it's history [feature is soon available again from 2025-07-02].
 
 ![Image edit metadata](img/editMetadata.png)
-
-
-### New developments on dataset types
-Generalize datatypes to remove restrictions of ```raw``` and ```derived``` types.
-
-[datasetTypes](../datasets/datasetTypes.md)
