@@ -11,7 +11,7 @@ SciCat has several strong points:
 
 * It can be integrated to almost any other service that has REST APIs. Therefore, site-specific applications can be easily integrated. 
 * The Data Model of SciCat forsees a schemaless fields for quite different use cases. This concept has been implemented for the main class, Datasets, but is extended to function in the same way for the other classes e.g. Proposlas, Samples, Intstruments and Published Data.
-* Its components are based on OpenSource software projects and state of the art technologies. 
+* Its components are based on OpenSource software projects and state of the art technologies using MongoDB as backbone database, nestjs as backend basis. 
 
 In the past 5 years SciCat has undergone major improvments in key areas for better user experience and re-structuring to meet the various different needs of photon science labs. The collaboration has grown and governance will be soon established.
 
