@@ -830,15 +830,17 @@
 <h1 id="datasets">Datasets</h1>
 <p>SciCat datasets are sets of metadata and can include several files which e.g. comprise a self-contained measurement - which is fully customizeable during ingestion of metadata. Users can search and view different formats (e.g. in tree, tables or as JSON) of the dataset and list them. </p>
 <h2 id="features">Features</h2>
-<ul>
-<li>A very handy feature is to group and tag datasets. Find <a href="grouping_tagging_ds/">here</a> more details how to do it. </li>
-<li>Datasets can also be selected for several actions. One such action is the <em>publication</em> of that selection. For more details see <a href="Publishing/">publication of SciCat datasets</a>. Generally, actions depend on what is implemented at your site and can cover a wide range from comprising them into a new datacollection of a custom type <a href="datasetTypes/">(see advanced documentation)</a> to using that selection of datasets to run an analysis on them.</li>
-</ul>
+<p>A very handy feature is to <strong>group and tag</strong> datasets. Find <a href="grouping_tagging_ds/">here</a> more details how to group them using tags. </p>
+<p>Datasets can also be selected for <strong>several actions</strong>:
+One such action is the <em>publication</em> of that selection. For more details see <a href="Publishing/">publication of SciCat datasets</a>.
+Generally, actions depend on what is implemented at your site and can cover a wide range from
+comprising them into a <em>new datacollection of a custom type</em> <a href="datasetTypes/">(see advanced documentation)</a> to
+using that selection of datasets to <em>run an analysis</em> on them.</p>
 <h2 id="how-to-search-for-datasets">How to search for datasets</h2>
-<p>You can use several places to query your datasets: </p>
+<p>Datasets can be queried in several places: </p>
 <ul>
-<li>the search bar at the top of the page provides a quick free text search</li>
-<li>the filter &amp; conditions column on the left allow you to customize your filters and conditions, adjust the filters to those that you find interesting and define your own conditions making use of your specific scientific metadata.</li>
+<li>The search bar at the top of the page provides a quick free text search.</li>
+<li>The filter &amp; conditions column on the left allow you to customize your filters and conditions, adjust the filters to those that you find interesting and define your own conditions making use of your specific scientific metadata.</li>
 </ul>
 <p>The bar looks like this:
 <a class="glightbox" href="img/datasets_SearchBar.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="search bar" src="img/datasets_SearchBar.png" /></a></p>
@@ -853,7 +855,7 @@
 <p>A dataset can have several associated files to it. They can be listed by clicking on the tab <strong>Datafiles</strong> just right to the Details tab:
 <a class="glightbox" href="img/dataset_details_filelist.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="list" src="img/dataset_details_filelist.png" /></a></p>
 <h2 id="dataset-attachments">Dataset attachments</h2>
-<p>Another tab is for the attachements of a dataset, e.g. pngs or tifs</p>
+<p>Another tab is for the attachements of a dataset, e.g. PNG or TIFF images.</p>
 <p><a class="glightbox" href="img/dataset_attachments_PSI.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Choose an image file, must be under 16 MB limit" src="img/dataset_attachments_PSI.png" /></a></p>
 <p>Simply follow the instructions to upload an image. The size is restricted to be below 16 MB.</p>
 <h2 id="view-raw-json-data">View raw JSON data</h2>
@@ -862,7 +864,7 @@
 <h2 id="get-raw-json-data">Get raw JSON data</h2>
 <p>One can also get the JSON file via the swagger API. If set up, one can directly access the API endpoints of SciCat backend. Usually the address is in the form: <code>my-scicat-instance.country/explorer</code>, swagger is accessible via the explorer. One needs to authenticate by copying the token from the GUI into the field <strong>authorize</strong>, then find the dataset of interest, by trying it out it will display you dataset and you can download it in JSON format.</p>
 <h2 id="edit-scientific-meta-data">Edit Scientific meta data</h2>
-<p>If enabled, fields in the scientific metadata can be modified and edited by the owner of the data by hitting the "Edit" Icon. The user can add,remove or change metadata fields, every change will create a new record in the databse with it's history [feature is soon available again from 2025-07-02].</p>
+<p>If enabled, fields in the scientific metadata can be modified and edited by any member of the <a href="../backendconfig/authorization/authorization_datasets/">Owner Group</a> of the data by hitting the "Edit" Icon. The user can add, remove or change metadata fields, every change will create a new record in the databse with it's history [feature is soon available again from 2025-07-02].</p>
 <p><a class="glightbox" href="img/editMetadata.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Image edit metadata" src="img/editMetadata.png" /></a></p>
 
 
