@@ -1,6 +1,6 @@
 # Dashboard
 
-The dashboard is the first page that you see independent of whether you are logged in or not. When set to datasets as main access point, it will show an overview of all datasets that you have access to. If you do not login you see those that are public. <!--Soon it will be possible to obtain this overview page for the other objects such as proposals, samples, published data and instruments. This can be configured by your site-admin.-->
+SciCat's Dashboard or also sometimes called Landing Page is the first page that you see independent of whether you are logged in or not. If you want to login click *Sign in* on the top right button, see [here](./index.md) for more information. When set to datasets as main access point, it will show an overview of all datasets that you have access to. If you do not login you see those that are public. <!--Soon it will be possible to obtain this overview page for the other objects such as proposals, samples, published data and instruments. This can be configured by your site-admin.-->
 
 ![dashboard](img/dashboard.png)
 

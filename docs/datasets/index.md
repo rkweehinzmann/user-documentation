@@ -8,17 +8,17 @@ SciCat datasets are sets of metadata and can include several files which e.g. co
 ## How to search for datasets
 You can use several places to query your datasets: 
 
-* from the top the search bar and
-* from the filter & conditions column on the left. You can customize your filters and conditions, adjust the filters to those that you find interesting and you can define your own conditions making use of your specific scientific metadata.
+* the search bar at the top of the page provides a quick free text search
+* the filter & conditions column on the left allow you to customize your filters and conditions, adjust the filters to those that you find interesting and define your own conditions making use of your specific scientific metadata.
 
 The bar looks like this:
 ![search bar](img/datasets_SearchBar.png)
 
-Filtering and condtions can be applied like that. On the very left one sees this column:
+Filtering by conditions can be applied through the option box on the left.
 
 ![filterColumn](img/datasets_filterNConditions_1.png)
 
- If you chose "More Filters" a pop-up window appears where you can chose which of the filters you want to display. You can also add your own conditions as well (visible in the background under conditions):
+If you chose "More Filters" a pop-up window appears where you can chose which of the filters you want to display. You can also add your own conditions as well (visible in the background under conditions):
 ![apply filters and conditions](../datasets/img/datasets_filterNConditions_2.png)
 
 ## Dataset details
