@@ -1,8 +1,7 @@
 # Welcome to SciCat Operator's Guide
 
 ## Overview
-
-Getting SciCat up and running at your site should be rather straight forward for a test deployment. However turning into a production ready system may involve some more work, because different existing systems will need to be interfaced to SciCat.
+SciCat is a flexible metadata catalogue designed to be easily interfaced in to most existing infrastructure. The following guide will introduce the configuration required to integrate SciCat into common technologies.
 
 How to ingest metadata, set SciCat up to deploy it is best covered by understanding its core systems, backend and frontend, its features, configurations, and what else one could do to fully exploit all of SciCat's capabilities.
 
@@ -10,12 +9,12 @@ SciCat consists of a backend application, that is connected to the database - a 
 
 ## Features 
 
-SciCat promises to cover these core aspects in a flexible way:
+SciCat covers these core aspects in a flexible way:
 
-1. Searchable metadata fields, most common and highly specific ones. Thereby, SciCat can answer the needs of several, not all, facilities running photon and neutron sources. Since the needs may differ many great features are configurable.
+1. Searchable metadata fields, most common and highly specific ones. SciCat was developed by the PaNoSc community and has been successfully used more widely. This is because SciCat is highly configurable.
 2. Provision of unique persistent identifiers not only for the internal catalogue, but also connecting to the global DOI system through e.g. ready pathway to publication via [DataCite](https://datacite.org/). 
 
-SciCat is an open source project can can be developed in accordance with our (license)[].
+SciCat is an open source project can can be developed in accordance with our (license)[https://github.com/SciCatProject/scicat-backend-next?tab=BSD-3-Clause-1-ov-file#readme].
 
 
 ## Up-to-date operator's information
