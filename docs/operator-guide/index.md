@@ -1,14 +1,21 @@
-# Welcome to SciCat Operator's Manual
+# Welcome to SciCat Operator's Guide
 
 ## Overview
+SciCat is a flexible metadata catalogue designed to be easily interfaced in to most existing infrastructure. The following guide will introduce the configuration required to integrate SciCat into common technologies.
 
-Getting SciCat up and running at your site should be rather straight forward for a test deployment. However turning into a production ready system may involve a bit more work, because different existing systems will need to be interfaced to SciCat.
+How to ingest metadata, set SciCat up to deploy it is best covered by understanding its core systems, backend and frontend, its features, configurations, and what else one could do to fully exploit all of SciCat's capabilities.
 
-## Understanding the Components
+SciCat consists of a backend application, that is connected to the database - a MongoDB - and a frontend client exposing database content through a GUI to a user. At large scale facilities SciCat handles about 30 PB of data. 
 
-For the subsequent sections it will be useful to have a "helicopter" overview of the various components that need to play together seamlessly. The following diagram shows these components and also shows potentially existing components at your site, that you would likely want to interface to SciCat. The specific diagram reflects essentially the situation at PSI as of Sept. 2020. Of course your situation may look different. The diagram should therefore be seen as an example, which you need to adapt to your situation.
+## Features 
 
-![ToDo: Updated schematic view of SciCat components](img/DacatDataflowV3.png)
+SciCat covers these core aspects in a flexible way:
+
+1. Searchable metadata fields, most common and highly specific ones. SciCat was developed by the PaNoSc community and has been successfully used more widely. This is because SciCat is highly configurable.
+2. Provision of unique persistent identifiers not only for the internal catalogue, but also connecting to the global DOI system through e.g. ready pathway to publication via [DataCite](https://datacite.org/). 
+
+SciCat is an open source project can can be developed in accordance with our (license)[https://github.com/SciCatProject/scicat-backend-next?tab=BSD-3-Clause-1-ov-file#readme].
+
 
 ## Up-to-date operator's information
 Generally, the [**scicatlive**](https://www.scicatproject.org/scicatlive/latest/) documentation contains an up-to-date information how to set up and run the system ```SciCat``` interfacing it with various external, site-specific services. For troublshooting issues, please refer [the User's Guide](../troubleshoot/index.md).
@@ -45,9 +52,7 @@ See [here](https://github.com/SciCatProject/frontend/blob/master/SITE-LOGO-CONFI
 
 SciCat strength is to intergrate into almost any existing infrastructure because **messaging systems** can be easily interfaced to SciCat that take over the communication to other services and systems.
 
-In particular RabbitMQ (used at PSI) and Apache Kafka are in use. Such systems can e.g. be used to interface to an tape archive system. To add the specific business logic you can e.g. add your own scripting layer. At PSI however a Node-RED based solution proved to be a stable and flexible platform for this purpose. Node-RED is a A NodeJS based visual programming tool to handle flows of data from one source to another. The following shows the Nod-RED flow used for communicating job requests to the PSI archive system.
-
-![Node-RED](img/job-assembler.png)
+A detailed description of jobs in for the new backend can be found [here](https://github.com/SciCatProject/documentation/blob/master/Development/v4.x/backend/configuration/jobconfig.md).
 
 
 ### Different entry points to SciCat

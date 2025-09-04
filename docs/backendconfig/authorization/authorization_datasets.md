@@ -1,4 +1,4 @@
-# Datasets Authoorization
+# Datasets Authorization
 ## CASL ability actions
 This is the list of the permissions methods available for datasets and all their endpoints and more fine-grained instance authorization. 
 

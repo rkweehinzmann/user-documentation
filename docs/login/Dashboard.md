@@ -1,8 +1,26 @@
 # Dashboard
 
-The dashboard is the first page that you see when you are logged in. When set to datasets as main access point, it will show an overview of all datasets that you have access to. <!--Soon it will be possible to obtain this overview page for the other objects such as proposals, samples, published data and instruments. This can be configured by your site-admin.-->
+SciCat's Dashboard or also sometimes called Landing Page is the first page that you see independent of whether you are logged in or not. If you want to login click *Sign in* on the top right button, see [here](./index.md) for more information. When set to datasets as main access point, it will show an overview of all datasets that you have access to. If you do not login you see those that are public. <!--Soon it will be possible to obtain this overview page for the other objects such as proposals, samples, published data and instruments. This can be configured by your site-admin.-->
 
 ![dashboard](img/dashboard.png)
+
+SciCat offers now new features for viewing metadata as you like with adjustable columns. 
+
+![dashboard_adjustableColumns](img/dashboard_adjustableColumns_rk.png)
+
+You can change the columns to be shown by chosing from the three right dots "Column setting" and select those you would like. You can also drag columns by hovering over dots that appear just next to the label, click and pull it where you want to place it, then release. 
+
+![dashboard_newFeatures](img/dashboard_optionsPerColumn.png)
+
+You can
+
+1. sort columns (click on the name and pull)
+2. adjust width of columns (left block of dots)
+3. remove or add columns (selection from Column settings)
+4. invert order of display (click arrow next to the name)
+5. apply a filter directly on that dataset with various options ("contains", "equals", "startsWith", "endsWith", "empty", "notEmpty") and either add (+), or (||) and exclude (x) another filter.
+
+![Overall Menu](img/dashboard_filterOnColumns.png)
 
 ## Menu access to different information pages
 
@@ -11,11 +29,11 @@ You can always navigate to other parts of the application, simply by clicking on
 ![Overall Menu](img/menu_dropdown.png)
 
 ## Finding Datasets
-SciCat provides several possibilities for finding the right datasets. One can use the tob search bar, one can narrow down your selection by applying filters and/or conditions and the user can search on his scientific metadata as well.
+SciCat provides several possibilities for finding the right datasets. You can use the top search bar, you can narrow down your selection by applying filters and/or conditions and the user can search on scientific metadata as well.
 
 ### Using Filters and Conditions
 
-On the left one can apply most common filters. Currently there are
+On the left you can apply most common filters. Currently there are
 
 1. Location: location of creation of the dataset.
 2. PID: Identifier of the dataset.
@@ -29,20 +47,11 @@ The text fields provide an auto completion, which becomes visible as you type.
 
 You can click on the date calendar to select the start date and a second to select end date. Make sure you select 2 dates.
 
-One can configure the selection of filters and add specific _conditions_. An example shows two additional conditions added:
+You can configure the selection of filters and add specific _conditions_. An example shows two additional conditions added:
 ![filters](./img/dashboard_filters.png)
 
-## Searching
-
-The text field at the top of the navigation bar allows you to search the metadata for any word contained in the metadata (but not arbitrary substrings). The search starts automatically when to start to type in this textfield, so better type fast ;-) 
-
-## Configure table columns
-
-The cog wheel symbol on the top right allows to define the columns, that you want to see in the table
-
 ## View Details
-
-To view a dataset simply click on it in the table and a more detailed view will load (this is covered in the next section)
+To view a dataset simply click on it in the table and a more detailed view will load (this is covered in the datasets section)
 
 
 

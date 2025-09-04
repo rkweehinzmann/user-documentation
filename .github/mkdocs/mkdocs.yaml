@@ -5,7 +5,7 @@ docs_dir: ../../docs
 nav: 
   - Home: index.md
   - SciCat User Guide:  
-    - user-manual/index.md
+    - user-guide/index.md
     - Login:
       - login/index.md
       - Anonymous: login/Anonymous.md
@@ -14,15 +14,16 @@ nav:
       - datasets/index.md
       - Publishing data: datasets/Publishing.md
       - Publishing data Advanced: datasets/PublishingAdvanced.md
+      - Data Retrieval: datasets/jobs.md 
     - Proposals: 
       - proposals/index.md
     - Samples: samples/index.md
-    - Instruments: instruments.md
+    - Instruments: instruments/index.md
     - Troubleshooting:
       - troubleshoot/index.md
   
   - SciCat Operator Guide: 
-    - operator-manual/index.md
+    - operator-guide/index.md
     - swagger/index.md
     - backendconfig/index.md
     - backendconfig/authorization/index.md
