@@ -28,6 +28,7 @@ nav:
     - backendconfig/index.md
     - backendconfig/authorization/index.md
     - backendconfig/dois.md
+    - frontendconfig/index.md
     
 
   - About:
