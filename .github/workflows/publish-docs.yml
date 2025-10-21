@@ -6,11 +6,12 @@ on:  # yamllint disable-line rule:truthy
       - main
     tags:
       - v*
+
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: SciCatProject/scicatlive/.github/actions/mkdocs-pages@tree
+      - uses: SciCatProject/docs-template/.github/actions/mkdocs-pages@main
         with:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           push: true
