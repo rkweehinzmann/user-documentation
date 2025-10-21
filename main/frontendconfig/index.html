@@ -9,10 +9,10 @@
       
       
       
-        <link rel="prev" href="..">
+        <link rel="prev" href="../backendconfig/dois/">
       
       
-        <link rel="next" href="../login/">
+        <link rel="next" href="../about/">
       
       
       <link rel="icon" href="../assets/images/favicon.png">
@@ -20,7 +20,7 @@
     
     
       
-        <title>SciCat User Guide - SciCat Documentation</title>
+        <title>Frontend configuration - SciCat Documentation</title>
       
     
     
@@ -81,7 +81,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#welcome-to-scicat-users-guide" class="md-skip">
+        <a href="#frontend-configuration" class="md-skip">
           Skip to content
         </a>
       
@@ -120,7 +120,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              SciCat User Guide
+              Frontend configuration
             
           </span>
         </div>
@@ -229,24 +229,22 @@
       
   
   
-    
   
   
-  
     
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
         
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="./" class="md-nav__link md-nav__link--active">
+            <a href="../user-guide/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -257,13 +255,13 @@
             </a>
             
               
-              <label class="md-nav__link md-nav__link--active" for="__nav_2" id="__nav_2_label" tabindex="0">
+              <label class="md-nav__link " for="__nav_2" id="__nav_2_label" tabindex="0">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
           </div>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
             SciCat User Guide
@@ -572,17 +570,19 @@
       
   
   
+    
   
   
+  
     
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
         
           
           
@@ -604,7 +604,7 @@
             
           </div>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
             SciCat Operator Guide
@@ -699,10 +699,19 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../frontendconfig/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -711,6 +720,7 @@
   
 
       </a>
+      
     </li>
   
 
@@ -763,50 +773,6 @@
     
   
   
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#how-to-run-scicat" class="md-nav__link">
-    <span class="md-ellipsis">
-      How to run SciCat
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#how-to-use-scicat" class="md-nav__link">
-    <span class="md-ellipsis">
-      How to use SciCat
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#how-tos-for-users-quick-links" class="md-nav__link">
-    <span class="md-ellipsis">
-      How-Tos for Users (Quick-links)
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#a-few-more-how-tos-for-users-and-site-admins" class="md-nav__link">
-    <span class="md-ellipsis">
-      A few more How-To's for users and site-admins
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
 </nav>
                   </div>
                 </div>
@@ -820,41 +786,16 @@
                   
 
 
-<h1 id="welcome-to-scicat-users-guide">Welcome to SciCat Users Guide<a class="headerlink" href="#welcome-to-scicat-users-guide" title="Permanent link">&para;</a></h1>
-<p>Scicat, a scientific metadata catalogue, allows your to explore your datasets through their metadata. SciCat has mechanisms to interact with the related datasets through its flexible integration with most storage systems.</p>
-<p>SciCat is a data management tool accompanying some critical steps during the entire data life cycle which are: getting an overview of datasets for data analysis, for re-analysis, for publishing datasets, and in particular for publication. </p>
-<p>Advantages of SciCat:</p>
-<ul>
-<li>It can be integrated to almost any other service that has REST APIs. Therefore, site-specific applications can be easily integrated. </li>
-<li>The Data Model of SciCat forsees a schemaless fields for quite different use cases. This concept has been implemented for the main class, Datasets, but is extended to function in the same way for the other classes e.g. Proposlas, Samples, Intstruments and Published Data.</li>
-<li>Its components are based on OpenSource software projects and state of the art technologies using MongoDB as backbone database, nestjs as backend basis. </li>
-</ul>
-<p>In the past 5 years SciCat has undergone major improvements in key areas for better user experience and re-structuring to meet the various different needs of photon science labs. The collaboration has grown and governance will be soon established.</p>
-<h2 id="how-to-run-scicat">How to run SciCat<a class="headerlink" href="#how-to-run-scicat" title="Permanent link">&para;</a></h2>
-<p>More detailed information on how to run scicat, see <a href="https://www.scicatproject.org/scicatlive/latest/">scicatlive documentation</a>. For more details on how to ingest, setup and deploy information from SciCat, see the <a href="../operator-guide/">operator's guide</a>. </p>
-<h2 id="how-to-use-scicat">How to use SciCat<a class="headerlink" href="#how-to-use-scicat" title="Permanent link">&para;</a></h2>
-<p>Once metadata is ingested into SciCat, the user can login and view, edit the metadata, list, filter and make a selection of interesting datasets using also scientific metadata. There are four main areas of SciCat where metadata can be explored:</p>
+<h1 id="frontend-configuration">Frontend configuration<a class="headerlink" href="#frontend-configuration" title="Permanent link">&para;</a></h1>
+<p>In only two json files SciCat's frontend configuration is managed, both as part of the backend configuration:</p>
 <ol>
-<li><a href="../datasets/">Datasets</a>: Metadata in SciCat is ideally sorted according to a dataset. It can have several associated files attached which have the same metadata like a thumbnail or most common image files.</li>
-<li><a href="../proposals.md">Proposals</a>: are used to link datasets to the proposal under which beamtime was granted.</li>
-<li><a href="../instruments.md">Instruments</a>: Instruments is a library of instruments available at your institute, which can be linked to datasets.</li>
-<li><a href="../samples.md">Samples</a>: Here you can add metadata describing a physical sample which can be linked to it’s experimental use captured in datasets. </li>
+<li><a href="https://github.com/SciCatProject/scicat-backend-next/blob/master/src/config/frontend.config.json">frontend.config.json</a> and </li>
+<li><a href="https://github.com/SciCatProject/scicat-backend-next/blob/master/src/config/frontend.theme.json">frontend.theme.json</a></li>
 </ol>
-<p>For many the SciCat datasets are the entry point to the catalogue, but soon it will be possible to start with samples or published data records (registered metadata sets).
-You can just browse what's in the catalogue for any published datasets. Else one can list all datasets that I either own or have access to. Here is how to find more on how to proceed:</p>
-<h2 id="how-tos-for-users-quick-links">How-Tos for Users (Quick-links)<a class="headerlink" href="#how-tos-for-users-quick-links" title="Permanent link">&para;</a></h2>
-<ul>
-<li><a href="../login/">Login</a></li>
-<li>Search and find your data, see <a href="../datasets/#how-to-query-datasets">Datasets How to query</a></li>
-<li>How to change some fields after ingestion</li>
-<li>How to view history of changes to a dataset</li>
-<li>How to <a href="../datasets/grouping_tagging_ds/">group and tag datasets</a>.</li>
-<li>How to group and tag grouped datasets</li>
-</ul>
-<h2 id="a-few-more-how-tos-for-users-and-site-admins">A few more How-To's for users and site-admins<a class="headerlink" href="#a-few-more-how-tos-for-users-and-site-admins" title="Permanent link">&para;</a></h2>
-<ul>
-<li>Where to find the version of the deployed SciCat Frontend? Check <a href="../about/operatorHowTos/">here</a>.</li>
-</ul>
+<p>Please write about
+- Why the frontend config is in the backend config?
+- What the scope is of these two files? 
+- Please provide examples for enabling/disabling buttons.</p>
 
 
 
