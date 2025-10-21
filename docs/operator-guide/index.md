@@ -30,6 +30,11 @@ These two components together comprise the "backend" of the architecture.
 ### Configuration of the backend
 There is one central place where one has a handle on how the backend is configured in SciCat: the [dotenv](../backendconfig/index.md) file.
 
+
+### Example: How to connect your scicat to an external service
+One useful feature of SciCat is to be able to connect your scicat to some external service via "SciCat jobs". Traditionally there were three fixed types, a job to archive, to retrieve and to publish, visible from the GUI through the respective buttons. Since recently (summer 2025) there are in total 9 types available. How to use them for your site, start with this documentation [here](../backendconfig/jobs.md) for admins. For now, stick to the developers documentation directly in the [code repo](https://github.com/SciCatProject/documentation/blob/master/Development/v4.x/backend/configuration/jobconfig.md).
+
+
 ### Example: How to integrate to OIDC using keycloak
 
 Integration with an identity provider, Keycloak, can be done using Open ID Connect, a protocol for authentication.
