@@ -16,6 +16,11 @@ SciCat covers these core aspects in a flexible way:
 
 SciCat is an open source project can can be developed in accordance with our (license)[https://github.com/SciCatProject/scicat-backend-next?tab=BSD-3-Clause-1-ov-file#readme].
 
+## Dataset ingestion
+You find here a pythonic way of metadata ingestion using SciCats API based on the PySciCat client:
+See https://www.scicatproject.org/pyscicat/howto/ingest.html to get started. 
+
+Another example that uses Jupyter Notebook in SciCatLive (see below) can be found (here)[https://github.com/SciCatProject/scicatlive/blob/main/services/jupyter/config/notebooks/pyscicat.ipynb] which includes how to authenticate, create a dataset, add datablocks and upload an attachement.
 
 ## Up-to-date operator's information
 Generally, the [**scicatlive**](https://www.scicatproject.org/scicatlive/latest/) documentation contains an up-to-date information how to set up and run the system ```SciCat``` interfacing it with various external, site-specific services. For troublshooting issues, please refer [the User's Guide](../troubleshoot/index.md).
