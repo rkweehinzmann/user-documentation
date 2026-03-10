@@ -1,6 +1,6 @@
 # Welcome to SciCat Users Guide
 
-Scicat, a scientific metadata catalogue, allows your to explore your datasets through their metadata. SciCat has mechanisms to interact with the related datasets through its flexible integration with most storage systems.
+Scicat, a scientific metadata catalogue, allows you to explore your datasets through their metadata. SciCat has mechanisms to interact with the related datasets through its flexible integration with most storage systems.
 
 SciCat is a data management tool accompanying some critical steps during the entire data life cycle which are: getting an overview of datasets for data analysis, for re-analysis, for publishing datasets, and in particular for publication. 
 
@@ -10,7 +10,7 @@ Advantages of SciCat:
 * The Data Model of SciCat forsees a schemaless fields for quite different use cases. This concept has been implemented for the main class, Datasets, but is extended to function in the same way for the other classes e.g. Proposlas, Samples, Intstruments and Published Data.
 * Its components are based on OpenSource software projects and state of the art technologies using MongoDB as backbone database, nestjs as backend basis. 
 
-In the past 5 years SciCat has undergone major improvements in key areas for better user experience and re-structuring to meet the various different needs of photon science labs. The collaboration has grown and governance will be soon established.
+In the past 5 years (since about 2020) SciCat has undergone major improvements in key areas for better user experience and re-structuring to meet the various different needs of photon science labs. The collaboration has grown and governance will be soon established.
 
 ## How to run SciCat
 More detailed information on how to run scicat, see [scicatlive documentation](https://www.scicatproject.org/scicatlive/latest/). For more details on how to ingest, setup and deploy information from SciCat, see the [operator's guide](../operator-guide/index.md). 

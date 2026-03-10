@@ -14,8 +14,13 @@ SciCat covers these core aspects in a flexible way:
 1. Searchable metadata fields, most common and highly specific ones. SciCat was developed by the PaNoSc community and has been successfully used more widely. This is because SciCat is highly configurable.
 2. Provision of unique persistent identifiers not only for the internal catalogue, but also connecting to the global DOI system through e.g. ready pathway to publication via [DataCite](https://datacite.org/). 
 
-SciCat is an open source project can can be developed in accordance with our (license)[https://github.com/SciCatProject/scicat-backend-next?tab=BSD-3-Clause-1-ov-file#readme].
+SciCat is an open source project can can be developed in accordance with our [license](https://github.com/SciCatProject/scicat-backend-next?tab=BSD-3-Clause-1-ov-file#readme).
 
+## Dataset ingestion
+You find here a pythonic way of metadata ingestion using SciCats API based on the PySciCat client:
+See this [how-to-ingest doc](https://www.scicatproject.org/pyscicat/howto/ingest.html) to get started. 
+
+Another example that uses Jupyter Notebook in SciCatLive (see below) can be found [here]([https://github.com/SciCatProject/scicatlive/blob/main/services/jupyter/config/notebooks/pyscicat.ipynb) which includes how to authenticate, create a dataset, add datablocks and upload an attachement.
 
 ## Up-to-date operator's information
 Generally, the [**scicatlive**](https://www.scicatproject.org/scicatlive/latest/) documentation contains an up-to-date information how to set up and run the system ```SciCat``` interfacing it with various external, site-specific services. For troublshooting issues, please refer [the User's Guide](../troubleshoot/index.md).
@@ -30,6 +35,11 @@ These two components together comprise the "backend" of the architecture.
 ### Configuration of the backend
 There is one central place where one has a handle on how the backend is configured in SciCat: the [dotenv](../backendconfig/index.md) file.
 
+
+### Example: How to connect your scicat to an external service
+One useful feature of SciCat is to be able to connect your scicat to some external service via "SciCat jobs". Traditionally there were three fixed types, a job to archive, to retrieve and to publish, visible from the GUI through the respective buttons. Since recently (summer 2025) there are in total 9 types available. How to use them for your site, start with this documentation [here](../backendconfig/jobs.md) for admins. For now, stick to the developers documentation directly in the [code repo](https://github.com/SciCatProject/documentation/blob/master/Development/v4.x/backend/configuration/jobconfig.md).
+
+
 ### Example: How to integrate to OIDC using keycloak
 
 Integration with an identity provider, Keycloak, can be done using Open ID Connect, a protocol for authentication.
@@ -41,9 +51,12 @@ To the REST server an arbitrary number of "clients" (frontends) can be connected
 
 In addition to the GUI other clients exist, such as command line (CLI) clients (example exist written in GO and Python) or desktop based GUI applications based on Qt. The CLI tools are especially useful for automated workflows, e.g. to get the data into the data catalog. This process is termed "ingestion" of the data. But they can also be used to add the data manually, especially for derived data, since this part of the workflow is often not possible to automate, in particular in truly experimental setups.
 
-### Configuration of the frontend
+### Start up a frontend client
 
 To start a local instance of the frontend follow the recipe: install requirements, esp. angular, git clone the [code](https://github.com/SciCatProject/frontend), go the the directory and run "npm run start". Then you can launch it by entering "localhost:4200".
+
+### Configuration of the frontend
+[Jays Link](https://github.com/SciCatProject/scicat-backend-next/pull/2306/files) Find [here](../frontendconfig/index.md) a guide of the frontend configuration.
 
 ### How to include site-specific logos
 See [here](https://github.com/SciCatProject/frontend/blob/master/SITE-LOGO-CONFIGURATION.md) for example procedure how to include your logo.
