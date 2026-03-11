@@ -2,12 +2,10 @@
 
 SciCat's frontend configuration is managed in two configuration file, both served through the backend configuration:
 
-1. [frontend.config.json](https://github.com/SciCatProject/backend/blob/master/src/config/frontend.config.json) defines the setup of the UI componets.
-2. [frontend.theme.json](https://github.com/SciCatProject/backend/blob/master/src/config/frontend.theme.json) defines the theming (color, font color etc) of the UI components.
+1. Frontend Config: [frontend.config.json](https://github.com/SciCatProject/backend/blob/master/src/config/frontend.config.json) defines the setup of the UI componets. For more information on the Frontedend Config definisions see [here](https://www.scicatproject.org/backend/main/frontend-config-guide/frontend-config/) 
+2. Frontend Theme Config: [frontend.theme.json](https://github.com/SciCatProject/backend/blob/master/src/config/frontend.theme.json) defines the theming (color, font color etc) of the UI components.
 
 The two frontend configs are served through the backend API so that it can be updated with ease. Adding these configs to the frontend would require a build step everytime the configuration file changed. To find out how to add the frontend configuration files to the backend please see [here](../backendconfig/index.md/#central-configuration-of-backend-env)
-
- 
 
 
 # Default List & Filter Configuration Pattern - Frontend Configuration Guide
@@ -62,3 +60,7 @@ Defines predefined condition filter in the side panel (currently supported only 
 | `rhs`        | `string` | Value to compare against                          | `"3.1e4"`           |
 | `unit`       | `string` | **Optional** unit for the value                       | `"mbar l/s/cm^2"`   | 
 | `unitsOptions`| `string[]`| **Optional** A list of allowed units for this condition. When provided, the unit dropdown will be restricted to only these options   | `["mbar l/s/cm^2", "Pa m^3/s/m^2"]`
+
+# Dynamic Dataset Detail Component
+
+The Dynamic Dataset Detail component can be customized to display dataset information in various templates and layouts based on your needs. It is an extra configuration file used in the Frontend Config. For more information on how to set this up please see [here](https://www.scicatproject.org/backend/main/frontend-config-guide/dynamic-dataset-detail-component/)
