@@ -1,14 +1,14 @@
 # Frontend configuration
 
-In only two json files SciCat's frontend configuration is managed, both as part of the backend configuration:
+SciCat's frontend configuration is managed in two configuration file, both served through the backend configuration:
 
-1. [frontend.config.json](https://github.com/SciCatProject/scicat-backend-next/blob/master/src/config/frontend.config.json) and 
-2. [frontend.theme.json](https://github.com/SciCatProject/scicat-backend-next/blob/master/src/config/frontend.theme.json)
+1. [frontend.config.json](https://github.com/SciCatProject/backend/blob/master/src/config/frontend.config.json) defines the setup of the UI componets.
+2. [frontend.theme.json](https://github.com/SciCatProject/backend/blob/master/src/config/frontend.theme.json) defines the theming (color, font color etc) of the UI components.
 
-Please write about
- - Why the frontend config is in the backend config?
- - What the scope is of these two files? 
- - Please provide code snippets examples for enabling/disabling buttons. Add ideally screenshots.
+The two frontend configs are served through the backend API so that it can be updated with ease. Adding these configs to the frontend would require a build step everytime the configuration file changed. To find out how to add the frontend configuration files to the backend please see [here](../backendconfig/index.md/#central-configuration-of-backend-env)
+
+ 
+
 
 # Default List & Filter Configuration Pattern - Frontend Configuration Guide
 

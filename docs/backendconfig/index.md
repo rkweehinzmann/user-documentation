@@ -498,6 +498,10 @@ ES_REFRESH=<"wait_for"|"false">
 LOGGERS_CONFIG_FILE="loggers.json"
 DATASET_TYPES_FILE="datasetTypes.json"
 PROPOSAL_TYPES_FILE="proposalTypes.json"
+
+FRONTEND_CONFIG_FILE="src/config/frontend.config.json"
+FRONTEND_THEME_FILE="src/config/frontend.theme.json"
+
 ```
 ### How to configure to connect the backend to other services
 In [scicatlive](https://www.scicatproject.org/scicatlive/latest/services/backend/) you find documentation on how to integrate your SciCat system with services providing identities, (e.g. KeyCloak) and authentication (OpenLDAP).
