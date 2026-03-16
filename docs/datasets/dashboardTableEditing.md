@@ -1,8 +1,7 @@
-# Filtering your data down
-
+## Using column settings
 SciCat comes equipped with many useful features and functionalities which enable the user to filter and arrange both their view and exports to suit their needs. This section will describe how to use some of these features along with visual demonstrations to help guide you through the UI.
 
-## Where are the filters
+## Where are the column settings
 To access the filters you must use the table menu in the top right corner of the tables header ![see image](./img/open%20menu.png)
 
 ## Manipulating the table layout
