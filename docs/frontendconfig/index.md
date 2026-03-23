@@ -2,7 +2,7 @@
 
 SciCat's frontend configuration is managed in two configuration file, both served through the backend configuration:
 
-1. Frontend Config: [frontend.config.json](https://github.com/SciCatProject/backend/blob/master/src/config/frontend.config.json) defines the setup of the UI componets. For more information on the Frontedend Config definisions see [here](https://www.scicatproject.org/backend/main/frontend-config-guide/frontend-config/) 
+1. Frontend Config: [frontend.config.json](https://github.com/SciCatProject/backend/blob/master/src/config/frontend.config.json) defines the setup of the UI componets. For more information on the Frontedend Config definitions see [here](https://www.scicatproject.org/backend/main/frontend-config-guide/frontend-config/) 
 2. Frontend Theme Config: [frontend.theme.json](https://github.com/SciCatProject/backend/blob/master/src/config/frontend.theme.json) defines the theming (color, font color etc) of the UI components.
 
 The two frontend configs are served through the backend API so that it can be updated with ease. Adding these configs to the frontend would require a build step everytime the configuration file changed. To find out how to add the frontend configuration files to the backend please see [here](../backendconfig/index.md/#central-configuration-of-backend-env)
