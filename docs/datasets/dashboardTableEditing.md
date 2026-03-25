@@ -49,4 +49,4 @@ The Json option will return you more information as it will save all data relate
 
 ### Saving only specific records
 In SciCat there is also the ability to only save data for manually selected data. ![see image](./img/selecting%20specific%20records%20to%20save%20to%20file.png)\
-This option works for both CSV and Json format to only return information about these selected records. However, the other aspects of each saving method still apply so CSV will return a snapshot of what you see, and Json will return all of the data related to just the selected records.
+This option works for both CSV and JSON format to only return information about these selected records. However, the other aspects of each saving method still apply so CSV will return a snapshot of what you see, and JSON will return all of the data related to just the selected records.
