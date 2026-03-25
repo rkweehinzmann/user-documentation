@@ -25,7 +25,7 @@ When making changes to the table, these changes will not automatically persist s
 - refresh the page
 - enter into any record and then go back
 
-Fortunately, SciCat has a built in way to make the layout persistent and the default. To make the table always filter to your selected columns, first apply the filters as shown above. Go back into the table menu and select the `save table settings` option.\
+ SciCat has a built in way to make the layout persistent and the default. To make the table always filter to your selected columns, first apply the filters as shown above. Go back into the table menu and select the `save table settings` option.\
 ![see image](./img/save%20table%20settings.png)\
 This will save the filters to your profile and results in the table formatting you've applied being persistent through refreshes. 
 **Note: this process will be required each time you wish to change the default column settings**
