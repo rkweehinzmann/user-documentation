@@ -44,7 +44,7 @@ This option will return you everything you can see in the table, this includes a
 
 #### Saving to JSON
 ![see image](./img/save%20as%20json.png)\
-The Json option will return you a lot more information as it will save all data related to the records being displayed on that page of the table. This option is very useful for metadata analysis and will provide all fields for each record in the Json format ready to be read/ingested by a program to perform analysis. 
+The Json option will return you more information as it will save all data related to the records being displayed on that page of the table. This option is very useful for metadata analysis and will provide all fields for each record in the JSON format ready to be read/ingested by a program to perform analysis. 
 **Note: The returned data from the JSON option will disregard filters so doesn't just collect information from the selected columns, but it will still only return data for the rows displayed on the current page/**
 
 ### Saving only specific records
