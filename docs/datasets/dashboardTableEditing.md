@@ -33,7 +33,7 @@ This will save the filters to your profile and results in the table formatting y
 ## Saving data from SciCat
 The process of saving or exporting data from Scicat is simple, open the table menu, select `Save data`, choose the output you want.\
 ![see image](./img/save%20data%20selection.png)\
-However there are a few important points to understand when saving data from SciCat.
+Descriptions of the saving behaviour for each of the formats are given below.
  
 ### What gets saved
 SciCat outputs only the data in the current page, meaning; If you have multiple pages of data, only the current page will be output to file. Also the method of output chosen, will result in a different level of data being returned so its important to know what you want to get from this extraction.
