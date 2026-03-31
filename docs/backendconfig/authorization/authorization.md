@@ -2,14 +2,14 @@
 ### Permission settings or who can do what?
 
 SciCat backend v4.x relies on [CASL](https://casl.js.or) to manage permissions.  
-The default vanilla installation of the backend is configured with the permissions described and linked below.   
+The default minimal installation of the backend is configured with the permissions described and linked below.   
 To avoid confusion and clarify the terminology used below, the term _User_ indicates a normal authenticated user with no elevated permissions, while _Admin_ indicates any user who belongs to a group that it is listed in the environmental variable ADMIN_GROUPS.  
 By default ADMIN_GROUPS is set to groups: admin, ingestor, archivemanager.
 Special case is for deleting items in SciCat. Users with groups listed in DELETE_GROUPS, are allowed to perform delete. Default value is archivemanager.
 
 ___IMPORTANT___ In v3.x, permissions were managed through roles. In v4.x, roles are not used, and they are converted to user groups.
 
-In the vanilla installation, the default functional accounts are assigned to groups as follow:
+In the minimal installation, the default functional accounts are assigned to groups as follow:
 - user: admin  
   group: admin  
 
@@ -22,8 +22,8 @@ In the vanilla installation, the default functional accounts are assigned to gro
 This allow for the flexibility required by many installations in different facilities with different needs.  
 
 
-## Group Lists available in Vanilla Configuration 
-The permissions in the vanilla installation provides a set of user groups which acquires specific set of permissions. In order to assign a set of permissions to a specific group of user, add such group to the correct list indicated below.
+## Group Lists available in Minimal Configuration 
+The permissions in the minimal installation provides a set of user groups which acquires specific set of permissions. In order to assign a set of permissions to a specific group of user, add such group to the correct list indicated below.
 
 | Configuration Group List | Description | CASL ability actions |
 | ------------------------ | ----------- | ------------------- |
