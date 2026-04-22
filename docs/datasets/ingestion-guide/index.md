@@ -123,6 +123,71 @@ curl -X 'POST' \
 }'
 
 ```
+Note, that datafiles and attachments related to a SciCat dataset need to be POSTed separtely:
+
+### Adding datafiles 
+Associated datafiles are organised in data blocks. There are original datablocks and only datablocks. The latter are obsolete and functionality has fully moved to `origdatablocks`. To attach your metadata of these associated datafiles to the dataset use e.g. `/api/v4/origdatablock`. Note, that the dataset to which the blocks belong are indicated by `dataasetId` which corresponds to the `pid` field of the dataset itself. The command can look like
+
+```bash
+curl -X 'POST' \
+  'http://localhost:3000/api/v4/origdatablocks' \
+  -H 'accept: application/json' \
+  -H 'Content-Type: application/json' \
+  -d '{
+  "ownerGroup": "string",
+  "accessGroups": [
+    "string"
+  ],
+  "instrumentGroup": "string",
+  "size": 0,
+  "chkAlg": "string",
+  "dataFileList": [
+    {
+      "path": "string",
+      "size": 0,
+      "time": "2026-04-22T11:28:56.870Z",
+      "chk": "string",
+      "uid": "string",
+      "gid": "string",
+      "perm": "string",
+      "type": "string"
+    }
+  ],
+  "isPublished": true,
+  "datasetId": "string"
+}'
+```
+Also note, that the ownerGroup must match the same field in the dataset. Same holds for attachments.
+
+### Adding attachments
+
+Here too a POST request will ingest attachments to the dataset, e.g. like this:
+
+```bash
+curl -X 'POST' \
+  'http://localhost:3000/api/v4/attachments' \
+  -H 'accept: application/json' \
+  -H 'Content-Type: application/json' \
+  -d '{
+  "ownerGroup": "string",
+  "accessGroups": [
+    "string"
+  ],
+  "instrumentGroup": "string",
+  "thumbnail": "string",
+  "caption": "string",
+  "relationships": [
+    {
+      "targetId": "string",
+      "targetType": "dataset",
+      "relationType": "is attached to"
+    }
+  ],
+  "isPublished": true,
+  "aid": "string"
+}'
+```
+
 
 ## Pythonic way: python sdk
 The python software development kit, sdk, is entirely generated from the backend based on the OpenAPI initiative and swagger definitions. Find more info [here](https://www.piwheels.org/project/scicat-sdk-py/).
