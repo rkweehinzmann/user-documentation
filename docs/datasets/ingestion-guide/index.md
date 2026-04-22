@@ -5,10 +5,10 @@ Once you have your database, the SciCat API server up and running, several optio
 Another example that uses Jupyter Notebook in SciCatLive can be found [here]([https://github.com/SciCatProject/scicatlive/blob/main/services/jupyter/config/notebooks/pyscicat.ipynb) which includes how to authenticate, create a dataset, add datablocks and upload an attachement.
 
 ## The `CURL` command
-The highest chance to make a successful request to one of SciCats endpoints is to learn from swagger. Browse and see what the syntax is, make sure you have a valid token, provide the correct fields and do not provide one of the forbidden fields. In the following we give some working examples.
+The highest chance to make a successful request to one of SciCats endpoints is to learn from swagger. Browse and see what the syntax is, make sure you have a valid token, provide the correct fields and do not provide one of the forbidden fields. In the following we give a skeleton for examples.
 
 ### Simple GET request
-Either as authenticated user (replace placeholders)
+with a known `pid` as authenticated user (replace placeholders)
 
 ```bash
 curl -X "GET" \
@@ -16,7 +16,7 @@ curl -X "GET" \
   -H "accept: application/json"
   -H 'Authentication: Bearer "${TOKEN}"'
 ```
-If you are only interested in public records just leave the last line.
+If you are only interested in public records just drop the last line.
 
 ### GET identifiers of ```origdatablocks``` (OIDs) of a dataset
 
@@ -126,7 +126,7 @@ curl -X 'POST' \
 Note, that datafiles and attachments related to a SciCat dataset need to be POSTed separtely:
 
 ### Adding datafiles 
-Associated datafiles are organised in data blocks. There are original datablocks and only datablocks. The latter are obsolete and functionality has fully moved to `origdatablocks`. To attach your metadata of these associated datafiles to the dataset use e.g. `/api/v4/origdatablock`. Note, that the dataset to which the blocks belong are indicated by `dataasetId` which corresponds to the `pid` field of the dataset itself. The command can look like
+Associated datafiles are organised in data blocks. There are original datablocks and only datablocks. The latter are obsolete and functionality has fully moved to `origdatablocks`. To attach your metadata of these associated datafiles to the dataset use e.g. `/api/v4/origdatablock`. Note, that the dataset to which the blocks belong are indicated by `dataasetId` which corresponds to the `pid` field of the dataset itself. The command can look like (and placeholders replaced):
 
 ```bash
 curl -X 'POST' \
@@ -157,11 +157,11 @@ curl -X 'POST' \
   "datasetId": "string"
 }'
 ```
-Also note, that the ownerGroup must match the same field in the dataset. Same holds for attachments.
+Also note, that the `ownerGroup` must match the same field in the dataset. Same holds for attachments.
 
 ### Adding attachments
 
-Here too a POST request will ingest attachments to the dataset, e.g. like this:
+Here too a POST request will ingest attachments to the dataset, e.g. like this (with placeholders replaced):
 
 ```bash
 curl -X 'POST' \
