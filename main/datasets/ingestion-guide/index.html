@@ -1141,7 +1141,7 @@ curl<span class="w"> </span>-G<span class="w"> </span><span class="s2">"</span><
 <span class="w">  </span>-H<span class="w"> </span><span class="s2">"Authorization: Bearer </span><span class="si">${</span><span class="nv">TOKEN</span><span class="si">}</span><span class="s2">"</span>
 </code></pre></div>
 <h3 id="create-a-dataset">Create a dataset<a class="headerlink" href="#create-a-dataset" title="Permanent link">¶</a></h3>
-<p>Make sure the json is formatted OK. Some fields are mandatory, you can check in swagger to see which fields are mandatory or not
+<p>Make sure the json is formatted OK. Some fields are mandatory, you can check in swagger to see which fields are mandatory or not, see also <a href="../../swagger/#tips-and-tricks">swagger documentation</a>.
 </p><div class="highlight"><pre><span></span><code>curl<span class="w"> </span>-X<span class="w"> </span><span class="s1">'POST'</span><span class="w"> </span><span class="se">\</span>
 <span class="w">  </span><span class="s1">'https://${URL}/api/v4/datasets'</span><span class="w"> </span><span class="se">\</span>
 <span class="w">  </span>-H<span class="w"> </span><span class="s1">'accept: application/json'</span><span class="w"> </span><span class="se">\</span>
@@ -1210,7 +1210,7 @@ curl<span class="w"> </span>-G<span class="w"> </span><span class="s2">"</span><
 <span class="s1">  "type": "string"</span>
 <span class="s1">}'</span>
 </code></pre></div>
-Note, that datafiles and attachments related to a SciCat dataset need to be POSTed separtely:<p></p>
+Note, that datafiles and attachments related to a SciCat dataset need to be POSTed separtely as they are a priori independent entities.<p></p>
 <h3 id="adding-datafiles">Adding datafiles<a class="headerlink" href="#adding-datafiles" title="Permanent link">¶</a></h3>
 <p>Associated datafiles are organised in data blocks. There are original datablocks and only datablocks. The latter are obsolete and functionality has fully moved to <code>origdatablocks</code>. To attach your metadata of these associated datafiles to the dataset use e.g. <code>/api/v4/origdatablock</code>. Note, that the dataset to which the blocks belong are indicated by <code>dataasetId</code> which corresponds to the <code>pid</code> field of the dataset itself. The command can look like (and placeholders replaced):</p>
 <p></p><div class="highlight"><pre><span></span><code>curl<span class="w"> </span>-X<span class="w"> </span><span class="s1">'POST'</span><span class="w"> </span><span class="se">\</span>
