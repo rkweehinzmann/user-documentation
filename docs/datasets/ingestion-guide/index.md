@@ -52,7 +52,7 @@ curl -G "${URL}/api/v4/datasets" \
 ```
 
 ### Create a dataset 
-Make sure the json is formatted OK. Some fields are mandatory, you can check in swagger to see which fields are mandatory or not
+Make sure the json is formatted OK. Some fields are mandatory, you can check in swagger to see which fields are mandatory or not, see also [swagger documentation](../../swagger/index.md#tips-and-tricks).
 ```bash
 curl -X 'POST' \
   'https://${URL}/api/v4/datasets' \
@@ -123,7 +123,7 @@ curl -X 'POST' \
 }'
 
 ```
-Note, that datafiles and attachments related to a SciCat dataset need to be POSTed separtely:
+Note, that datafiles and attachments related to a SciCat dataset need to be POSTed separtely as they are a priori independent entities.
 
 ### Adding datafiles 
 Associated datafiles are organised in data blocks. There are original datablocks and only datablocks. The latter are obsolete and functionality has fully moved to `origdatablocks`. To attach your metadata of these associated datafiles to the dataset use e.g. `/api/v4/origdatablock`. Note, that the dataset to which the blocks belong are indicated by `dataasetId` which corresponds to the `pid` field of the dataset itself. The command can look like (and placeholders replaced):
