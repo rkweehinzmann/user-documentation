@@ -1103,15 +1103,15 @@
 <p>Once you have your database, the SciCat API server up and running, several options of ingesting a dataset into SciCat exist - ranging from quick, one-time ingestion via CURL to a fully automized ingestion setup using python wrappers for SciCat API access based on <a href="[https://pydantic.dev/docs/validation/latest/concepts/models/]"><code>pydantic</code></a> (a python validation class to ensure valid formats).</p>
 <p>Another example that uses Jupyter Notebook in SciCatLive can be found <a href="[https://github.com/SciCatProject/scicatlive/blob/main/services/jupyter/config/notebooks/pyscicat.ipynb">here</a> which includes how to authenticate, create a dataset, add datablocks and upload an attachement.</p>
 <h2 id="the-curl-command">The <code>CURL</code> command<a class="headerlink" href="#the-curl-command" title="Permanent link">¶</a></h2>
-<p>The highest chance to make a successful request to one of SciCats endpoints is to learn from swagger. Browse and see what the syntax is, make sure you have a valid token, provide the correct fields and do not provide one of the forbidden fields. In the following we give some working examples.</p>
+<p>The highest chance to make a successful request to one of SciCats endpoints is to learn from swagger. Browse and see what the syntax is, make sure you have a valid token, provide the correct fields and do not provide one of the forbidden fields. In the following we give a skeleton for examples.</p>
 <h3 id="simple-get-request">Simple GET request<a class="headerlink" href="#simple-get-request" title="Permanent link">¶</a></h3>
-<p>Either as authenticated user (replace placeholders)</p>
+<p>with a known <code>pid</code> as authenticated user (replace placeholders)</p>
 <p></p><div class="highlight"><pre><span></span><code>curl<span class="w"> </span>-X<span class="w"> </span><span class="s2">"GET"</span><span class="w"> </span><span class="se">\</span>
 <span class="w">  </span><span class="s2">"http://"</span><span class="si">${</span><span class="nv">URL</span><span class="si">}</span><span class="s2">"/api/v4/datasets/</span><span class="si">${</span><span class="nv">pid</span><span class="si">}</span><span class="s2">"</span><span class="w"> </span><span class="se">\</span>
 <span class="w">  </span>-H<span class="w"> </span><span class="s2">"accept: application/json"</span>
 <span class="w">  </span>-H<span class="w"> </span><span class="s1">'Authentication: Bearer "${TOKEN}"'</span>
 </code></pre></div>
-If you are only interested in public records just leave the last line.<p></p>
+If you are only interested in public records just drop the last line.<p></p>
 <h3 id="get-identifiers-of-origdatablocks-oids-of-a-dataset">GET identifiers of <code>origdatablocks</code> (OIDs) of a dataset<a class="headerlink" href="#get-identifiers-of-origdatablocks-oids-of-a-dataset" title="Permanent link">¶</a></h3>
 <p>The dataset is identified by its pid, we use v4 API and first define a filter</p>
 <div class="highlight"><pre><span></span><code><span class="nb">export</span><span class="w"> </span><span class="nv">URL</span><span class="o">=</span><span class="s2">"valid_url"</span>
@@ -1212,7 +1212,7 @@ curl<span class="w"> </span>-G<span class="w"> </span><span class="s2">"</span><
 </code></pre></div>
 Note, that datafiles and attachments related to a SciCat dataset need to be POSTed separtely:<p></p>
 <h3 id="adding-datafiles">Adding datafiles<a class="headerlink" href="#adding-datafiles" title="Permanent link">¶</a></h3>
-<p>Associated datafiles are organised in data blocks. There are original datablocks and only datablocks. The latter are obsolete and functionality has fully moved to <code>origdatablocks</code>. To attach your metadata of these associated datafiles to the dataset use e.g. <code>/api/v4/origdatablock</code>. Note, that the dataset to which the blocks belong are indicated by <code>dataasetId</code> which corresponds to the <code>pid</code> field of the dataset itself. The command can look like</p>
+<p>Associated datafiles are organised in data blocks. There are original datablocks and only datablocks. The latter are obsolete and functionality has fully moved to <code>origdatablocks</code>. To attach your metadata of these associated datafiles to the dataset use e.g. <code>/api/v4/origdatablock</code>. Note, that the dataset to which the blocks belong are indicated by <code>dataasetId</code> which corresponds to the <code>pid</code> field of the dataset itself. The command can look like (and placeholders replaced):</p>
 <p></p><div class="highlight"><pre><span></span><code>curl<span class="w"> </span>-X<span class="w"> </span><span class="s1">'POST'</span><span class="w"> </span><span class="se">\</span>
 <span class="w">  </span><span class="s1">'http://localhost:3000/api/v4/origdatablocks'</span><span class="w"> </span><span class="se">\</span>
 <span class="w">  </span>-H<span class="w"> </span><span class="s1">'accept: application/json'</span><span class="w"> </span><span class="se">\</span>
@@ -1241,9 +1241,9 @@ Note, that datafiles and attachments related to a SciCat dataset need to be POST
 <span class="s1">  "datasetId": "string"</span>
 <span class="s1">}'</span>
 </code></pre></div>
-Also note, that the ownerGroup must match the same field in the dataset. Same holds for attachments.<p></p>
+Also note, that the <code>ownerGroup</code> must match the same field in the dataset. Same holds for attachments.<p></p>
 <h3 id="adding-attachments">Adding attachments<a class="headerlink" href="#adding-attachments" title="Permanent link">¶</a></h3>
-<p>Here too a POST request will ingest attachments to the dataset, e.g. like this:</p>
+<p>Here too a POST request will ingest attachments to the dataset, e.g. like this (with placeholders replaced):</p>
 <div class="highlight"><pre><span></span><code>curl<span class="w"> </span>-X<span class="w"> </span><span class="s1">'POST'</span><span class="w"> </span><span class="se">\</span>
 <span class="w">  </span><span class="s1">'http://localhost:3000/api/v4/attachments'</span><span class="w"> </span><span class="se">\</span>
 <span class="w">  </span>-H<span class="w"> </span><span class="s1">'accept: application/json'</span><span class="w"> </span><span class="se">\</span>
