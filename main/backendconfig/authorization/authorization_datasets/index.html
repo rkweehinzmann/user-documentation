@@ -1,1114 +1,211 @@
-<!DOCTYPE html><html lang="en" class="no-js"><head>
-    
-      <meta charset="utf-8">
-      <meta name="viewport" content="width=device-width,initial-scale=1">
-      
-      
-      
-      
-      
-      
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         
-      
-      
-      <link rel="icon" href="../../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.0">
-    
-    
-      
+        
+        
+        <link rel="shortcut icon" href="../../../img/favicon.ico">
         <title>Datasets Authorization - SciCat Documentation</title>
-      
-    
-    
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.618322db.min.css">
-      
-        
-        <link rel="stylesheet" href="../../../assets/stylesheets/palette.ab4e12ef.min.css">
-      
-      
-
-
-    
-    
-      
-    
-    
-      
-        
-        
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback">
-        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
-      
-    
-    
-      <link rel="stylesheet" href="../../../css/custom.css">
-    
-    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
-    
-      
-
-    
-    
-  <link href="../../../assets/stylesheets/glightbox.min.css" rel="stylesheet"><script src="../../../assets/javascripts/glightbox.min.js"></script><style id="glightbox-style">
-            html.glightbox-open { overflow: initial; height: 100%; }
-            .gslide-title { margin-top: 0px; user-select: text; }
-            .gslide-desc { color: #666; user-select: text; }
-            .gslide-image img { background: white; }
-            .gscrollbar-fixer { padding-right: 15px; }
-            .gdesc-inner { font-size: 0.75rem; }
-            body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color); }
-            body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color); }
-            body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color); }
-        </style></head>
-  
-  
-    
-    
-    
-    
-    
-    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="light-blue">
-  
-    
-    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
-    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
-    <label class="md-overlay" for="__drawer"></label>
-    <div data-md-component="skip">
-      
-        
-        <a href="#datasets-authorization" class="md-skip">
-          Skip to content
-        </a>
-      
-    </div>
-    <div data-md-component="announce">
-      
-    </div>
-    
-      <div data-md-color-scheme="default" data-md-component="outdated" hidden="">
-        
-      </div>
-    
-    
-      
-
-  
-
-<header class="md-header md-header--shadow" data-md-component="header">
-  <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../../.." title="SciCat Documentation" class="md-header__button md-logo" aria-label="SciCat Documentation" data-md-component="logo">
-      
-  <img src="../../../assets/SciCat-logo-icon.png" alt="logo">
-
-    </a>
-    <label class="md-header__button md-icon" for="__drawer">
-      
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg>
-    </label>
-    <div class="md-header__title" data-md-component="header-title">
-      <div class="md-header__ellipsis">
-        <div class="md-header__topic">
-          <span class="md-ellipsis">
-            SciCat Documentation
-          </span>
-        </div>
-        <div class="md-header__topic" data-md-component="header-topic">
-          <span class="md-ellipsis">
-            
-              Datasets Authorization
-            
-          </span>
-        </div>
-      </div>
-    </div>
-    
-      
-    
-    
-    
-    
-      
-      
-        <label class="md-header__button md-icon" for="__search">
-          
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
-        </label>
-        <div class="md-search" data-md-component="search" role="dialog">
-  <label class="md-search__overlay" for="__search"></label>
-  <div class="md-search__inner" role="search">
-    <form class="md-search__form" name="search">
-      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required="">
-      <label class="md-search__icon md-icon" for="__search">
-        
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
-        
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
-      </label>
-      <nav class="md-search__options" aria-label="Search">
-        
-        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
-          
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path></svg>
-        </button>
-      </nav>
-      
-    </form>
-    <div class="md-search__output">
-      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix="">
-        <div class="md-search-result" data-md-component="search-result">
-          <div class="md-search-result__meta">
-            Initializing search
-          </div>
-          <ol class="md-search-result__list" role="presentation"></ol>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-      
-    
-    
-  </nav>
-  
-</header>
-    
-    <div class="md-container" data-md-component="container">
-      
-      
-        
-          
-        
-      
-      <main class="md-main" data-md-component="main">
-        <div class="md-main__inner md-grid">
-          
-            
-              
-              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
-                <div class="md-sidebar__scrollwrap">
-                  <div class="md-sidebar__inner">
-                    
-
-
-
-<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
-  <label class="md-nav__title" for="__drawer">
-    <a href="../../.." title="SciCat Documentation" class="md-nav__button md-logo" aria-label="SciCat Documentation" data-md-component="logo">
-      
-  <img src="../../../assets/SciCat-logo-icon.png" alt="logo">
-
-    </a>
-    SciCat Documentation
-  </label>
-  
-  <ul class="md-nav__list" data-md-scrollfix="">
-    
-      
-      
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../.." class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Home
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    
-    
-    
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2">
-        
-          
-          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
-            
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    SciCat User Guide
-  
-
-    
-  </span>
-  
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_2">
-            <span class="md-nav__icon md-icon"></span>
-            
-  
-    SciCat User Guide
-  
-
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix="">
-            
-              
-                
-  
-  
-  
-  
-    
-    
-    
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1">
-        
-          
-          <label class="md-nav__link" for="__nav_2_1" id="__nav_2_1_label" tabindex="0">
-            
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Login
-  
-
-    
-  </span>
-  
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_1_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_2_1">
-            <span class="md-nav__icon md-icon"></span>
-            
-  
-    Login
-  
-
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix="">
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../login/Anonymous/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Anonymous
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    
-    
-    
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2">
-        
-          
-          <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
-            
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Datasets
-  
-
-    
-  </span>
-  
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_2_2">
-            <span class="md-nav__icon md-icon"></span>
-            
-  
-    Datasets
-  
-
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix="">
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../datasets/Publishing/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Publishing data
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../datasets/PublishingAdvanced/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Publishing data Advanced
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../datasets/jobs/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Data Retrieval
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    
-    
-    
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2_4">
-        
-          
-          <label class="md-nav__link" for="__nav_2_2_4" id="__nav_2_2_4_label" tabindex="0">
-            
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Dashboard
-  
-
-    
-  </span>
-  
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_2_4_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_2_2_4">
-            <span class="md-nav__icon md-icon"></span>
-            
-  
-    Dashboard
-  
-
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix="">
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../datasets/DashboardDatasetsFiltering.md" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Search and Filter
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../datasets/dashboardTableEditing/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Configure Dataset Table
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../proposals/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Proposals
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../samples/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Samples
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../instruments/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Instruments
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../troubleshoot/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Troubleshooting
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    
-    
-    
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3">
-        
-          
-          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
-            
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    SciCat Operator Guide
-  
-
-    
-  </span>
-  
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_3">
-            <span class="md-nav__icon md-icon"></span>
-            
-  
-    SciCat Operator Guide
-  
-
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix="">
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../swagger/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Swagger - explore the Backend API
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Central Configuration of Backend: .env
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Authorization Model
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../dois/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    DOI minting in SciCat - How to set up publication of datasets
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../frontendconfig/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Frontend configuration
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../about/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    About
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-    
-  </ul>
-</nav>
-                  </div>
-                </div>
-              </div>
-            
-            
-              
-              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc">
-                <div class="md-sidebar__scrollwrap">
-                  <div class="md-sidebar__inner">
-                    
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
-      
-        <li class="md-nav__item">
-  <a href="#casl-ability-actions" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        CASL ability actions
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="CASL ability actions">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#endpoint-authorization" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Endpoint authorization
-      
-    </span>
-  </a>
-  
+        <link href="../../../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../../../css/fontawesome.min.css" rel="stylesheet">
+        <link href="../../../css/brands.min.css" rel="stylesheet">
+        <link href="../../../css/solid.min.css" rel="stylesheet">
+        <link href="../../../css/v4-font-face.min.css" rel="stylesheet">
+        <link href="../../../css/base.css" rel="stylesheet">
+        <link id="hljs-light" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" >
+        <link id="hljs-dark" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github-dark.min.css" disabled>
+        <link href="../../../css/version-select.css" rel="stylesheet">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script>hljs.highlightAll();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="../../..">SciCat Documentation</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar-collapse" aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="nav-item">
+                                <a href="../../.." class="nav-link">Home</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">SciCat User Guide</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../../user-guide/" class="dropdown-item">Welcome to SciCat Users Guide</a>
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#instance-authorization" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Instance authorization
-      
-    </span>
-  </a>
-  
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Login</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../login/" class="dropdown-item">Login</a>
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#implementation" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Implementation
-      
-    </span>
-  </a>
-  
+            
+<li>
+    <a href="../../../login/Anonymous/" class="dropdown-item">Anonymous</a>
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#priority" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Priority
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#authorization-table" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Authorization table
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Authorization table">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#datasets" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Datasets
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#origdatablock" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        OrigDatablock
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#datablocks" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Datablocks
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
     </ul>
-  
-</nav>
-                  </div>
-                </div>
-              </div>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Datasets</a>
+    <ul class="dropdown-menu">
             
-          
-          
-            <div class="md-content" data-md-component="content">
-              
-              <article class="md-content__inner md-typeset">
-                
-                  
+<li>
+    <a href="../../../datasets/" class="dropdown-item">Datasets</a>
+</li>
+            
+<li>
+    <a href="../../../datasets/Publishing/" class="dropdown-item">Publishing data</a>
+</li>
+            
+<li>
+    <a href="../../../datasets/PublishingAdvanced/" class="dropdown-item">Publishing data Advanced</a>
+</li>
+            
+<li>
+    <a href="../../../datasets/jobs/" class="dropdown-item">Data Retrieval</a>
+</li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Dashboard</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../datasets/DashboardDatasetsFiltering.md" class="dropdown-item">Search and Filter</a>
+</li>
+            
+<li>
+    <a href="../../../datasets/dashboardTableEditing/" class="dropdown-item">Configure Dataset Table</a>
+</li>
+    </ul>
+  </li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Proposals</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../proposals/" class="dropdown-item">Index</a>
+</li>
+    </ul>
+  </li>
+                                    
+<li>
+    <a href="../../../samples/" class="dropdown-item">Samples</a>
+</li>
+                                    
+<li>
+    <a href="../../../instruments/" class="dropdown-item">Instruments</a>
+</li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Troubleshooting</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../troubleshoot/" class="dropdown-item">Trouble shooting</a>
+</li>
+    </ul>
+  </li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">SciCat Operator Guide</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../../operator-guide/" class="dropdown-item">Welcome to SciCat Operator's Guide</a>
+</li>
+                                    
+<li>
+    <a href="../../../swagger/" class="dropdown-item">Swagger - explore the Backend API</a>
+</li>
+                                    
+<li>
+    <a href="../../" class="dropdown-item">Central Configuration of Backend: .env</a>
+</li>
+                                    
+<li>
+    <a href="../" class="dropdown-item">Authorization Model</a>
+</li>
+                                    
+<li>
+    <a href="../../dois/" class="dropdown-item">DOI minting in SciCat - How to set up publication of datasets</a>
+</li>
+                                    
+<li>
+    <a href="../../../frontendconfig/" class="dropdown-item">Frontend configuration</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">About</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../../about/" class="dropdown-item">About the team - who are we?</a>
+</li>
+                                </ul>
+                            </li>
+                        </ul>
 
+                    <ul class="nav navbar-nav ms-md-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-bs-toggle="modal" data-bs-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
 
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-bs-toggle="collapse" data-bs-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
 
-<h1 id="datasets-authorization">Datasets Authorization<a class="headerlink" href="#datasets-authorization" title="Permanent link">¶</a></h1>
-<h2 id="casl-ability-actions">CASL ability actions<a class="headerlink" href="#casl-ability-actions" title="Permanent link">¶</a></h2>
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-body-tertiary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-bs-level="1"><a href="#datasets-authorization" class="nav-link">Datasets Authorization</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-bs-level="2"><a href="#casl-ability-actions" class="nav-link">CASL ability actions</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<h1 id="datasets-authorization">Datasets Authorization</h1>
+<h2 id="casl-ability-actions">CASL ability actions</h2>
 <p>This is the list of the permissions methods available for datasets and all their endpoints and more fine-grained instance authorization. </p>
-<h3 id="endpoint-authorization">Endpoint authorization<a class="headerlink" href="#endpoint-authorization" title="Permanent link">¶</a></h3>
+<h3 id="endpoint-authorization">Endpoint authorization</h3>
 <ol>
 <li>DatasetCreate</li>
 <li>DatasetRead</li>
@@ -1128,7 +225,7 @@
 <li>DatasetDatablockDelete</li>
 <li>DatasetLogbookRead</li>
 </ol>
-<h3 id="instance-authorization">Instance authorization<a class="headerlink" href="#instance-authorization" title="Permanent link">¶</a></h3>
+<h3 id="instance-authorization">Instance authorization</h3>
 <ol>
 <li>DatasetCreateOwnerNoPid</li>
 <li>DatasetCreateOwnerWithPid</li>
@@ -1176,12 +273,12 @@
 <li>DatasetLogbookReadOwner</li>
 <li>DatasetLogbookReadAny</li>
 </ol>
-<h3 id="implementation">Implementation<a class="headerlink" href="#implementation" title="Permanent link">¶</a></h3>
+<h3 id="implementation">Implementation</h3>
 <p>How the different level of authorization translates in data condition applied byt he backend.</p>
 <ul>
 <li><strong>Public</strong></li>
 <li><code>isPublished = true</code></li>
-<li><strong>Access</strong>&nbsp;(condition ar applied in logical <em>or</em>)</li>
+<li><strong>Access</strong> (condition ar applied in logical <em>or</em>)</li>
 <li><code>isPublished = true</code></li>
 <li><code>ownerGroup</code> is one of the groups that the user belongs</li>
 <li><code>accessGroups</code> are one of the groups that the user belongs</li>
@@ -1191,12 +288,12 @@
 <li><strong>Any</strong></li>
 <li>User can perform the action to any dataset</li>
 </ul>
-<h3 id="priority">Priority<a class="headerlink" href="#priority" title="Permanent link">¶</a></h3>
-<p></p><div class="highlight"><pre><span></span><code>    DatasetCreate--&gt;DatasetCreateOwnerNoPid;
+<h3 id="priority">Priority</h3>
+<pre><code>    DatasetCreate--&gt;DatasetCreateOwnerNoPid;
     DatasetCreateOwnerNoPid--&gt;DatasetCreateOwnerWithPid;
     DatasetCreateOwnerWithPid--&gt;DatasetCreateAny;
-</code></pre></div>
-<div class="highlight"><pre><span></span><code>    DatasetRead--&gt;DatasetReadManyPublic;
+</code></pre>
+<pre><code>    DatasetRead--&gt;DatasetReadManyPublic;
     DatasetReadManyPublic--&gt;DatasetReadManyAccess;
     DatasetReadManyAccess--&gt;DatasetReadManyOwner;
     DatasetReadManyOwner--&gt;DatasetReadAny;
@@ -1204,15 +301,15 @@
     DatasetReadOnePublic--&gt;DatasetReadOneAccess;
     DatasetReadOneAccess--&gt;DatasetReadOneOwner;
     DatasetReadOneOwner--&gt;DatasetReadAny;
-</code></pre></div>
-<div class="highlight"><pre><span></span><code>    DatasetUpdate--&gt;DatasetUpdateOwner;
+</code></pre>
+<pre><code>    DatasetUpdate--&gt;DatasetUpdateOwner;
     DatasetUpdateOwner--&gt;DatasetUpdateAny;
     DatasetDelete--&gt;DatasetDeleteOwner;
     DatasetDeleteOwner--&gt;DatasetDeleteAny;
-</code></pre></div><p></p>
-<h3 id="authorization-table">Authorization table<a class="headerlink" href="#authorization-table" title="Permanent link">¶</a></h3>
+</code></pre>
+<h3 id="authorization-table">Authorization table</h3>
 <p>Note, merely for visibility reasons the table has been split. Hierarchically, <code>OrigDatablocks</code> and <code>Datablocks</code> belong to <code>Datasets</code>.</p>
-<h4 id="datasets">Datasets<a class="headerlink" href="#datasets" title="Permanent link">¶</a></h4>
+<h4 id="datasets">Datasets</h4>
 <table>
 <thead>
 <tr>
@@ -1236,10 +333,10 @@
 <td><em>DatasetCreate</em></td>
 <td><strong>no</strong></td>
 <td><strong>no</strong></td>
-<td>Owner, w/o PID<br><em>DatasetCreateOwnerNoPid</em></td>
-<td>Owner, w/ PID<br><em>DatasetCreateOwnerWithPid</em></td>
-<td>Any<br><em>DatasetCreateAny</em></td>
-<td>Any<br><em>DatasetCreateAny</em></td>
+<td>Owner, w/o PID<br/><em>DatasetCreateOwnerNoPid</em></td>
+<td>Owner, w/ PID<br/><em>DatasetCreateOwnerWithPid</em></td>
+<td>Any<br/><em>DatasetCreateAny</em></td>
+<td>Any<br/><em>DatasetCreateAny</em></td>
 <td><strong>no</strong></td>
 <td></td>
 </tr>
@@ -1249,10 +346,10 @@
 <td><em>DatasetCreate</em></td>
 <td><strong>no</strong></td>
 <td><strong>no</strong></td>
-<td>Owner, w/o PID<br><em>DatasetCreateOwnerNoPid</em></td>
-<td>Owner, W/ PID<br><em>DatasetCreateOwnerWithPid</em></td>
-<td>Any<br><em>DatasetCreateAny</em></td>
-<td>Any<br><em>DatasetCreateAny</em></td>
+<td>Owner, w/o PID<br/><em>DatasetCreateOwnerNoPid</em></td>
+<td>Owner, W/ PID<br/><em>DatasetCreateOwnerWithPid</em></td>
+<td>Any<br/><em>DatasetCreateAny</em></td>
+<td>Any<br/><em>DatasetCreateAny</em></td>
 <td><strong>no</strong></td>
 <td></td>
 </tr>
@@ -1260,12 +357,12 @@
 <td>GET</td>
 <td>Datasets</td>
 <td><em>DatasetRead</em></td>
-<td>Public<br><em>DatasetReadPublic</em></td>
-<td>Has Access<br><em>DatasetReadAccess</em></td>
-<td>Has Access<br><em>DatasetReadAccess</em></td>
-<td>Has Access<br><em>DatasetReadAccess</em></td>
-<td>Has Access<br><em>DatasetReadAccess</em></td>
-<td>Any<br><em>DatasetReadyAny</em></td>
+<td>Public<br/><em>DatasetReadPublic</em></td>
+<td>Has Access<br/><em>DatasetReadAccess</em></td>
+<td>Has Access<br/><em>DatasetReadAccess</em></td>
+<td>Has Access<br/><em>DatasetReadAccess</em></td>
+<td>Has Access<br/><em>DatasetReadAccess</em></td>
+<td>Any<br/><em>DatasetReadyAny</em></td>
 <td><strong>no</strong></td>
 <td></td>
 </tr>
@@ -1273,12 +370,12 @@
 <td>GET</td>
 <td>Datasets/fullquery</td>
 <td><em>DatasetRead</em></td>
-<td>Public<br><em>DatasetReadManyPublic</em></td>
-<td>Has Access<br><em>DatasetReadManyAccess</em></td>
-<td>Has Access<br><em>DatasetReadManyAccess</em></td>
-<td>Has Access<br><em>DatasetReadManyAccess</em></td>
-<td>Has Access<br><em>DatasetReadManyAccess</em></td>
-<td>Any<br><em>DatasetReadAny</em></td>
+<td>Public<br/><em>DatasetReadManyPublic</em></td>
+<td>Has Access<br/><em>DatasetReadManyAccess</em></td>
+<td>Has Access<br/><em>DatasetReadManyAccess</em></td>
+<td>Has Access<br/><em>DatasetReadManyAccess</em></td>
+<td>Has Access<br/><em>DatasetReadManyAccess</em></td>
+<td>Any<br/><em>DatasetReadAny</em></td>
 <td><strong>no</strong></td>
 <td></td>
 </tr>
@@ -1286,12 +383,12 @@
 <td>GET</td>
 <td>Datasets/fullfacet</td>
 <td><em>DatasetRead</em></td>
-<td>Public<br><em>DatasetReadManyPublic</em></td>
-<td>Has Access<br><em>DatasetReadManyAccess</em></td>
-<td>Has Access<br><em>DatasetReadManyAccess</em></td>
-<td>Has Access<br><em>DatasetReadManyAccess</em></td>
-<td>Has Access<br><em>DatasetReadManyAccess</em></td>
-<td>Any<br><em>DatasetReadAny</em></td>
+<td>Public<br/><em>DatasetReadManyPublic</em></td>
+<td>Has Access<br/><em>DatasetReadManyAccess</em></td>
+<td>Has Access<br/><em>DatasetReadManyAccess</em></td>
+<td>Has Access<br/><em>DatasetReadManyAccess</em></td>
+<td>Has Access<br/><em>DatasetReadManyAccess</em></td>
+<td>Any<br/><em>DatasetReadAny</em></td>
 <td><strong>no</strong></td>
 <td></td>
 </tr>
@@ -1299,12 +396,12 @@
 <td>GET</td>
 <td>Datasets/metadataKeys</td>
 <td><em>DatasetRead</em></td>
-<td>Public<br><em>DatasetReadManyPublic</em></td>
-<td>Has Access<br><em>DatasetReadManyAccess</em></td>
-<td>Has Access<br><em>DatasetReadManyAccess</em></td>
-<td>Has Access<br><em>DatasetReadManyAccess</em></td>
-<td>Has Access<br><em>DatasetReadManyAccess</em></td>
-<td>Any<br><em>DatasetReadAny</em></td>
+<td>Public<br/><em>DatasetReadManyPublic</em></td>
+<td>Has Access<br/><em>DatasetReadManyAccess</em></td>
+<td>Has Access<br/><em>DatasetReadManyAccess</em></td>
+<td>Has Access<br/><em>DatasetReadManyAccess</em></td>
+<td>Has Access<br/><em>DatasetReadManyAccess</em></td>
+<td>Any<br/><em>DatasetReadAny</em></td>
 <td><strong>no</strong></td>
 <td></td>
 </tr>
@@ -1312,12 +409,12 @@
 <td>GET</td>
 <td>Datasets/count</td>
 <td><em>DatasetRead</em></td>
-<td>Public<br><em>DatasetReadManyPublic</em></td>
-<td>Has Access<br><em>DatasetReadManyAccess</em></td>
-<td>Has Access<br><em>DatasetReadManyAccess</em></td>
-<td>Has Access<br><em>DatasetReadManyAccess</em></td>
-<td>Has Access<br><em>DatasetReadManyAccess</em></td>
-<td>Any<br><em>DatasetReadAny</em></td>
+<td>Public<br/><em>DatasetReadManyPublic</em></td>
+<td>Has Access<br/><em>DatasetReadManyAccess</em></td>
+<td>Has Access<br/><em>DatasetReadManyAccess</em></td>
+<td>Has Access<br/><em>DatasetReadManyAccess</em></td>
+<td>Has Access<br/><em>DatasetReadManyAccess</em></td>
+<td>Any<br/><em>DatasetReadAny</em></td>
 <td><strong>no</strong></td>
 <td></td>
 </tr>
@@ -1325,12 +422,12 @@
 <td>GET</td>
 <td>Datasets/findOne</td>
 <td><em>DatasetRead</em></td>
-<td>Public<br><em>DatasetReadOnePublic</em></td>
-<td>Has Access<br><em>DatasetReadOneAccess</em></td>
-<td>Has Access<br><em>DatasetReadOneAccess</em></td>
-<td>Has Access<br><em>DatasetReadOneAccess</em></td>
-<td>Has Access<br><em>DatasetReadOneAccess</em></td>
-<td>Any<br><em>DatasetReadAny</em></td>
+<td>Public<br/><em>DatasetReadOnePublic</em></td>
+<td>Has Access<br/><em>DatasetReadOneAccess</em></td>
+<td>Has Access<br/><em>DatasetReadOneAccess</em></td>
+<td>Has Access<br/><em>DatasetReadOneAccess</em></td>
+<td>Has Access<br/><em>DatasetReadOneAccess</em></td>
+<td>Any<br/><em>DatasetReadAny</em></td>
 <td><strong>no</strong></td>
 <td></td>
 </tr>
@@ -1338,12 +435,12 @@
 <td>GET</td>
 <td>Datasets/<em>pid</em></td>
 <td><em>DatasetRead</em></td>
-<td>Public<br><em>DatasetReadOnePublic</em></td>
-<td>Has Access<br><em>DatasetReadOneAccess</em></td>
-<td>Has Access<br><em>DatasetReadOneAccess</em></td>
-<td>Has Access<br><em>DatasetReadOneAccess</em></td>
-<td>Has Access<br><em>DatasetReadOneAccess</em></td>
-<td>Any<br><em>DatasetReadAny</em></td>
+<td>Public<br/><em>DatasetReadOnePublic</em></td>
+<td>Has Access<br/><em>DatasetReadOneAccess</em></td>
+<td>Has Access<br/><em>DatasetReadOneAccess</em></td>
+<td>Has Access<br/><em>DatasetReadOneAccess</em></td>
+<td>Has Access<br/><em>DatasetReadOneAccess</em></td>
+<td>Any<br/><em>DatasetReadAny</em></td>
 <td><strong>no</strong></td>
 <td></td>
 </tr>
@@ -1353,10 +450,10 @@
 <td><em>DatasetUpdate</em></td>
 <td><strong>no</strong></td>
 <td><strong>no</strong></td>
-<td>Owner<br><em>DatasetUpdateOwner</em></td>
-<td>Owner<br><em>DatasetUpdateOwner</em></td>
-<td>Owner<br><em>DatasetUpdateOwner</em></td>
-<td>Any<br><em>DatasetUpdateAny</em></td>
+<td>Owner<br/><em>DatasetUpdateOwner</em></td>
+<td>Owner<br/><em>DatasetUpdateOwner</em></td>
+<td>Owner<br/><em>DatasetUpdateOwner</em></td>
+<td>Any<br/><em>DatasetUpdateAny</em></td>
 <td><strong>no</strong></td>
 <td></td>
 </tr>
@@ -1366,10 +463,10 @@
 <td><em>DatasetUpdate</em></td>
 <td><strong>no</strong></td>
 <td><strong>no</strong></td>
-<td>Owner<br><em>DatasetUpdateOwner</em></td>
-<td>Owner<br><em>DatasetUpdateOwner</em></td>
-<td>Owner<br><em>DatasetUpdateOwner</em></td>
-<td>Any<br><em>DatasetUpdateAny</em></td>
+<td>Owner<br/><em>DatasetUpdateOwner</em></td>
+<td>Owner<br/><em>DatasetUpdateOwner</em></td>
+<td>Owner<br/><em>DatasetUpdateOwner</em></td>
+<td>Any<br/><em>DatasetUpdateAny</em></td>
 <td><strong>no</strong></td>
 <td></td>
 </tr>
@@ -1379,10 +476,10 @@
 <td><em>DatasetUpdate</em></td>
 <td><strong>no</strong></td>
 <td><strong>no</strong></td>
-<td>Owner<br><em>DatasetUpdateOwner</em></td>
-<td>Owner<br><em>DatasetUpdateOwner</em></td>
-<td>Owner<br><em>DatasetUpdateOwner</em></td>
-<td>Any<br><em>DatasetUpdateAny</em></td>
+<td>Owner<br/><em>DatasetUpdateOwner</em></td>
+<td>Owner<br/><em>DatasetUpdateOwner</em></td>
+<td>Owner<br/><em>DatasetUpdateOwner</em></td>
+<td>Any<br/><em>DatasetUpdateAny</em></td>
 <td><strong>no</strong></td>
 <td></td>
 </tr>
@@ -1409,7 +506,7 @@
 <td><strong>no</strong></td>
 <td><strong>no</strong></td>
 <td><strong>no</strong></td>
-<td>Any<br><em>DatasetDeleteAny</em></td>
+<td>Any<br/><em>DatasetDeleteAny</em></td>
 <td></td>
 </tr>
 <tr>
@@ -1429,12 +526,12 @@
 <td>GET</td>
 <td>Datasets/<em>pid</em>/thumbnail</td>
 <td><em>DatasetRead</em></td>
-<td>Public<br><em>DatasetReadPublic</em></td>
-<td>Has Access<br><em>DatasetReadAccess</em></td>
-<td>Has Access<br><em>DatasetReadAccess</em></td>
-<td>Has Access<br><em>DatasetReadAccess</em></td>
-<td>Has Access<br><em>DatasetReadAccess</em></td>
-<td>Any<br><em>DatasetReadAny</em></td>
+<td>Public<br/><em>DatasetReadPublic</em></td>
+<td>Has Access<br/><em>DatasetReadAccess</em></td>
+<td>Has Access<br/><em>DatasetReadAccess</em></td>
+<td>Has Access<br/><em>DatasetReadAccess</em></td>
+<td>Has Access<br/><em>DatasetReadAccess</em></td>
+<td>Any<br/><em>DatasetReadAny</em></td>
 <td><strong>no</strong></td>
 <td></td>
 </tr>
@@ -1457,10 +554,10 @@
 <td><em>DatasetAttachmentCreate</em></td>
 <td><strong>no</strong></td>
 <td><strong>no</strong></td>
-<td>Owner<br><em>DatasetAttachmentCreateOwner</em></td>
-<td>Owner<br><em>DatasetAttachmentCreateOwner</em></td>
-<td>Any<br><em>DatasetAttachmentCreateAny</em></td>
-<td>Any<br><em>DatasetAttachmentCreateAny</em></td>
+<td>Owner<br/><em>DatasetAttachmentCreateOwner</em></td>
+<td>Owner<br/><em>DatasetAttachmentCreateOwner</em></td>
+<td>Any<br/><em>DatasetAttachmentCreateAny</em></td>
+<td>Any<br/><em>DatasetAttachmentCreateAny</em></td>
 <td><strong>no</strong></td>
 <td></td>
 </tr>
@@ -1468,12 +565,12 @@
 <td>GET</td>
 <td>Datasets/<em>pid</em>/attachments</td>
 <td><em>DatasetAttachmemntRead</em></td>
-<td>Public<br><em>DatasetAttachmentReadPublic</em></td>
-<td>Has Access<br><em>DatasetAttachmentReadAccess</em></td>
-<td>Has Access<br><em>DatasetAttachmentReadAccess</em></td>
-<td>Has Access<br><em>DatasetAttachmentReadAccess</em></td>
-<td>Has Access<br><em>DatasetAttachmentReadAccess</em></td>
-<td>Any<br><em>DatasetAttachmentReadAny</em></td>
+<td>Public<br/><em>DatasetAttachmentReadPublic</em></td>
+<td>Has Access<br/><em>DatasetAttachmentReadAccess</em></td>
+<td>Has Access<br/><em>DatasetAttachmentReadAccess</em></td>
+<td>Has Access<br/><em>DatasetAttachmentReadAccess</em></td>
+<td>Has Access<br/><em>DatasetAttachmentReadAccess</em></td>
+<td>Any<br/><em>DatasetAttachmentReadAny</em></td>
 <td><strong>no</strong></td>
 <td></td>
 </tr>
@@ -1483,10 +580,10 @@
 <td><em>DatasetAttachmemntUpdate</em></td>
 <td><strong>no</strong></td>
 <td><strong>no</strong></td>
-<td>Owner<br><em>DatasetAttachmentUpdateOwner</em></td>
-<td>Owner<br><em>DatasetAttachmentUpdateOwner</em></td>
-<td>Owner<br><em>DatasetAttachmentUpdateOwner</em></td>
-<td>Any<br><em>DatasetAttachmentCreateAny</em></td>
+<td>Owner<br/><em>DatasetAttachmentUpdateOwner</em></td>
+<td>Owner<br/><em>DatasetAttachmentUpdateOwner</em></td>
+<td>Owner<br/><em>DatasetAttachmentUpdateOwner</em></td>
+<td>Any<br/><em>DatasetAttachmentCreateAny</em></td>
 <td><strong>no</strong></td>
 <td></td>
 </tr>
@@ -1496,16 +593,16 @@
 <td><em>DatasetAttachmemntDelete</em></td>
 <td><strong>no</strong></td>
 <td><strong>no</strong></td>
-<td>Owner<br><em>DatasetAttachmentDeleteOwner</em></td>
-<td>Owner<br><em>DatasetAttachmentDeleteOwner</em></td>
-<td>Owner<br><em>DatasetAttachmentDeleteOwner</em></td>
-<td>Any<br><em>DatasetAttachmentDeleteAny</em></td>
+<td>Owner<br/><em>DatasetAttachmentDeleteOwner</em></td>
+<td>Owner<br/><em>DatasetAttachmentDeleteOwner</em></td>
+<td>Owner<br/><em>DatasetAttachmentDeleteOwner</em></td>
+<td>Any<br/><em>DatasetAttachmentDeleteAny</em></td>
 <td><strong>no</strong></td>
 <td></td>
 </tr>
 </tbody>
 </table>
-<h4 id="origdatablock">OrigDatablock<a class="headerlink" href="#origdatablock" title="Permanent link">¶</a></h4>
+<h4 id="origdatablock">OrigDatablock</h4>
 <table>
 <thead>
 <tr>
@@ -1529,10 +626,10 @@
 <td><em>DatasetOrigdatablocksCreate</em></td>
 <td><strong>no</strong></td>
 <td><strong>no</strong></td>
-<td>Owner<br><em>DatasetOrigdatablockCreateOwner</em></td>
-<td>Owner<br><em>DatasetOrigdatablockCreateOwner</em></td>
-<td>Any<br><em>DatasetOrigdatablockCreateAny</em></td>
-<td>Any<br><em>DatasetOrigdatablockCreateAny</em></td>
+<td>Owner<br/><em>DatasetOrigdatablockCreateOwner</em></td>
+<td>Owner<br/><em>DatasetOrigdatablockCreateOwner</em></td>
+<td>Any<br/><em>DatasetOrigdatablockCreateAny</em></td>
+<td>Any<br/><em>DatasetOrigdatablockCreateAny</em></td>
 <td><strong>no</strong></td>
 <td></td>
 </tr>
@@ -1542,10 +639,10 @@
 <td><em>DatasetOrigdatablocksCreate</em></td>
 <td><strong>no</strong></td>
 <td><strong>no</strong></td>
-<td>Owner<br><em>DatasetOrigdatablockCreateOwner</em></td>
-<td>Owner<br><em>DatasetOrigdatablockCreateOwner</em></td>
-<td>Any<br><em>DatasetOrigdatablockCreateAny</em></td>
-<td>Any<br><em>DatasetOrigdatablockCreateAny</em></td>
+<td>Owner<br/><em>DatasetOrigdatablockCreateOwner</em></td>
+<td>Owner<br/><em>DatasetOrigdatablockCreateOwner</em></td>
+<td>Any<br/><em>DatasetOrigdatablockCreateAny</em></td>
+<td>Any<br/><em>DatasetOrigdatablockCreateAny</em></td>
 <td><strong>no</strong></td>
 <td></td>
 </tr>
@@ -1553,12 +650,12 @@
 <td>GET</td>
 <td>Datasets/<em>pid</em>/origdatablocks</td>
 <td><em>DatasetOrigdatablocksRead</em></td>
-<td>Public<br><em>DatasetOrigdatablockReadPublic</em></td>
-<td>Has Access<br><em>DatasetOrigdatablockReadOAccess</em></td>
-<td>Has Access<br><em>DatasetOrigdatablockReadAccess</em></td>
-<td>Has Access<br><em>DatasetOrigdatablockReadAccess</em></td>
-<td>Has Access<br><em>DatasetOrigdatablockReadAccess</em></td>
-<td>Any<br><em>DatasetOrigdatablockReadAny</em></td>
+<td>Public<br/><em>DatasetOrigdatablockReadPublic</em></td>
+<td>Has Access<br/><em>DatasetOrigdatablockReadOAccess</em></td>
+<td>Has Access<br/><em>DatasetOrigdatablockReadAccess</em></td>
+<td>Has Access<br/><em>DatasetOrigdatablockReadAccess</em></td>
+<td>Has Access<br/><em>DatasetOrigdatablockReadAccess</em></td>
+<td>Any<br/><em>DatasetOrigdatablockReadAny</em></td>
 <td><strong>no</strong></td>
 <td></td>
 </tr>
@@ -1568,10 +665,10 @@
 <td><em>DatasetOrigdatablocksUpdate</em></td>
 <td><strong>no</strong></td>
 <td><strong>no</strong></td>
-<td>Owner<br><em>DatasetOrigdatablockUpdateOwner</em></td>
-<td>Owner<br><em>DatasetOrigdatablockUpdateOwner</em></td>
-<td>Owner<br><em>DatasetOrigdatablockUpdateOwner</em></td>
-<td>Any<br><em>DatasetOrigdatablockCreateAny</em></td>
+<td>Owner<br/><em>DatasetOrigdatablockUpdateOwner</em></td>
+<td>Owner<br/><em>DatasetOrigdatablockUpdateOwner</em></td>
+<td>Owner<br/><em>DatasetOrigdatablockUpdateOwner</em></td>
+<td>Any<br/><em>DatasetOrigdatablockCreateAny</em></td>
 <td><strong>no</strong></td>
 <td></td>
 </tr>
@@ -1585,12 +682,12 @@
 <td><strong>no</strong></td>
 <td><strong>no</strong></td>
 <td><strong>no</strong></td>
-<td>Any<br><em>DatasetOrigdatablockDeleteAny</em></td>
+<td>Any<br/><em>DatasetOrigdatablockDeleteAny</em></td>
 <td></td>
 </tr>
 </tbody>
 </table>
-<h4 id="datablocks">Datablocks<a class="headerlink" href="#datablocks" title="Permanent link">¶</a></h4>
+<h4 id="datablocks">Datablocks</h4>
 <table>
 <thead>
 <tr>
@@ -1614,10 +711,10 @@
 <td><em>DatasetDatablocksCreate</em></td>
 <td><strong>no</strong></td>
 <td><strong>no</strong></td>
-<td>Owner<br><em>DatasetDatablockCreateOwner</em></td>
-<td>Owner<br><em>DatasetDatablockCreateOwner</em></td>
-<td>Owner<br><em>DatasetDatablockCreateOwner</em></td>
-<td>Any<br><em>DatasetDatablockCreateAny</em></td>
+<td>Owner<br/><em>DatasetDatablockCreateOwner</em></td>
+<td>Owner<br/><em>DatasetDatablockCreateOwner</em></td>
+<td>Owner<br/><em>DatasetDatablockCreateOwner</em></td>
+<td>Any<br/><em>DatasetDatablockCreateAny</em></td>
 <td><strong>no</strong></td>
 <td></td>
 </tr>
@@ -1625,12 +722,12 @@
 <td>GET</td>
 <td>Datasets/<em>pid</em>/datablocks</td>
 <td><em>DatasetOrigdatablocksRead</em></td>
-<td>Public<br><em>DatasetDatablockReadPublic</em></td>
-<td>Has Access<br><em>DatasetDatablockReadAccess</em></td>
-<td>Has Access<br><em>DatasetDatablockReadAccess</em></td>
-<td>Has Access<br><em>DatasetDatablockReadAccess</em></td>
-<td>Has Access<br><em>DatasetDatablockReadAccess</em></td>
-<td>Any<br><em>DatasetDatablockReadAny</em></td>
+<td>Public<br/><em>DatasetDatablockReadPublic</em></td>
+<td>Has Access<br/><em>DatasetDatablockReadAccess</em></td>
+<td>Has Access<br/><em>DatasetDatablockReadAccess</em></td>
+<td>Has Access<br/><em>DatasetDatablockReadAccess</em></td>
+<td>Has Access<br/><em>DatasetDatablockReadAccess</em></td>
+<td>Any<br/><em>DatasetDatablockReadAny</em></td>
 <td><strong>no</strong></td>
 <td></td>
 </tr>
@@ -1640,10 +737,10 @@
 <td><em>DatasetDatablocksUpdate</em></td>
 <td><strong>no</strong></td>
 <td><strong>no</strong></td>
-<td>Owner<br><em>DatasetDatablockUpdateOwner</em></td>
-<td>Owner<br><em>DatasetDatablockUpdateOwner</em></td>
-<td>Owner<br><em>DatasetDatablockUpdateOwner</em></td>
-<td>Any<br><em>DatasetDatablockCreateAny</em></td>
+<td>Owner<br/><em>DatasetDatablockUpdateOwner</em></td>
+<td>Owner<br/><em>DatasetDatablockUpdateOwner</em></td>
+<td>Owner<br/><em>DatasetDatablockUpdateOwner</em></td>
+<td>Any<br/><em>DatasetDatablockCreateAny</em></td>
 <td><strong>no</strong></td>
 <td></td>
 </tr>
@@ -1657,7 +754,7 @@
 <td><strong>no</strong></td>
 <td><strong>no</strong></td>
 <td><strong>no</strong></td>
-<td>Any<br><em>DatasetDatablockDeleteAny</em></td>
+<td>Any<br/><em>DatasetDatablockDeleteAny</em></td>
 <td></td>
 </tr>
 <tr>
@@ -1678,72 +775,92 @@
 <td>Datasets/<em>pid</em>/logbook</td>
 <td><em>DatasetLogbookRead</em></td>
 <td><strong>no</strong></td>
-<td>Owner<br><em>DatasetLogbookReadOwner</em></td>
-<td>Owner<br><em>DatasetLogbookReadOwner</em></td>
-<td>Owner<br><em>DatasetLogbookReadOwner</em></td>
-<td>Owner<br><em>DatasetLogbookReadOwner</em></td>
-<td>Any<br><em>DatasetLogbookReadAny</em></td>
+<td>Owner<br/><em>DatasetLogbookReadOwner</em></td>
+<td>Owner<br/><em>DatasetLogbookReadOwner</em></td>
+<td>Owner<br/><em>DatasetLogbookReadOwner</em></td>
+<td>Owner<br/><em>DatasetLogbookReadOwner</em></td>
+<td>Any<br/><em>DatasetLogbookReadAny</em></td>
 <td><strong>no</strong></td>
 <td></td>
 </tr>
 </tbody>
-</table>
-
-
-
-
-
-
-
-
-
-
-
-
-                
-              </article>
+</table></div>
             </div>
-          
-          
-<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
         </div>
-        
-      </main>
-      
-        <footer class="md-footer">
-  
-  <div class="md-footer-meta md-typeset">
-    <div class="md-footer-meta__inner md-grid">
-      <div class="md-copyright">
-  
-  
-    Made with
-    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
-      Material for MkDocs
-    </a>
-  
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script src="../../../js/bootstrap.bundle.min.js"></script>
+        <script>
+            var base_url = "../../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../../../js/base.js"></script>
+        <script src="../../../search/main.js"></script>
+        <script src="../../../js/version-select.js"></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p>From here you can search these documents. Enter your search terms below.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
 </div>
-      
-    </div>
-  </div>
-</footer>
-      
-    </div>
-    <div class="md-dialog" data-md-component="dialog">
-      <div class="md-dialog__inner md-typeset"></div>
-    </div>
-    
-    
-    
-      
-      
-      <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["instant"], "search": "../../../assets/javascripts/workers/search.7a47a382.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"provider": "mike"}}</script>
-    
-    
-      <script src="../../../assets/javascripts/bundle.e71a0d61.min.js"></script>
-      
-    
-  
-<script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
-document$.subscribe(()=>{ lightbox.reload(); });
-</script></body></html>
+
+    </body>
+</html>

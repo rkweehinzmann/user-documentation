@@ -1,1427 +1,345 @@
-<!DOCTYPE html><html lang="en" class="no-js"><head>
-    
-      <meta charset="utf-8">
-      <meta name="viewport" content="width=device-width,initial-scale=1">
-      
-      
-      
-      
-        <link rel="prev" href="../jobs/">
-      
-      
-        <link rel="next" href="../../proposals/">
-      
-      
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         
-      
-      
-      <link rel="icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.0">
-    
-    
-      
+        
+        
+        <link rel="shortcut icon" href="../../img/favicon.ico">
         <title>Configure Dataset Table - SciCat Documentation</title>
-      
-    
-    
-      <link rel="stylesheet" href="../../assets/stylesheets/main.618322db.min.css">
-      
-        
-        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
-      
-      
+        <link href="../../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../../css/fontawesome.min.css" rel="stylesheet">
+        <link href="../../css/brands.min.css" rel="stylesheet">
+        <link href="../../css/solid.min.css" rel="stylesheet">
+        <link href="../../css/v4-font-face.min.css" rel="stylesheet">
+        <link href="../../css/base.css" rel="stylesheet">
+        <link id="hljs-light" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" >
+        <link id="hljs-dark" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github-dark.min.css" disabled>
+        <link href="../../css/version-select.css" rel="stylesheet">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script>hljs.highlightAll();</script> 
+    </head>
 
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="../..">SciCat Documentation</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar-collapse" aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
 
-    
-    
-      
-    
-    
-      
-        
-        
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback">
-        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
-      
-    
-    
-      <link rel="stylesheet" href="../../css/custom.css">
-    
-    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
-    
-      
-
-    
-    
-  <link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"><script src="../../assets/javascripts/glightbox.min.js"></script><style id="glightbox-style">
-            html.glightbox-open { overflow: initial; height: 100%; }
-            .gslide-title { margin-top: 0px; user-select: text; }
-            .gslide-desc { color: #666; user-select: text; }
-            .gslide-image img { background: white; }
-            .gscrollbar-fixer { padding-right: 15px; }
-            .gdesc-inner { font-size: 0.75rem; }
-            body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color); }
-            body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color); }
-            body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color); }
-        </style></head>
-  
-  
-    
-    
-    
-    
-    
-    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="light-blue">
-  
-    
-    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
-    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
-    <label class="md-overlay" for="__drawer"></label>
-    <div data-md-component="skip">
-      
-        
-        <a href="#using-column-settings" class="md-skip">
-          Skip to content
-        </a>
-      
-    </div>
-    <div data-md-component="announce">
-      
-    </div>
-    
-      <div data-md-color-scheme="default" data-md-component="outdated" hidden="">
-        
-      </div>
-    
-    
-      
-
-  
-
-<header class="md-header md-header--shadow" data-md-component="header">
-  <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../.." title="SciCat Documentation" class="md-header__button md-logo" aria-label="SciCat Documentation" data-md-component="logo">
-      
-  <img src="../../assets/SciCat-logo-icon.png" alt="logo">
-
-    </a>
-    <label class="md-header__button md-icon" for="__drawer">
-      
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg>
-    </label>
-    <div class="md-header__title" data-md-component="header-title">
-      <div class="md-header__ellipsis">
-        <div class="md-header__topic">
-          <span class="md-ellipsis">
-            SciCat Documentation
-          </span>
-        </div>
-        <div class="md-header__topic" data-md-component="header-topic">
-          <span class="md-ellipsis">
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="nav-item">
+                                <a href="../.." class="nav-link">Home</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle active" aria-current="page" role="button" data-bs-toggle="dropdown"  aria-expanded="false">SciCat User Guide</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../user-guide/" class="dropdown-item">Welcome to SciCat Users Guide</a>
+</li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Login</a>
+    <ul class="dropdown-menu">
             
-              Configure Dataset Table
+<li>
+    <a href="../../login/" class="dropdown-item">Login</a>
+</li>
             
-          </span>
+<li>
+    <a href="../../login/Anonymous/" class="dropdown-item">Anonymous</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Datasets</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../" class="dropdown-item">Datasets</a>
+</li>
+            
+<li>
+    <a href="../Publishing/" class="dropdown-item">Publishing data</a>
+</li>
+            
+<li>
+    <a href="../PublishingAdvanced/" class="dropdown-item">Publishing data Advanced</a>
+</li>
+            
+<li>
+    <a href="../jobs/" class="dropdown-item">Data Retrieval</a>
+</li>
+            
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Dashboard</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../DashboardDatasetsFiltering.md" class="dropdown-item">Search and Filter</a>
+</li>
+            
+<li>
+    <a href="./" class="dropdown-item active" aria-current="page">Configure Dataset Table</a>
+</li>
+    </ul>
+  </li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Proposals</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../proposals/" class="dropdown-item">Index</a>
+</li>
+    </ul>
+  </li>
+                                    
+<li>
+    <a href="../../samples/" class="dropdown-item">Samples</a>
+</li>
+                                    
+<li>
+    <a href="../../instruments/" class="dropdown-item">Instruments</a>
+</li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Troubleshooting</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../troubleshoot/" class="dropdown-item">Trouble shooting</a>
+</li>
+    </ul>
+  </li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">SciCat Operator Guide</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../operator-guide/" class="dropdown-item">Welcome to SciCat Operator's Guide</a>
+</li>
+                                    
+<li>
+    <a href="../../swagger/" class="dropdown-item">Swagger - explore the Backend API</a>
+</li>
+                                    
+<li>
+    <a href="../../backendconfig/" class="dropdown-item">Central Configuration of Backend: .env</a>
+</li>
+                                    
+<li>
+    <a href="../../backendconfig/authorization/" class="dropdown-item">Authorization Model</a>
+</li>
+                                    
+<li>
+    <a href="../../backendconfig/dois/" class="dropdown-item">DOI minting in SciCat - How to set up publication of datasets</a>
+</li>
+                                    
+<li>
+    <a href="../../frontendconfig/" class="dropdown-item">Frontend configuration</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">About</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../about/" class="dropdown-item">About the team - who are we?</a>
+</li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ms-md-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-bs-toggle="modal" data-bs-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li class="nav-item">
+                                <a rel="prev" href="../jobs/" class="nav-link">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" href="../../proposals/" class="nav-link">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
         </div>
-      </div>
-    </div>
-    
-      
-    
-    
-    
-    
-      
-      
-        <label class="md-header__button md-icon" for="__search">
-          
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
-        </label>
-        <div class="md-search" data-md-component="search" role="dialog">
-  <label class="md-search__overlay" for="__search"></label>
-  <div class="md-search__inner" role="search">
-    <form class="md-search__form" name="search">
-      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required="">
-      <label class="md-search__icon md-icon" for="__search">
-        
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
-        
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
-      </label>
-      <nav class="md-search__options" aria-label="Search">
-        
-        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
-          
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path></svg>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-bs-toggle="collapse" data-bs-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
         </button>
-      </nav>
-      
-    </form>
-    <div class="md-search__output">
-      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix="">
-        <div class="md-search-result" data-md-component="search-result">
-          <div class="md-search-result__meta">
-            Initializing search
-          </div>
-          <ol class="md-search-result__list" role="presentation"></ol>
-        </div>
-      </div>
     </div>
-  </div>
-</div>
-      
+
     
-    
-  </nav>
-  
-</header>
-    
-    <div class="md-container" data-md-component="container">
-      
-      
-        
-          
-        
-      
-      <main class="md-main" data-md-component="main">
-        <div class="md-main__inner md-grid">
-          
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-body-tertiary">
+        <ul class="nav flex-column">
             
-              
-              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
-                <div class="md-sidebar__scrollwrap">
-                  <div class="md-sidebar__inner">
-                    
-
-
-
-<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
-  <label class="md-nav__title" for="__drawer">
-    <a href="../.." title="SciCat Documentation" class="md-nav__button md-logo" aria-label="SciCat Documentation" data-md-component="logo">
-      
-  <img src="../../assets/SciCat-logo-icon.png" alt="logo">
-
-    </a>
-    SciCat Documentation
-  </label>
-  
-  <ul class="md-nav__list" data-md-scrollfix="">
-    
-      
-      
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../.." class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Home
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-    
-      
-      
-  
-  
-    
-  
-  
-  
-    
-    
-    
-    
-    
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked="">
-        
-          
-          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            <li class="nav-item" data-bs-level="2"><a href="#using-column-settings" class="nav-link">Using column settings</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
             
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    SciCat User Guide
-  
-
-    
-  </span>
-  
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
-          <label class="md-nav__title" for="__nav_2">
-            <span class="md-nav__icon md-icon"></span>
+            <li class="nav-item" data-bs-level="2"><a href="#where-are-the-column-settings" class="nav-link">Where are the column settings</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
             
-  
-    SciCat User Guide
-  
-
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix="">
+            <li class="nav-item" data-bs-level="2"><a href="#manipulating-the-table-layout" class="nav-link">Manipulating the table layout</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
             
-              
-                
-  
-  
-  
-  
-    
-    
-    
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1">
-        
-          
-          <label class="md-nav__link" for="__nav_2_1" id="__nav_2_1_label" tabindex="0">
-            
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Login
-  
-
-    
-  </span>
-  
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_1_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_2_1">
-            <span class="md-nav__icon md-icon"></span>
-            
-  
-    Login
-  
-
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix="">
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../login/Anonymous/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Anonymous
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-    
-  
-  
-  
-    
-    
-    
-    
-    
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" checked="">
-        
-          
-          <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
-            
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Datasets
-  
-
-    
-  </span>
-  
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="true">
-          <label class="md-nav__title" for="__nav_2_2">
-            <span class="md-nav__icon md-icon"></span>
-            
-  
-    Datasets
-  
-
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix="">
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../Publishing/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Publishing data
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../PublishingAdvanced/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Publishing data Advanced
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../jobs/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Data Retrieval
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-    
-  
-  
-  
-    
-    
-    
-    
-    
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2_4" checked="">
-        
-          
-          <label class="md-nav__link" for="__nav_2_2_4" id="__nav_2_2_4_label" tabindex="0">
-            
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Dashboard
-  
-
-    
-  </span>
-  
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_2_4_label" aria-expanded="true">
-          <label class="md-nav__title" for="__nav_2_2_4">
-            <span class="md-nav__icon md-icon"></span>
-            
-  
-    Dashboard
-  
-
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix="">
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../DashboardDatasetsFiltering.md" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Search and Filter
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-    
-  
-  
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Configure Dataset Table
-  
-
-    
-  </span>
-  
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Configure Dataset Table
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
-      
-        <li class="md-nav__item">
-  <a href="#using-column-settings" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Using column settings
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#where-are-the-column-settings" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Where are the column settings
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#manipulating-the-table-layout" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Manipulating the table layout
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Manipulating the table layout">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#filtering-columns" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Filtering columns
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#reorganising-columns" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Reorganising columns
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#table-filter-persistence" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Table filter persistence
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#saving-data-from-scicat" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Saving data from SciCat
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Saving data from SciCat">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#what-gets-saved" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        What gets saved
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="What gets saved">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#saving-to-csv" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Saving to CSV
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#saving-to-json" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Saving to JSON
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#saving-only-specific-records" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Saving only specific records
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../proposals/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Proposals
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../samples/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Samples
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../instruments/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Instruments
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../troubleshoot/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Troubleshooting
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    
-    
-    
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3">
-        
-          
-          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
-            
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    SciCat Operator Guide
-  
-
-    
-  </span>
-  
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_3">
-            <span class="md-nav__icon md-icon"></span>
-            
-  
-    SciCat Operator Guide
-  
-
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix="">
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../swagger/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Swagger - explore the Backend API
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../backendconfig/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Central Configuration of Backend: .env
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../backendconfig/authorization/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Authorization Model
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../backendconfig/dois/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    DOI minting in SciCat - How to set up publication of datasets
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../frontendconfig/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Frontend configuration
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../about/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    About
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-    
-  </ul>
-</nav>
-                  </div>
-                </div>
-              </div>
-            
-            
-              
-              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc">
-                <div class="md-sidebar__scrollwrap">
-                  <div class="md-sidebar__inner">
-                    
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
-      
-        <li class="md-nav__item">
-  <a href="#using-column-settings" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Using column settings
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#where-are-the-column-settings" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Where are the column settings
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#manipulating-the-table-layout" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Manipulating the table layout
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Manipulating the table layout">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#filtering-columns" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Filtering columns
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#reorganising-columns" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Reorganising columns
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#table-filter-persistence" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Table filter persistence
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#saving-data-from-scicat" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Saving data from SciCat
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Saving data from SciCat">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#what-gets-saved" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        What gets saved
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="What gets saved">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#saving-to-csv" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Saving to CSV
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#saving-to-json" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Saving to JSON
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#saving-only-specific-records" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Saving only specific records
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-                  </div>
-                </div>
-              </div>
-            
-          
-          
-            <div class="md-content" data-md-component="content">
-              
-              <article class="md-content__inner md-typeset">
-                
-                  
-
-
-
-  <h1>Configure Dataset Table</h1>
-
-<h2 id="using-column-settings">Using column settings<a class="headerlink" href="#using-column-settings" title="Permanent link">¶</a></h2>
+            <li class="nav-item" data-bs-level="2"><a href="#saving-data-from-scicat" class="nav-link">Saving data from SciCat</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<h2 id="using-column-settings">Using column settings</h2>
 <p>SciCat comes equipped with many useful features and functionalities which enable the user to filter and arrange both their view and exports to suit their needs. This section will describe how to use some of these features along with visual demonstrations to help guide you through the UI.</p>
-<h2 id="where-are-the-column-settings">Where are the column settings<a class="headerlink" href="#where-are-the-column-settings" title="Permanent link">¶</a></h2>
-<p>To access the filters you must use the table menu in the top right corner of the tables header <a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../img/open_menu.png" data-desc-position="bottom"><img alt="see image" src="../img/open_menu.png"></a></p>
-<h2 id="manipulating-the-table-layout">Manipulating the table layout<a class="headerlink" href="#manipulating-the-table-layout" title="Permanent link">¶</a></h2>
+<h2 id="where-are-the-column-settings">Where are the column settings</h2>
+<p>To access the filters you must use the table menu in the top right corner of the tables header <img alt="see image" src="../img/open_menu.png" /></p>
+<h2 id="manipulating-the-table-layout">Manipulating the table layout</h2>
 <p>The initial table for SciCat can contain an abundance of information, but sometimes you might only want to see a specific set of columns information.</p>
-<h3 id="filtering-columns">Filtering columns<a class="headerlink" href="#filtering-columns" title="Permanent link">¶</a></h3>
-<p>You can use the column settings option which will enable you to see a list of the available columns and checkbox each one you wish to be part of your view. <a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../img/column_settings.png" data-desc-position="bottom"><img alt="see image" src="../img/column_settings.png"></a>\
+<h3 id="filtering-columns">Filtering columns</h3>
+<p>You can use the column settings option which will enable you to see a list of the available columns and checkbox each one you wish to be part of your view. <img alt="see image" src="../img/column_settings.png" />\
 To select the columns you want to see, simply click the checkboxes ensuring each column of interest is highlighted by the green tick.\
-<a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../img/selected_columns.png" data-desc-position="bottom"><img alt="see image" src="../img/selected_columns.png"></a>\
-Once you've selected all of the columns, apply the changes by clicking on the tick in the bottom right corner <a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../img/tick_to_apply_filters.png" data-desc-position="bottom"><img alt="see image" src="../img/tick_to_apply_filters.png"></a>\
+<img alt="see image" src="../img/selected_columns.png" />\
+Once you've selected all of the columns, apply the changes by clicking on the tick in the bottom right corner <img alt="see image" src="../img/tick_to_apply_filters.png" />\
 Now that you've applied the changes to your settings, your table will reflect only the columns you selected.
-<a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../img/applied_filters_on_table.png" data-desc-position="bottom"><img alt="see image" src="../img/applied_filters_on_table.png"></a></p>
-<h3 id="reorganising-columns">Reorganising columns<a class="headerlink" href="#reorganising-columns" title="Permanent link">¶</a></h3>
+<img alt="see image" src="../img/applied_filters_on_table.png" /></p>
+<h3 id="reorganising-columns">Reorganising columns</h3>
 <p>Within the SciCat UI, the columns can be reordered by the user simply by accessing the column setting and using the <code>drag</code> option to the left of the column name you wish to move.\
-<a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../img/drag_option_before.png" data-desc-position="bottom"><img alt="see image" src="../img/drag_option_before.png"></a> <a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../img/drag_option_after.png" data-desc-position="bottom"><img alt="see image" src="../img/drag_option_after.png"></a>\
+<img alt="see image" src="../img/drag_option_before.png" /> <img alt="see image" src="../img/drag_option_after.png" />\
 All columns have this functionality so you can structure the table however suits you best.</p>
-<h3 id="table-filter-persistence">Table filter persistence<a class="headerlink" href="#table-filter-persistence" title="Permanent link">¶</a></h3>
+<h3 id="table-filter-persistence">Table filter persistence</h3>
 <p>When making changes to the table, these changes will not automatically persist so the table will revert to its original form if you:
 - refresh the page
 - enter into any record and then go back</p>
 <p>SciCat has a built in way to make the layout persistent and the default. To make the table always filter to your selected columns, first apply the filters as shown above. Go back into the table menu and select the <code>save table settings</code> option.\
-<a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../img/save_table_settings.png" data-desc-position="bottom"><img alt="see image" src="../img/save_table_settings.png"></a>\
+<img alt="see image" src="../img/save_table_settings.png" />\
 This will save the filters to your profile and results in the table formatting you've applied being persistent through refreshes. 
 <strong>Note: this process will be required each time you wish to change the default column settings</strong></p>
-<h2 id="saving-data-from-scicat">Saving data from SciCat<a class="headerlink" href="#saving-data-from-scicat" title="Permanent link">¶</a></h2>
+<h2 id="saving-data-from-scicat">Saving data from SciCat</h2>
 <p>The process of saving or exporting data from Scicat is simple, open the table menu, select <code>Save data</code>, choose the output you want.\
-<a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../img/save_data_selection.png" data-desc-position="bottom"><img alt="see image" src="../img/save_data_selection.png"></a>\
+<img alt="see image" src="../img/save_data_selection.png" />\
 Descriptions of the saving behaviour for each of the formats are given below.</p>
-<h3 id="what-gets-saved">What gets saved<a class="headerlink" href="#what-gets-saved" title="Permanent link">¶</a></h3>
+<h3 id="what-gets-saved">What gets saved</h3>
 <p>SciCat outputs only the data in the current page, meaning; If you have multiple pages of data, only the current page will be output to file. Also the method of output chosen, will result in a different level of data being returned so its important to know what you want to get from this extraction.</p>
-<h4 id="saving-to-csv">Saving to CSV<a class="headerlink" href="#saving-to-csv" title="Permanent link">¶</a></h4>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../img/save_as_csv.png" data-desc-position="bottom"><img alt="see image" src="../img/save_as_csv.png"></a>\
+<h4 id="saving-to-csv">Saving to CSV</h4>
+<p><img alt="see image" src="../img/save_as_csv.png" />\
 This option will return you everything you can see in the table, this includes any filters or ordering that have been applied to the table. So as an output you will get a CSV version of exactly what you have created on the screen. This option is most useful for figure generation or high-level data analysis</p>
-<h4 id="saving-to-json">Saving to JSON<a class="headerlink" href="#saving-to-json" title="Permanent link">¶</a></h4>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../img/save_as_json.png" data-desc-position="bottom"><img alt="see image" src="../img/save_as_json.png"></a>\
+<h4 id="saving-to-json">Saving to JSON</h4>
+<p><img alt="see image" src="../img/save_as_json.png" />\
 The Json option will return you more information as it will save all data related to the records being displayed on that page of the table. This option is very useful for metadata analysis and will provide all fields for each record in the JSON format ready to be read/ingested by a program to perform analysis. 
 <strong>Note: The returned data from the JSON option will disregard filters so doesn't just collect information from the selected columns, but it will still only return data for the rows displayed on the current page/</strong></p>
-<h3 id="saving-only-specific-records">Saving only specific records<a class="headerlink" href="#saving-only-specific-records" title="Permanent link">¶</a></h3>
-<p>In SciCat there is also the ability to only save data for manually selected data. <a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../img/selecting_specific_records_to_save_to_file.png" data-desc-position="bottom"><img alt="see image" src="../img/selecting_specific_records_to_save_to_file.png"></a>\
-This option works for both CSV and JSON format to only return information about these selected records. However, the other aspects of each saving method still apply so CSV will return a snapshot of what you see, and JSON will return all of the data related to just the selected records.</p>
-
-
-
-
-
-
-
-
-
-
-
-
-                
-              </article>
+<h3 id="saving-only-specific-records">Saving only specific records</h3>
+<p>In SciCat there is also the ability to only save data for manually selected data. <img alt="see image" src="../img/selecting_specific_records_to_save_to_file.png" />\
+This option works for both CSV and JSON format to only return information about these selected records. However, the other aspects of each saving method still apply so CSV will return a snapshot of what you see, and JSON will return all of the data related to just the selected records.</p></div>
             </div>
-          
-          
-<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
         </div>
-        
-      </main>
-      
-        <footer class="md-footer">
-  
-  <div class="md-footer-meta md-typeset">
-    <div class="md-footer-meta__inner md-grid">
-      <div class="md-copyright">
-  
-  
-    Made with
-    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
-      Material for MkDocs
-    </a>
-  
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script src="../../js/bootstrap.bundle.min.js"></script>
+        <script>
+            var base_url = "../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../../js/base.js"></script>
+        <script src="../../search/main.js"></script>
+        <script src="../../js/version-select.js"></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p>From here you can search these documents. Enter your search terms below.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
 </div>
-      
-    </div>
-  </div>
-</footer>
-      
-    </div>
-    <div class="md-dialog" data-md-component="dialog">
-      <div class="md-dialog__inner md-typeset"></div>
-    </div>
-    
-    
-    
-      
-      
-      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["instant"], "search": "../../assets/javascripts/workers/search.7a47a382.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"provider": "mike"}}</script>
-    
-    
-      <script src="../../assets/javascripts/bundle.e71a0d61.min.js"></script>
-      
-    
-  
-<script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
-document$.subscribe(()=>{ lightbox.reload(); });
-</script></body></html>
+
+    </body>
+</html>
