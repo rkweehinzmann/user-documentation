@@ -13,6 +13,13 @@ You need to authenticate twice:
 1. Get the **SciCat token** from the user setting when logged into SciCat via the main GUI. Copy paste it into the field "Authorize" in the explorer on the top right. ![swagger login](img/swagger_getToken.png)
 <br>
 <br>
-2. Login on the explorer page again with the same credentials. ![swagger login](img/swaggerLogin.png)
+2. Login on the explorer page again with the same credentials using the token. ![swagger login](img/swaggerLogin.png)
+
+## Tips and Tricks
+
+To see which fields are required check the "Schema" link next to the _Example Value_ in the **Response body** section. They are marked with a red asterisk. ![required fields](img/swagger_required_fields.png) 
+
+
+
 
 
