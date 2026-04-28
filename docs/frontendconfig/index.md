@@ -25,12 +25,13 @@ Defines how each field is displayed in the list table.
 
 | **Property** | **Type**  | **Description**                                                                                                                                                                                                                       | **Example / Notes** |
 | ------------ | --------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------- |
-| `name`       | `string`  | Object key whose value will be displayed in the column.                                                                                                                                                                               | `"datasetName"`     |
-| `order`      | `number`  | Position of the column in the table.                                                                                                                                                                                                  | `2`                 |
-| `type`       | `string`  | How the value is rendered:<br>• `standard` – plain text (default)<br>• `hoverContent` – shows icon with popup/modal when mouseover (for long text)<br>• `date` – formats ISO date strings; can include a `format` (e.g. `yyyy-MM-dd`)<br>• `editable` – plain text and editable by clicking on cell if user has permission | `"date"`            |
-| `width`      | `number`  | Default width of the column.                                                                                                                                                                                                          | `200`               |
-| `format`     | `string`  | Optional property used **only** when `type` is set to `date`. Defines how ISO date strings are displayed (e.g. `yyyy-MM-dd`). <br> it fallsback to `dateFormat` or `yyyy-MM-dd HH:mm` for dataset and `yyyy-MM-dd` for proposal       | `"yyyy-MM-dd"`      |
-| `enabled`    | `boolean` | Whether the column is displayed by default.                                                                                                                                                                                           | `true`              |
+| `name`       | `string`  | Object key whose value will be displayed in the column. | `"datasetName"` |
+| `header`     | `string`  | Display label for the column, used in the UI and exports. | `"Dataset Name"` |
+| `order`      | `number`  | Position of the column in the table. | `2` |
+| `type`       | `string`  | How the value is rendered:<br>• `standard` – plain text (default)<br>• `hoverContent` – shows icon with popup/modal when mouseover (for long text)<br>• `date` – formats ISO date strings; can include a `format` (e.g. `yyyy-MM-dd`)<br>• `editable` – plain text and editable by clicking on cell if user has permission | `"date"` |
+| `width`      | `number`  | Default width of the column. | `200`  |
+| `format`     | `string`  | Optional property used **only** when `type` is set to `date`. Defines how ISO date strings are displayed (e.g. `yyyy-MM-dd`). <br> It fallsback to `dateFormat` or `yyyy-MM-dd HH:mm` for dataset and `yyyy-MM-dd` for proposal. | `"yyyy-MM-dd"`      |
+| `enabled`    | `boolean` | Whether the column is displayed by default.  | `true` |
 
 ---
 
