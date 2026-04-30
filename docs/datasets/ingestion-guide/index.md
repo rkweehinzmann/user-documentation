@@ -1,11 +1,11 @@
 # Dataset Ingestion Guide
 
-Once you have your database, the SciCat API server up and running, several options of ingesting a dataset into SciCat exist - ranging from quick, one-time ingestion via CURL to a fully automized ingestion setup using python wrappers for SciCat API access based on [`pydantic`]([https://pydantic.dev/docs/validation/latest/concepts/models/]) (a python validation class to ensure valid formats).
+Once you have your database, the SciCat API server up and running, several options of ingesting a dataset into SciCat exist - ranging from quick, one-time ingestion via CURL (not recommended) to a fully automized ingestion setup using python software for SciCat API access based on [`pydantic`]([https://pydantic.dev/docs/validation/latest/concepts/models/]) (a python validation class to ensure valid formats) for example [`pyscicat`](https://www.scicatproject.org/pyscicat/) or SciCat's `python-sdk`.
 
 Another example that uses Jupyter Notebook in SciCatLive can be found [here]([https://github.com/SciCatProject/scicatlive/blob/main/services/jupyter/config/notebooks/pyscicat.ipynb) which includes how to authenticate, create a dataset, add datablocks and upload an attachement.
 
 ## The `CURL` command
-The highest chance to make a successful request to one of SciCats endpoints is to learn from swagger. Browse and see what the syntax is, make sure you have a valid token, provide the correct fields and do not provide one of the forbidden fields. In the following we give a skeleton for examples.
+The highest chance to make a successful request to one of SciCats endpoints is to learn from Swagger. Browse to see  the syntax formation, obtain a valid token via the auth login or through looking at the Users endpoint in settings on the frontend, provide the correct fields ensuring you exclude the forbidden fields. In the following we give a skeleton for examples.
 
 ### Simple GET request
 with a known `pid` as authenticated user (replace placeholders)
