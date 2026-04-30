@@ -1,11 +1,11 @@
 # Dataset Ingestion Guide
 
-Once you have your database, the SciCat API server up and running, several options of ingesting a dataset into SciCat exist - ranging from quick, one-time ingestion via CURL to a fully automized ingestion setup using python wrappers for SciCat API access based on [`pydantic`]([https://pydantic.dev/docs/validation/latest/concepts/models/]) (a python validation class to ensure valid formats).
+Once you have your database, the SciCat API server up and running, several options of ingesting a dataset into SciCat exist - ranging from quick, one-time ingestion via CURL (not recommended) to a fully automized ingestion setup using python software for SciCat API access based on [`pydantic`]([https://pydantic.dev/docs/validation/latest/concepts/models/]) (a python validation class to ensure valid formats) for example [`pyscicat`](https://www.scicatproject.org/pyscicat/) or SciCat's `python-sdk`.
 
 Another example that uses Jupyter Notebook in SciCatLive can be found [here]([https://github.com/SciCatProject/scicatlive/blob/main/services/jupyter/config/notebooks/pyscicat.ipynb) which includes how to authenticate, create a dataset, add datablocks and upload an attachement.
 
 ## The `CURL` command
-The highest chance to make a successful request to one of SciCats endpoints is to learn from swagger. Browse and see what the syntax is, make sure you have a valid token, provide the correct fields and do not provide one of the forbidden fields. In the following we give a skeleton for examples.
+The highest chance to make a successful request to one of SciCats endpoints is to learn from Swagger. Browse to see  the syntax formation, obtain a valid token via the auth login or through looking at the Users endpoint in settings on the frontend, provide the correct fields ensuring you exclude the forbidden fields. In the following we give a skeleton for examples.
 
 ### Simple GET request
 with a known `pid` as authenticated user (replace placeholders)
@@ -16,7 +16,7 @@ curl -X "GET" \
   -H "accept: application/json"
   -H 'Authentication: Bearer "${TOKEN}"'
 ```
-If you are only interested in public records just drop the last line.
+If you are only interested in public records , you will not need to authenticate so repeat the command without the last line `-H Authentication: Bearer "${TOKEN}"`.
 
 ### GET identifiers of ```origdatablocks``` (OIDs) of a dataset
 
@@ -126,7 +126,7 @@ curl -X 'POST' \
 Note, that datafiles and attachments related to a SciCat dataset need to be POSTed separtely as they are a priori independent entities.
 
 ### Adding datafiles 
-Associated datafiles are organised in data blocks. There are original datablocks and only datablocks. The latter are obsolete and functionality has fully moved to `origdatablocks`. To attach your metadata of these associated datafiles to the dataset use e.g. `/api/v4/origdatablock`. Note, that the dataset to which the blocks belong are indicated by `dataasetId` which corresponds to the `pid` field of the dataset itself. The command can look like (and placeholders replaced):
+Associated datafiles are organised in datablocks. There are original datablocks (`origdatablocks`) and `datablocks`. The latter are obsolete and functionality has fully moved to `origdatablocks`. To attach your metadata of these associated datafiles to the dataset use e.g. `/api/v4/origdatablock`. Note, that the dataset to which the blocks belong are indicated by `dataasetId` which corresponds to the `pid` field of the dataset itself. This can be achieved by the following command (and placeholders replaced):
 
 ```bash
 curl -X 'POST' \
