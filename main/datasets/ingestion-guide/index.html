@@ -215,10 +215,10 @@
                     <div class="col-md-9" role="main">
 
 <h1 id="dataset-ingestion-guide">Dataset Ingestion Guide</h1>
-<p>Once you have your database, the SciCat API server up and running, several options of ingesting a dataset into SciCat exist - ranging from quick, one-time ingestion via CURL to a fully automized ingestion setup using python wrappers for SciCat API access based on <a href="[https://pydantic.dev/docs/validation/latest/concepts/models/]"><code>pydantic</code></a> (a python validation class to ensure valid formats).</p>
+<p>Once you have your database, the SciCat API server up and running, several options of ingesting a dataset into SciCat exist - ranging from quick, one-time ingestion via CURL (not recommended) to a fully automized ingestion setup using python software for SciCat API access based on <a href="[https://pydantic.dev/docs/validation/latest/concepts/models/]"><code>pydantic</code></a> (a python validation class to ensure valid formats) for example <a href="https://www.scicatproject.org/pyscicat/"><code>pyscicat</code></a> or SciCat's <code>python-sdk</code>.</p>
 <p>Another example that uses Jupyter Notebook in SciCatLive can be found <a href="[https://github.com/SciCatProject/scicatlive/blob/main/services/jupyter/config/notebooks/pyscicat.ipynb">here</a> which includes how to authenticate, create a dataset, add datablocks and upload an attachement.</p>
 <h2 id="the-curl-command">The <code>CURL</code> command</h2>
-<p>The highest chance to make a successful request to one of SciCats endpoints is to learn from swagger. Browse and see what the syntax is, make sure you have a valid token, provide the correct fields and do not provide one of the forbidden fields. In the following we give a skeleton for examples.</p>
+<p>The highest chance to make a successful request to one of SciCats endpoints is to learn from Swagger. Browse to see  the syntax formation, obtain a valid token via the auth login or through looking at the Users endpoint in settings on the frontend, provide the correct fields ensuring you exclude the forbidden fields. In the following we give a skeleton for examples.</p>
 <h3 id="simple-get-request">Simple GET request</h3>
 <p>with a known <code>pid</code> as authenticated user (replace placeholders)</p>
 <pre><code class="language-bash">curl -X &quot;GET&quot; \
