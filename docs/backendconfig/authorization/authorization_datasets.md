@@ -1,4 +1,21 @@
 # Datasets Authorization
+
+Datasets authorisation relies on groups defined in the configuration file for the backend:
+
+| Configuration Group List | Description |
+| ------------------------ | ----------- |
+| ADMIN_GROUPS | Users of the listed groups can create, read, modify, and delete any dataset. |
+| | |
+| DELETE_GROUPS | Users of the listed groups can delete any dataset. |
+| | |
+| CREATE_DATASET_GROUPS | Users of the listed groups can create and modify datasets for any of the groups they belong to. At creation time, the system assigns a pid to the new datasets. If the user assigns one, the system will ignore it. |
+| | |
+| CREATE_DATASET_WITH_PID_GROUPS | Users of the listed groups can create and modify datasets for any of the groups they belong to. They are allowed to specify the dataset pid. If they decide not to specify a pid, the system will assign one. |
+| | |
+| CREATE_DATASET_PRIVILEGED_GROUPS | Users of the listed groups can create datasets for any group, but can only modify datasets belonging to one of the groups they belong to. They are allowed to specify pids for new datasets. This setting is suggested for ingestion functional accounts. |
+| | |
+| UPDATE_DATASET_LIFECYCLE_GROUPS | Users of the listed groups can update the lifecycle state fields of a dataset. Authenticated users not in this group (and not in ADMIN_GROUPS) cannot modify lifecycle fields. |
+
 ## CASL ability actions
 This is the list of the permissions methods available for datasets and all their endpoints and more fine-grained instance authorization. 
 
