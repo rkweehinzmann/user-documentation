@@ -1,4 +1,21 @@
 # Datasets Authorization
+
+Datasets authorisation relies on groups defined in the configuration file for the backend:
+
+| Configuration Group List | Description |
+| ------------------------ | ----------- |
+| ADMIN_GROUPS | Users of the listed groups can create, read, modify, and delete any dataset. |
+| | |
+| DELETE_GROUPS | Users of the listed groups can delete any dataset. |
+| | |
+| CREATE_DATASET_GROUPS | Users of the listed groups can create and modify datasets for any of the groups they belong to. At creation time, the system assigns a pid to the new datasets. If the user assigns one, the system will ignore it. |
+| | |
+| CREATE_DATASET_WITH_PID_GROUPS | Users of the listed groups can create and modify datasets for any of the groups they belong to. They are allowed to specify the dataset pid. If they decide not to specify a pid, the system will assign one. |
+| | |
+| CREATE_DATASET_PRIVILEGED_GROUPS | Users of the listed groups can create datasets for any group, but can only modify datasets belonging to one of the groups they belong to. They are allowed to specify pids for new datasets. This setting is suggested for ingestion functional accounts. |
+| | |
+| UPDATE_DATASET_LIFECYCLE_GROUPS | Users of the listed groups can update the lifecycle state fields of a dataset. Authenticated users not in this group (and not in ADMIN_GROUPS) cannot modify lifecycle fields. |
+
 ## CASL ability actions
 This is the list of the permissions methods available for datasets and all their endpoints and more fine-grained instance authorization. 
 
@@ -34,7 +51,7 @@ This is the list of the permissions methods available for datasets and all their
 - DatasetReadAny
 - DatasetUpdateOwner
 - DatasetUpdateAny
-- DetasetDeleteOwner
+- DatasetDeleteOwner
 - DatasetDeleteAny
 - DatasetAttachmentCreateOwner
 - DatasetAttachmentCreateAny
@@ -42,8 +59,8 @@ This is the list of the permissions methods available for datasets and all their
 - DatasetAttachmentReadAccess
 - DatasetAttachmentReadOwner
 - DatasetAttachmentReadAny
-- DatasetAtatchementUpdateOwner
-- DatasetAtatchementUpdateAny
+- DatasetAttachmentUpdateOwner
+- DatasetAttachmentUpdateAny
 - DatasetAttachmentDeleteOwner
 - DatasetAttachmentDeleteAny
 - DatasetOrigdatablockCreateOwner
@@ -114,7 +131,7 @@ Note, merely for visibility reasons the table has been split. Hierarchically, `O
 | -------- | ------- | ------- | ------- | ------- | ------- | ------- | ------- | ------- | ------- | ------- |
 | POST | Datasets | _DatasetCreate_ | __no__ | __no__ | Owner, w/o PID<br/>_DatasetCreateOwnerNoPid_ | Owner, w/ PID<br/>_DatasetCreateOwnerWithPid_ | Any<br/>_DatasetCreateAny_ | Any<br/>_DatasetCreateAny_ | __no__ | 
 | POST | Datasets/isValid | _DatasetCreate_ | __no__ | __no__ | Owner, w/o PID<br/>_DatasetCreateOwnerNoPid_ | Owner, W/ PID<br/>_DatasetCreateOwnerWithPid_ | Any<br/>_DatasetCreateAny_ | Any<br/>_DatasetCreateAny_ | __no__ | 
-| GET | Datasets | _DatasetRead_ | Public<br/>_DatasetReadPublic_ | Has Access<br/>_DatasetReadAccess_ | Has Access<br/>_DatasetReadAccess_ | Has Access<br/>_DatasetReadAccess_ | Has Access<br/>_DatasetReadAccess_ | Any<br/>_DatasetReadyAny_ | __no__ | 
+| GET | Datasets | _DatasetRead_ | Public<br/>_DatasetReadPublic_ | Has Access<br/>_DatasetReadAccess_ | Has Access<br/>_DatasetReadAccess_ | Has Access<br/>_DatasetReadAccess_ | Has Access<br/>_DatasetReadAccess_ | Any<br/>_DatasetReadAny_ | __no__ | 
 | GET | Datasets/fullquery | _DatasetRead_ | Public<br/>_DatasetReadManyPublic_ | Has Access<br/>_DatasetReadManyAccess_ | Has Access<br/>_DatasetReadManyAccess_ | Has Access<br/>_DatasetReadManyAccess_ | Has Access<br/>_DatasetReadManyAccess_ | Any<br/>_DatasetReadAny_ | __no__ | 
 | GET | Datasets/fullfacet | _DatasetRead_ | Public<br/>_DatasetReadManyPublic_ | Has Access<br/>_DatasetReadManyAccess_ | Has Access<br/>_DatasetReadManyAccess_ | Has Access<br/>_DatasetReadManyAccess_ | Has Access<br/>_DatasetReadManyAccess_ | Any<br/>_DatasetReadAny_ | __no__ | 
 | GET | Datasets/metadataKeys | _DatasetRead_ | Public<br/>_DatasetReadManyPublic_ | Has Access<br/>_DatasetReadManyAccess_ | Has Access<br/>_DatasetReadManyAccess_ | Has Access<br/>_DatasetReadManyAccess_ | Has Access<br/>_DatasetReadManyAccess_ | Any<br/>_DatasetReadAny_ | __no__ | 
@@ -130,9 +147,9 @@ Note, merely for visibility reasons the table has been split. Hierarchically, `O
 | GET | Datasets/_pid_/thumbnail | _DatasetRead_ | Public<br/>_DatasetReadPublic_ | Has Access<br/>_DatasetReadAccess_ | Has Access<br/>_DatasetReadAccess_ | Has Access<br/>_DatasetReadAccess_ | Has Access<br/>_DatasetReadAccess_ | Any<br/>_DatasetReadAny_ | __no__ | 
 | | | | | | | | | |
 | POST | Datasets/_pid_/attachments | _DatasetAttachmentCreate_ | __no__ | __no__ | Owner<br/>_DatasetAttachmentCreateOwner_ | Owner<br/>_DatasetAttachmentCreateOwner_ | Any<br/>_DatasetAttachmentCreateAny_ | Any<br/>_DatasetAttachmentCreateAny_ | __no__ | 
-| GET | Datasets/_pid_/attachments | _DatasetAttachmemntRead_ | Public<br/>_DatasetAttachmentReadPublic_ | Has Access<br/>_DatasetAttachmentReadAccess_ | Has Access<br/>_DatasetAttachmentReadAccess_ | Has Access<br/>_DatasetAttachmentReadAccess_ | Has Access<br/>_DatasetAttachmentReadAccess_ | Any<br/>_DatasetAttachmentReadAny_ | __no__ | 
-| PUT | Datasets/_pid_/attachments/_aid_ | _DatasetAttachmemntUpdate_ | __no__ | __no__ | Owner<br/>_DatasetAttachmentUpdateOwner_ | Owner<br/>_DatasetAttachmentUpdateOwner_ | Owner<br/>_DatasetAttachmentUpdateOwner_ |  Any<br/>_DatasetAttachmentCreateAny_ | __no__ | 
-| DELETE | Datasets/_pid_/attachments/_aid_ | _DatasetAttachmemntDelete_ | __no__ | __no__ | Owner<br/>_DatasetAttachmentDeleteOwner_ | Owner<br/>_DatasetAttachmentDeleteOwner_ | Owner<br/>_DatasetAttachmentDeleteOwner_ | Any<br/>_DatasetAttachmentDeleteAny_ | __no__ | 
+| GET | Datasets/_pid_/attachments | _DatasetAttachmentRead_ | Public<br/>_DatasetAttachmentReadPublic_ | Has Access<br/>_DatasetAttachmentReadAccess_ | Has Access<br/>_DatasetAttachmentReadAccess_ | Has Access<br/>_DatasetAttachmentReadAccess_ | Has Access<br/>_DatasetAttachmentReadAccess_ | Any<br/>_DatasetAttachmentReadAny_ | __no__ | 
+| PUT | Datasets/_pid_/attachments/_aid_ | _DatasetAttachmentUpdate_ | __no__ | __no__ | Owner<br/>_DatasetAttachmentUpdateOwner_ | Owner<br/>_DatasetAttachmentUpdateOwner_ | Owner<br/>_DatasetAttachmentUpdateOwner_ |  Any<br/>_DatasetAttachmentCreateAny_ | __no__ | 
+| DELETE | Datasets/_pid_/attachments/_aid_ | _DatasetAttachmentDelete_ | __no__ | __no__ | Owner<br/>_DatasetAttachmentDeleteOwner_ | Owner<br/>_DatasetAttachmentDeleteOwner_ | Owner<br/>_DatasetAttachmentDeleteOwner_ | Any<br/>_DatasetAttachmentDeleteAny_ | __no__ | 
 
 #### OrigDatablock
 | HTTP method | Endpoint | Endpoint Authorization | Anonymous | Authenticated User | Create Dataset Groups | Create Dataset with Pid Groups | Create Dataset Privileged Groups | Admin Groups | Delete Groups | Notes |

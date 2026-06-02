@@ -58,6 +58,31 @@ The permissions in the minimal installation provides a set of user groups which 
 | | Users can view logbook for any datasets| DatasetLogbookReadAny | 
 | | |
 | DELETE_GROUPS | Users whose group is listed here are allowed to delete datasets, origdatablock or datablock | DatasetDeleteAny , DatasetOrigdatablockDeleteAny , DatasetDatablockDeleteAny |
+| | |
+| UPDATE_DATASET_LIFECYCLE_GROUPS | Users of the listed groups can update the lifecycle state fields of a dataset. Authenticated users not in this group (and not in ADMIN_GROUPS) cannot modify lifecycle fields. | DatasetLifecycleUpdate |
+| | |
+| POLICY_GROUPS | Users of the listed groups can create, read, and update policies. Users in ADMIN_GROUPS always have this permission. | Create , Read , Update (Policy) |
+| | |
+| ATTACHMENT_GROUPS | Users of the listed groups can create, read, update, and delete attachments belonging to groups they are a member of. Setting this to "#all" grants all authenticated users these permissions (this is the default). | AttachmentCreateInstance , AttachmentReadInstance , AttachmentUpdateInstance , AttachmentDeleteInstance (for own groups) |
+| | |
+| ATTACHMENT_PRIVILEGED_GROUPS | Users of the listed groups can create attachments for any owner group, and can read, update, and delete attachments belonging to groups they are a member of or that they have access to. | AttachmentCreateInstance (any) , AttachmentReadInstance , AttachmentUpdateInstance , AttachmentDeleteInstance (own/access groups) |
+
+## History Access Groups
+
+Change history (audit log) access is controlled by a separate set of group variables, one per tracked entity type. Users in ADMIN_GROUPS always have access to all history. Other users need their group listed in the relevant variable.
+
+| Configuration Group List | Grants access to history of |
+| ------------------------ | --------------------------- |
+| HISTORY_ACCESS_DATASET_GROUPS | Datasets |
+| HISTORY_ACCESS_PROPOSAL_GROUPS | Proposals |
+| HISTORY_ACCESS_SAMPLE_GROUPS | Samples |
+| HISTORY_ACCESS_INSTRUMENT_GROUPS | Instruments |
+| HISTORY_ACCESS_PUBLISHED_DATA_GROUPS | Published data records |
+| HISTORY_ACCESS_POLICIES_GROUPS | Policies |
+| HISTORY_ACCESS_DATABLOCK_GROUPS | Datablocks |
+| HISTORY_ACCESS_ATTACHMENT_GROUPS | Attachments |
+
+All history access group variables default to `""` (no access for non-admin users). A user only needs to be listed in at least one of these variables to access the history endpoint; access to specific entity types is then controlled per-variable.
 
 ## Subsystems
 - [Datasets](./authorization_datasets.md)
