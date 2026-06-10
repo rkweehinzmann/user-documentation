@@ -13,7 +13,7 @@ Advantages of SciCat:
 In the past 5 years (since about 2020) SciCat has undergone major improvements in key areas for better user experience and re-structuring to meet the various different needs of photon science labs. The collaboration has grown and governance will be soon established.
 
 ## How to run SciCat
-More detailed information on how to run scicat, see [scicatlive documentation](https://www.scicatproject.org/scicatlive/latest/). For more details on how to ingest, setup and deploy information from SciCat, see the [operator's guide](../operator-guide/index.md). 
+If you would like to run SciCat, we recommend to start with our dockerized SciCat kit ```scicatlive```, find details documented [here](https://www.scicatproject.org/scicatlive/latest/). For more details on how to ingest, setup and deploy information from SciCat, see the [operator's guide](../operator-guide/index.md). 
 
 ## How to use SciCat
 Once metadata is ingested into SciCat, the user can login and view, edit the metadata, list, filter and make a selection of interesting datasets using also scientific metadata. There are four main areas of SciCat where metadata can be explored:
@@ -23,8 +23,9 @@ Once metadata is ingested into SciCat, the user can login and view, edit the met
 3. [Instruments](../instruments.md): Instruments is a library of instruments available at your institute, which can be linked to datasets.
 4. [Samples](../samples.md): Here you can add metadata describing a physical sample which can be linked to it’s experimental use captured in datasets. 
 
-For many the SciCat datasets are the entry point to the catalogue, but soon it will be possible to start with samples or published data records (registered metadata sets).
-You can just browse what's in the catalogue for any published datasets. Else one can list all datasets that I either own or have access to. Here is how to find more on how to proceed:
+For many the SciCat datasets are the entry point to the catalogue, it is possible to configure the entry page to show samples or published data records too. From the Hamburger button (on top left) one can change the view.
+
+You can just browse what's in the catalogue for any published datasets. Else one can list all datasets that you either own or have access to. Here is how to find more on how to proceed.
 
 ## How-Tos for Users (Quick-links)
 
