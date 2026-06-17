@@ -5,7 +5,7 @@ SciCat datasets are sets of metadata and can include several files which e.g. co
 Datasets can be queried in several places and ways, genereally to get an overview or to narrow down your datasets of interests.
 We have the **left filter column** and the **top search bar**, both query directly the mongo database, so filters generally need to be exact. Partial string search are also possible from the top bar on titles and descriptions only.
 
-[![searchesInSciCat](img/datasets_SearchingInSciCat.png)](img/datasets_SearchingInSciCat.png)
+[![searchingInSciCat](img/datasets_SearchingInSciCat.png)](img/datasets_SearchingInSciCat.png)
 
 Advanced users can also use the API, either from [Swagger](../swagger/index.md) or [commandline](queries_curl.md) some examples.
 
@@ -48,8 +48,8 @@ One will see this button either from the dataset list view or on the dataset det
 
 ## Dataset details
 The main tab shows the details of a dataset. 
-
-![example of dataset details page](img/dataset_details_PSI.png)
+It can look like that:
+[![example of dataset details page](img/dataset_details_PSI.png)](img/dataset_details_PSI.png)
 
 ## Dataset file listing
 A dataset can have several associated files to it. They can be listed by clicking on the tab **Datafiles** just right to the Details tab:
@@ -59,14 +59,14 @@ A dataset can have several associated files to it. They can be listed by clickin
 ## Dataset attachments
 Another tab is for the attachements of a dataset, e.g. PNG or TIFF images.
 
-![Choose an image file, must be under 16 MB limit](img/dataset_attachments_PSI.png)
+[![Choose an image file, must be under 16 MB limit](img/dataset_attachments_PSI.png)](img/dataset_attachments_PSI.png)
 
 Simply follow the instructions to upload an image. The size is restricted to be below 16 MB.
 
 ## View raw JSON data
 
 Scientific meta data is shown in JSON under its section and looks like this:
-![img](img/dataset_details_rawJSON.png)
+[![img](img/dataset_details_rawJSON.png)](img/dataset_details_rawJSON.png)
 
 ## Get raw JSON data
 
@@ -75,4 +75,4 @@ One can also get the JSON file via the swagger API. If set up, one can directly 
 ## Edit Scientific meta data
 If enabled, fields in the scientific metadata can be modified and edited by any member of the [Owner Group](../backendconfig/authorization/authorization_datasets.md) of the data by hitting the "Edit" Icon. The user can add, remove or change metadata fields, every change will create a new record in the databse with it's history [feature is soon available again from 2025-07-02].
 
-![Image edit metadata](img/editMetadata.png)
+[![Image edit metadata](img/editMetadata.png)](img/editMetadata.png)
