@@ -12,15 +12,15 @@ Advanced users can also use the API, either from [Swagger](../swagger/index.md) 
 ### Left search column: Filters
 One can filter for six criteria of which if you hoover or click there it shows directly the number of available datasets matching. 
 
-* `Location`: string that tells about where the dataset was created.
-* `PID`: identifier of the dataset
-* `Group`: groups that show your access to the datasets
-* `Type`: usually raw or derived. In SciCat one can define also your own type of dataset, e.g. "summary".
-* `Keyword`: also known as tags
-* `Creation Time period`: select start and end dates of the creation of the datasets
-* `Conditions`: they contain scientific metadata
+* <span style="color:blue">Location</span>: string that tells about where the dataset was created.
+* <span style="color:blue">PID</span>: identifier of the dataset
+* <span style="color:blue">Group</span>: groups that show your access to the datasets
+* <span style="color:blue">Type</span>: usually raw or derived. In SciCat one can define also your own type of dataset, e.g. "summary".
+* <span style="color:blue">Keyword</span>: also known as tags
+* <span style="color:blue">Creation Time</span> period: select start and end dates of the creation of the datasets
+* <span style="color:blue">Conditions</span>: they contain scientific metadata
 
-You need to hit <span style="color:blue">Clear</span> to reset the filter, even for search criteria set in the top bar. When ready, hit <span style="color:blue">Apply</span> . Note by clearing, one also resets the value in the top bar.
+You need to hit <span style="color:green">Clear</span> to reset the filter, even for search criteria set in the top bar. When ready, hit <span style="color:green">Apply</span> . Note by clearing, one also resets the value in the top bar.
 
 Use filters when you know *exact* values, e.g. the ```pid``` or a certain period of time. 
 Before entering any values SciCat already shows what is available merely by clicking into one of the fields:
