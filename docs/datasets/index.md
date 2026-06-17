@@ -5,7 +5,7 @@ SciCat datasets are sets of metadata and can include several files which e.g. co
 Datasets can be queried in several places and ways, genereally to get an overview or to narrow down your datasets of interests.
 We have the **left filter column** and the **top search bar**, both query directly the mongo database, so filters generally need to be exact. Partial string search are also possible from the top bar on titles and descriptions only.
 
-[![searchesInSciCat](img/datasets_SearchesInSciCat.png)](img/datasets_SearchesInSciCat.png)
+[![searchesInSciCat](img/datasets_SearchingInSciCat.png)](img/datasets_SearchingInSciCat.png)
 
 Advanced users can also use the API, either from [Swagger](../swagger/index.md) or [commandline](queries_curl.md) some examples.
 
