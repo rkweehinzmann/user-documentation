@@ -226,7 +226,7 @@
   -H &quot;accept: application/json&quot;
   -H 'Authentication: Bearer &quot;${TOKEN}&quot;'
 </code></pre>
-<p>If you are only interested in public records just drop the last line.</p>
+<p>If you are only interested in public records , you will not need to authenticate so repeat the command without the last line <code>-H Authentication: Bearer "${TOKEN}"</code>.</p>
 <h3 id="get-identifiers-of-origdatablocks-oids-of-a-dataset">GET identifiers of <code>origdatablocks</code> (OIDs) of a dataset</h3>
 <p>The dataset is identified by its pid, we use v4 API and first define a filter</p>
 <pre><code class="language-bash">export URL=&quot;valid_url&quot;
@@ -329,7 +329,7 @@ curl -G &quot;${URL}/api/v4/datasets&quot; \
 </code></pre>
 <p>Note, that datafiles and attachments related to a SciCat dataset need to be POSTed separtely as they are a priori independent entities.</p>
 <h3 id="adding-datafiles">Adding datafiles</h3>
-<p>Associated datafiles are organised in data blocks. There are original datablocks and only datablocks. The latter are obsolete and functionality has fully moved to <code>origdatablocks</code>. To attach your metadata of these associated datafiles to the dataset use e.g. <code>/api/v4/origdatablock</code>. Note, that the dataset to which the blocks belong are indicated by <code>dataasetId</code> which corresponds to the <code>pid</code> field of the dataset itself. The command can look like (and placeholders replaced):</p>
+<p>Associated datafiles are organised in datablocks. There are original datablocks (<code>origdatablocks</code>) and <code>datablocks</code>. The latter are obsolete and functionality has fully moved to <code>origdatablocks</code>. To attach your metadata of these associated datafiles to the dataset use e.g. <code>/api/v4/origdatablock</code>. Note, that the dataset to which the blocks belong are indicated by <code>dataasetId</code> which corresponds to the <code>pid</code> field of the dataset itself. This can be achieved by the following command (and placeholders replaced):</p>
 <pre><code class="language-bash">curl -X 'POST' \
   'http://localhost:3000/api/v4/origdatablocks' \
   -H 'accept: application/json' \
