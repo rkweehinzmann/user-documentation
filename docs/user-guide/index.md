@@ -19,9 +19,9 @@ More detailed information on how to run scicat, see [scicatlive documentation](h
 Once metadata is ingested into SciCat, the user can login and view, edit the metadata, list, filter and make a selection of interesting datasets using also scientific metadata. There are four main areas of SciCat where metadata can be explored:
 
 1. [Datasets](../datasets/index.md): Metadata in SciCat is ideally sorted according to a dataset. It can have several associated files attached which have the same metadata like a thumbnail or most common image files.
-2. [Proposals](../proposals.md): are used to link datasets to the proposal under which beamtime was granted.
-3. [Instruments](../instruments.md): Instruments is a library of instruments available at your institute, which can be linked to datasets.
-4. [Samples](../samples.md): Here you can add metadata describing a physical sample which can be linked to it’s experimental use captured in datasets. 
+2. [Proposals](../proposals/index.md): are used to link datasets to the proposal under which beamtime was granted.
+3. [Instruments](../instruments/index.md): Instruments is a library of instruments available at your institute, which can be linked to datasets.
+4. [Samples](../samples/index.md): Here you can add metadata describing a physical sample which can be linked to it’s experimental use captured in datasets. 
 
 For many the SciCat datasets are the entry point to the catalogue, but soon it will be possible to start with samples or published data records (registered metadata sets).
 You can just browse what's in the catalogue for any published datasets. Else one can list all datasets that I either own or have access to. Here is how to find more on how to proceed:
